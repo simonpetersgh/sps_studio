@@ -83,11 +83,11 @@ const HeroSection = () => (
       SPS Studio
     </h1>
     <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
-      Crafting Digital Excellence: From Insightful Data Analysis to Seamless Web
-      & App Solutions.
+      I craft digital excellence, from insightful data analysis to seamless web
+      & app solutions.
     </p>
     <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-      <Link href="#portfolio">View Our Work</Link>
+      <Link href="#portfolio">View My Work</Link>
     </Button>
   </section>
 );
@@ -124,33 +124,47 @@ const skills = [
   {
     icon: <Code2 className="h-10 w-10 text-primary" />,
     name: "Web Development",
+    description:
+      "I build modern, responsive, and performant websites and applications using the latest web technologies.",
   },
   {
     icon: <Smartphone className="h-10 w-10 text-primary" />,
     name: "App Development",
+    description:
+      "I create intuitive and engaging cross-platform mobile applications for both iOS and Android.",
   },
   {
     icon: <Database className="h-10 w-10 text-primary" />,
     name: "Data Analysis",
+    description:
+      "I leverage data to uncover insights, drive decisions, and create compelling data visualizations.",
   },
-  { icon: <Wrench className="h-10 w-10 text-primary" />, name: "Tools" },
+  {
+    icon: <Wrench className="h-10 w-10 text-primary" />,
+    name: "Tools & Tech",
+    description:
+      "Proficient with a range of modern tools like React, Next.js, Node.js, and Firebase to build robust solutions.",
+  },
 ];
 
 const SkillsSection = () => (
   <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
     <div className="max-w-6xl mx-auto">
       <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12">
-        Our Expertise
+        My Expertise
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {skills.map((skill) => (
-          <div
+          <Card
             key={skill.name}
-            className="flex flex-col items-center text-center p-4"
+            className="flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300 p-6"
           >
             {skill.icon}
             <h3 className="mt-4 font-bold text-lg">{skill.name}</h3>
-          </div>
+            <p className="mt-2 text-sm text-muted-foreground flex-1">
+              {skill.description}
+            </p>
+          </Card>
         ))}
       </div>
     </div>
@@ -188,7 +202,7 @@ const ServicesSection = () => (
   <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
     <div className="max-w-6xl mx-auto">
       <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12">
-        Services We Offer
+        Services I Offer
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {services.map((service) => (
@@ -253,7 +267,7 @@ const PortfolioSection = () => (
   >
     <div className="max-w-6xl mx-auto">
       <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12">
-        Our Portfolio
+        My Portfolio
       </h2>
       <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
@@ -309,7 +323,7 @@ const ContactSection = () => (
           Get In Touch
         </h2>
         <p className="mt-4 text-lg text-muted-foreground">
-          Have a project in mind? We'd love to hear from you.
+          Have a project in mind? I'd love to hear from you.
         </p>
       </div>
       <Card>
@@ -318,7 +332,7 @@ const ContactSection = () => (
         </CardContent>
         <CardFooter className="flex flex-col gap-6 pt-6">
           <p className="text-sm text-muted-foreground">
-            You can also reach us on
+            You can also reach me on
           </p>
           <div className="flex gap-4">
             <Button asChild variant="outline" size="icon">

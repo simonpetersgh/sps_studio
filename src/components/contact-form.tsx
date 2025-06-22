@@ -55,7 +55,7 @@ export function ContactForm() {
       if (result.success) {
         toast({
           title: "Message Sent!",
-          description: "Thank you for contacting us. We'll be in touch soon.",
+          description: "Thank you for your message. I'll get back to you shortly.",
         });
         form.reset();
       } else {
