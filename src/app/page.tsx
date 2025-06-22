@@ -1,3 +1,4 @@
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -52,6 +53,9 @@ const Header = () => (
         <span className="font-headline text-xl font-bold">SPS Studio</span>
       </Link>
       <div className="hidden md:flex items-center gap-4 text-sm font-medium">
+        <Link href="#about" className="hover:text-primary transition-colors">
+          About
+        </Link>
         <Link href="#skills" className="hover:text-primary transition-colors">
           Skills
         </Link>
@@ -85,6 +89,34 @@ const HeroSection = () => (
     <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
       <Link href="#portfolio">View Our Work</Link>
     </Button>
+  </section>
+);
+
+const AboutSection = () => (
+  <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div className="order-2 md:order-1">
+        <h2 className="font-headline text-4xl md:text-5xl font-bold mb-6">
+          Hi, I'm Simon.
+        </h2>
+        <p className="text-lg text-muted-foreground mb-4">
+          I'm the creative mind behind SPS Studio. With a passion for both the analytical and the artistic, I've dedicated my career to bridging the gap between data and design. My journey began in data analysis, where I honed my skills in uncovering hidden patterns and telling stories with numbers.
+        </p>
+        <p className="text-lg text-muted-foreground">
+          This analytical foundation now fuels my work in web and app development, allowing me to build not just beautiful, but also smart and effective digital solutions. I thrive on transforming complex problems into elegant, user-friendly experiences. Let's create something exceptional together.
+        </p>
+      </div>
+      <div className="flex justify-center order-1 md:order-2">
+        <Image
+          src="https://placehold.co/400x400.png"
+          alt="A portrait of Simon"
+          width={400}
+          height={400}
+          className="rounded-full object-cover w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
+          data-ai-hint="portrait man"
+        />
+      </div>
+    </div>
   </section>
 );
 
@@ -325,6 +357,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <HeroSection />
+        <AboutSection />
         <SkillsSection />
         <ServicesSection />
         <PortfolioSection />
