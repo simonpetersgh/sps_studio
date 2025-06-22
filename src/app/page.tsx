@@ -1,3 +1,336 @@
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { ContactForm } from "@/components/contact-form";
+import {
+  BarChartBig,
+  Briefcase,
+  Code2,
+  Database,
+  ExternalLink,
+  Github,
+  LayoutTemplate,
+  Linkedin,
+  Mail,
+  Smartphone,
+  Wrench,
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import type { SVGProps } from "react";
+
+const SpsLogo = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    width="48"
+    height="48"
+    viewBox="0 0 48 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48ZM20.6667 13.3333C18.3363 13.3333 16.4444 15.2251 16.4444 17.5556C16.4444 19.886 18.3363 21.7778 20.6667 21.7778H27.3333C29.6637 21.7778 31.5556 19.886 31.5556 17.5556C31.5556 15.2251 29.6637 13.3333 27.3333 13.3333H20.6667ZM20.6667 26.2222C18.3363 26.2222 16.4444 28.114 16.4444 30.4444C16.4444 32.7749 18.3363 34.6667 20.6667 34.6667H27.3333C29.6637 34.6667 31.5556 32.7749 31.5556 30.4444C31.5556 28.114 29.6637 26.2222 27.3333 26.2222H20.6667Z"
+      fill="hsl(var(--primary))"
+    />
+  </svg>
+);
+
+const Header = () => (
+  <header className="py-4 px-4 sm:px-6 lg:px-8">
+    <nav className="flex justify-between items-center">
+      <Link href="/" className="flex items-center gap-2">
+        <SpsLogo />
+        <span className="font-headline text-xl font-bold">SPS Studio</span>
+      </Link>
+      <div className="hidden md:flex items-center gap-4 text-sm font-medium">
+        <Link href="#skills" className="hover:text-primary transition-colors">
+          Skills
+        </Link>
+        <Link href="#services" className="hover:text-primary transition-colors">
+          Services
+        </Link>
+        <Link href="#portfolio" className="hover:text-primary transition-colors">
+          Portfolio
+        </Link>
+        <Link href="#contact" className="hover:text-primary transition-colors">
+          Contact
+        </Link>
+      </div>
+      <Button asChild className="hidden md:block" variant="outline">
+        <Link href="#contact">Get In Touch</Link>
+      </Button>
+    </nav>
+  </header>
+);
+
+const HeroSection = () => (
+  <section className="text-center py-20 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+    <SpsLogo className="w-24 h-24 mb-6" />
+    <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight mb-4">
+      SPS Studio
+    </h1>
+    <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
+      Crafting Digital Excellence: From Insightful Data Analysis to Seamless Web
+      & App Solutions.
+    </p>
+    <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+      <Link href="#portfolio">View Our Work</Link>
+    </Button>
+  </section>
+);
+
+const skills = [
+  {
+    icon: <Code2 className="h-10 w-10 text-primary" />,
+    name: "Web Development",
+  },
+  {
+    icon: <Smartphone className="h-10 w-10 text-primary" />,
+    name: "App Development",
+  },
+  {
+    icon: <Database className="h-10 w-10 text-primary" />,
+    name: "Data Analysis",
+  },
+  { icon: <Wrench className="h-10 w-10 text-primary" />, name: "Tools" },
+];
+
+const SkillsSection = () => (
+  <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
+    <div className="max-w-6xl mx-auto">
+      <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12">
+        Our Expertise
+      </h2>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {skills.map((skill) => (
+          <div
+            key={skill.name}
+            className="flex flex-col items-center text-center p-4"
+          >
+            {skill.icon}
+            <h3 className="mt-4 font-bold text-lg">{skill.name}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const services = [
+  {
+    icon: <LayoutTemplate className="h-8 w-8 mb-4 text-primary" />,
+    title: "Web Solutions",
+    description:
+      "Crafting responsive, high-performance websites and web applications tailored to your business needs.",
+  },
+  {
+    icon: <Smartphone className="h-8 w-8 mb-4 text-primary" />,
+    title: "Mobile App Development",
+    description:
+      "Building intuitive and engaging mobile experiences for both iOS and Android platforms.",
+  },
+  {
+    icon: <BarChartBig className="h-8 w-8 mb-4 text-primary" />,
+    title: "Data Insight & Visualization",
+    description:
+      "Transforming complex datasets into clear, actionable insights through powerful visualizations.",
+  },
+  {
+    icon: <Briefcase className="h-8 w-8 mb-4 text-primary" />,
+    title: "Custom Solutions",
+    description:
+      "Developing bespoke software solutions to solve unique challenges and drive business growth.",
+  },
+];
+
+const ServicesSection = () => (
+  <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-6xl mx-auto">
+      <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12">
+        Services We Offer
+      </h2>
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {services.map((service) => (
+          <Card
+            key={service.title}
+            className="flex flex-col text-center items-center hover:shadow-lg transition-shadow duration-300"
+          >
+            <CardHeader>
+              {service.icon}
+              <CardTitle className="font-headline">{service.title}</CardTitle>
+            </CardHeader>
+            <CardContent className="flex-1">
+              <p className="text-muted-foreground">{service.description}</p>
+            </CardContent>
+            <CardFooter>
+              <Button variant="link">Learn More</Button>
+            </CardFooter>
+          </Card>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const projects = [
+  {
+    title: "Insight Dashboard",
+    description:
+      "A powerful data visualization platform for analyzing business metrics and trends in real-time.",
+    tags: ["React", "D3.js", "Node.js", "PostgreSQL"],
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "data dashboard",
+    liveUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    title: "Mobile POS System",
+    description:
+      "An intuitive point-of-sale application for small businesses, available on both iOS and Android.",
+    tags: ["React Native", "Firebase", "Stripe API"],
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "mobile payment",
+    liveUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    title: "Corporate Website Redesign",
+    description:
+      "A modern, performant, and SEO-friendly marketing website for a leading tech company.",
+    tags: ["Next.js", "Tailwind CSS", "Sanity CMS"],
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "corporate website",
+    liveUrl: "#",
+    githubUrl: "#",
+  },
+];
+
+const PortfolioSection = () => (
+  <section
+    id="portfolio"
+    className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50"
+  >
+    <div className="max-w-6xl mx-auto">
+      <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12">
+        Our Portfolio
+      </h2>
+      <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+        {projects.map((project) => (
+          <Card
+            key={project.title}
+            className="overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300"
+          >
+            <Image
+              src={project.imageUrl}
+              alt={project.title}
+              width={600}
+              height={400}
+              className="w-full h-48 object-cover"
+              data-ai-hint={project.imageHint}
+            />
+            <CardHeader>
+              <CardTitle className="font-headline">{project.title}</CardTitle>
+              <CardDescription>{project.description}</CardDescription>
+            </CardHeader>
+            <CardContent className="flex-1">
+              <div className="flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <Badge key={tag} variant="secondary">
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+            </CardContent>
+            <CardFooter className="flex justify-end gap-2">
+              <Button asChild variant="outline">
+                <Link href={project.liveUrl} target="_blank">
+                  <ExternalLink className="mr-2 h-4 w-4" /> Live View
+                </Link>
+              </Button>
+              <Button asChild>
+                <Link href={project.githubUrl} target="_blank">
+                  <Github className="mr-2 h-4 w-4" /> GitHub
+                </Link>
+              </Button>
+            </CardFooter>
+          </Card>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const ContactSection = () => (
+  <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-xl mx-auto">
+      <div className="text-center mb-12">
+        <h2 className="font-headline text-4xl md:text-5xl font-bold">
+          Get In Touch
+        </h2>
+        <p className="mt-4 text-lg text-muted-foreground">
+          Have a project in mind? We'd love to hear from you.
+        </p>
+      </div>
+      <Card>
+        <CardContent className="p-6">
+          <ContactForm />
+        </CardContent>
+        <CardFooter className="flex flex-col gap-6 pt-6">
+          <p className="text-sm text-muted-foreground">
+            You can also reach us on
+          </p>
+          <div className="flex gap-4">
+            <Button asChild variant="outline" size="icon">
+              <Link href="#" aria-label="GitHub">
+                <Github className="h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="icon">
+              <Link href="#" aria-label="LinkedIn">
+                <Linkedin className="h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="icon">
+              <Link href="mailto:contact@sps.studio" aria-label="Email">
+                <Mail className="h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        </CardFooter>
+      </Card>
+    </div>
+  </section>
+);
+
+const Footer = () => (
+  <footer className="py-6 px-4 sm:px-6 lg:px-8 border-t">
+    <div className="text-center text-sm text-muted-foreground">
+      © {new Date().getFullYear()} SPS Studio. All Rights Reserved.
+    </div>
+  </footer>
+);
+
 export default function Home() {
-  return <></>;
+  return (
+    <div className="flex flex-col min-h-dvh bg-background">
+      <Header />
+      <main className="flex-1">
+        <HeroSection />
+        <SkillsSection />
+        <ServicesSection />
+        <PortfolioSection />
+        <ContactSection />
+      </main>
+      <Footer />
+    </div>
+  );
 }
