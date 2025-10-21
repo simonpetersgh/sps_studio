@@ -55,7 +55,7 @@ const Header = () => (
     <nav className="flex justify-between items-center">
       <Link href="/" className="flex items-center gap-2">
         <SpsLogo />
-        <span className="font-headline text-xl font-bold">TheSPS Studio</span>
+        <span className="font-headline text-xl font-bold">SPS Studio</span>
       </Link>
       <div className="hidden md:flex items-center gap-4 text-sm font-medium">
         <Link href="#about" className="hover:text-primary transition-colors">
@@ -82,7 +82,7 @@ const HeroSection = () => (
   <section className="text-center py-20 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
     <SpsLogo className="w-24 h-24 mb-6" />
     <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight mb-4">
-      TheSPS - Simon Peters Sakpla
+      SPS Studio
     </h1>
     <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
       I craft digital excellence, from insightful data analysis to seamless web
@@ -99,10 +99,10 @@ const AboutSection = () => (
     <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
       <div className="order-2 md:order-1">
         <h2 className="font-headline text-4xl md:text-5xl font-bold mb-6">
-          Hii, I'm Simon.
+          Hi, I'm Simon.
         </h2>
         <p className="text-lg text-muted-foreground mb-4">
-          I'm the creative mind, a freelance business analyst and developer. With a passion for both the analytical and the artistic, I've dedicated my career to bridging the gap between data and design. My journey began in data analysis, where I honed my skills in uncovering hidden patterns and telling stories with numbers.
+          I'm the creative mind behind SPS Studio. With a passion for both the analytical and the artistic, I've dedicated my career to bridging the gap between data and design. My journey began in data analysis, where I honed my skills in uncovering hidden patterns and telling stories with numbers.
         </p>
         <p className="text-lg text-muted-foreground">
           This analytical foundation now fuels my work in web and app development, allowing me to build not just beautiful, but also smart and effective digital solutions. I thrive on transforming complex problems into elegant, user-friendly experiences. Let's create something exceptional together.
@@ -169,7 +169,7 @@ const ServicesSection = () => (
               <p className="text-muted-foreground">{service.description}</p>
             </CardContent>
             <CardFooter>
-              {/* <Button variant="link">Learn More</Button> */}
+              <Button variant="link">Learn More</Button>
             </CardFooter>
           </Card>
         ))}
@@ -278,7 +278,7 @@ const Footer = () => (
         <div className="space-y-4">
           <div className="flex items-center gap-2">
               <SpsLogo className="w-8 h-8" />
-              <span className="font-headline text-xl font-bold text-foreground">TheSPS Studio</span>
+              <span className="font-headline text-xl font-bold text-foreground">SPS Studio</span>
           </div>
           <p className="text-sm">
             Crafting digital excellence, from insightful data analysis to seamless web & app solutions.
@@ -338,7 +338,7 @@ const Footer = () => (
 
       </div>
       <div className="mt-8 pt-6 border-t border-muted-foreground/20 text-center text-sm">
-        © {new Date().getFullYear()} TheSPS Studio - Simon Peters Sakpla. All Rights Reserved.
+        © {new Date().getFullYear()} SPS Studio. All Rights Reserved.
       </div>
     </footer>
 );
