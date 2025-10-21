@@ -16,13 +16,16 @@ import {
   Code2,
   Database,
   ExternalLink,
+  Facebook,
   Github,
+  Instagram,
   LayoutTemplate,
   Linkedin,
   LocateIcon,
   Mail,
   Phone,
   Smartphone,
+  Twitter,
   Wrench,
 } from "lucide-react";
 import Image from "next/image";
@@ -302,6 +305,21 @@ const ContactSection = () => (
                 <Button asChild variant="outline" size="icon">
                   <Link href="#" aria-label="LinkedIn">
                     <Linkedin className="h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="icon">
+                  <Link href="#" aria-label="Twitter">
+                    <Twitter className="h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="icon">
+                  <Link href="#" aria-label="Facebook">
+                    <Facebook className="h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="icon">
+                  <Link href="#" aria-label="Instagram">
+                    <Instagram className="h-5 w-5" />
                   </Link>
                 </Button>
               </div>
