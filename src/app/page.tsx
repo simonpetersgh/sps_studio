@@ -255,7 +255,7 @@ const PortfolioSection = () => (
 
 const ContactSection = () => (
   <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-3xl mx-auto">
       <div className="text-center mb-12">
         <h2 className="font-headline text-4xl md:text-5xl font-bold">
           Get In Touch
@@ -264,70 +264,8 @@ const ContactSection = () => (
           Have a project in mind? I'd love to hear from you.
         </p>
       </div>
-      <Card className="rounded-xl overflow-hidden">
-        <div className="grid md:grid-cols-2">
-          <div className="p-8 bg-muted/50">
-            <h3 className="font-headline text-2xl font-bold mb-6">Contact Information</h3>
-            <div className="space-y-4 text-muted-foreground">
-              <div className="flex items-start gap-4">
-                <LocateIcon className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h4 className="font-semibold text-foreground">Location</h4>
-                    <p>Accra, Ghana</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Mail className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h4 className="font-semibold text-foreground">Email</h4>
-                  <a href="mailto:contact@sps.studio" className="hover:text-primary">
-                    simonpetersgh@gmail.com
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Phone className="h-6 w-6 text-primary mt-1" />
-                <div>
-                  <h4 className="font-semibold text-foreground">Phone</h4>
-                  <p>(+233) 0540-228-056</p>
-                </div>
-              </div>
-            </div>
-            <div className="mt-8">
-                <h4 className="font-semibold text-foreground mb-4">Follow Me</h4>
-                <div className="flex gap-4">
-                <Button asChild variant="outline" size="icon">
-                  <Link href="#" aria-label="GitHub">
-                    <Github className="h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="icon">
-                  <Link href="#" aria-label="LinkedIn">
-                    <Linkedin className="h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="icon">
-                  <Link href="#" aria-label="Twitter">
-                    <Twitter className="h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="icon">
-                  <Link href="#" aria-label="Facebook">
-                    <Facebook className="h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="icon">
-                  <Link href="#" aria-label="Instagram">
-                    <Instagram className="h-5 w-5" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-          <div className="p-8">
-            <ContactForm />
-          </div>
-        </div>
+      <Card className="rounded-xl p-8">
+        <ContactForm />
       </Card>
     </div>
   </section>
@@ -335,11 +273,74 @@ const ContactSection = () => (
 
 
 const Footer = () => (
-  <footer className="py-6 px-4 sm:px-6 lg:px-8 border-t">
-    <div className="text-center text-sm text-muted-foreground">
-      © {new Date().getFullYear()} SPS Studio. All Rights Reserved.
-    </div>
-  </footer>
+    <footer className="bg-muted text-muted-foreground py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="space-y-4">
+          <div className="flex items-center gap-2">
+              <SpsLogo className="w-8 h-8" />
+              <span className="font-headline text-xl font-bold text-foreground">SPS Studio</span>
+          </div>
+          <p className="text-sm">
+            Crafting digital excellence, from insightful data analysis to seamless web & app solutions.
+          </p>
+        </div>
+
+        <div>
+            <h3 className="font-headline text-lg font-semibold text-foreground mb-4">Contact Information</h3>
+            <div className="space-y-2 text-sm">
+                <div className="flex items-start gap-3">
+                    <LocateIcon className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                    <span>Accra, Ghana</span>
+                </div>
+                <div className="flex items-start gap-3">
+                    <Mail className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                    <a href="mailto:simonpetersgh@gmail.com" className="hover:text-primary hover:underline">
+                        simonpetersgh@gmail.com
+                    </a>
+                </div>
+                <div className="flex items-start gap-3">
+                    <Phone className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                    <span>(+233) 0540-228-056</span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h3 className="font-headline text-lg font-semibold text-foreground mb-4">Follow Me</h3>
+            <div className="flex gap-4">
+            <Button asChild variant="outline" size="icon" className="bg-transparent hover:bg-accent/50">
+              <Link href="#" aria-label="GitHub">
+                <Github className="h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="icon" className="bg-transparent hover:bg-accent/50">
+              <Link href="#" aria-label="LinkedIn">
+                <Linkedin className="h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="icon" className="bg-transparent hover:bg-accent/50">
+              <Link href="#" aria-label="Twitter">
+                <Twitter className="h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="icon" className="bg-transparent hover:bg-accent/50">
+              <Link href="#" aria-label="Facebook">
+                <Facebook className="h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="icon" className="bg-transparent hover:bg-accent/50">
+              <Link href="#" aria-label="Instagram">
+                <Instagram className="h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+
+      </div>
+      <div className="mt-8 pt-6 border-t border-muted-foreground/20 text-center text-sm">
+        © {new Date().getFullYear()} SPS Studio. All Rights Reserved.
+      </div>
+    </footer>
 );
 
 export default function Home() {
@@ -357,5 +358,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
