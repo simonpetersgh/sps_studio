@@ -153,7 +153,7 @@ const ServicesSection = () => (
     <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
     <div className="max-w-6xl mx-auto">
       <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12">
-        Services I Offer
+        What I Do
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {services.map((service) => (
@@ -264,7 +264,7 @@ const ContactSection = () => (
           Have a project in mind? I'd love to hear from you.
         </p>
       </div>
-      <Card className="overflow-hidden">
+      <Card className="rounded-xl overflow-hidden">
         <div className="grid md:grid-cols-2">
           <div className="p-8 bg-muted/50">
             <h3 className="font-headline text-2xl font-bold mb-6">Contact Information</h3>
@@ -273,8 +273,7 @@ const ContactSection = () => (
                 <LocateIcon className="h-6 w-6 text-primary mt-1" />
                 <div>
                   <h4 className="font-semibold text-foreground">Location</h4>
-                    <p>San Francisco, CA</p>
-                    <p>United States</p>
+                    <p>Accra, Ghana</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -282,7 +281,7 @@ const ContactSection = () => (
                 <div>
                   <h4 className="font-semibold text-foreground">Email</h4>
                   <a href="mailto:contact@sps.studio" className="hover:text-primary">
-                    contact@sps.studio
+                    simonpetersgh@gmail.com
                   </a>
                 </div>
               </div>
@@ -290,7 +289,7 @@ const ContactSection = () => (
                 <Phone className="h-6 w-6 text-primary mt-1" />
                 <div>
                   <h4 className="font-semibold text-foreground">Phone</h4>
-                  <p>(555) 123-4567</p>
+                  <p>(+233) 0540-228-056</p>
                 </div>
               </div>
             </div>
