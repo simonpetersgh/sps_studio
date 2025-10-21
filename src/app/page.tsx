@@ -19,7 +19,9 @@ import {
   Github,
   LayoutTemplate,
   Linkedin,
+  LocateIcon,
   Mail,
+  Phone,
   Smartphone,
   Wrench,
 } from "lucide-react";
@@ -56,14 +58,11 @@ const Header = () => (
         <Link href="#about" className="hover:text-primary transition-colors">
           About
         </Link>
-        <Link href="#skills" className="hover:text-primary transition-colors">
-          Skills
-        </Link>
         <Link href="#services" className="hover:text-primary transition-colors">
           Services
         </Link>
         <Link href="#portfolio" className="hover:text-primary transition-colors">
-          Portfolio
+          Projects
         </Link>
         <Link href="#contact" className="hover:text-primary transition-colors">
           Contact
@@ -108,7 +107,7 @@ const AboutSection = () => (
       </div>
       <div className="flex justify-center order-1 md:order-2">
         <Image
-          src="https://placehold.co/400x400.png"
+          src="https://picsum.photos/seed/1/400/400"
           alt="A portrait of Simon"
           width={400}
           height={400}
@@ -120,86 +119,35 @@ const AboutSection = () => (
   </section>
 );
 
-const skills = [
-  {
-    icon: <Code2 className="h-10 w-10 text-primary" />,
-    name: "Web Development",
-    description:
-      "I build modern, responsive, and performant websites and applications using the latest web technologies.",
-  },
-  {
-    icon: <Smartphone className="h-10 w-10 text-primary" />,
-    name: "App Development",
-    description:
-      "I create intuitive and engaging cross-platform mobile applications for both iOS and Android.",
-  },
-  {
-    icon: <Database className="h-10 w-10 text-primary" />,
-    name: "Data Analysis",
-    description:
-      "I leverage data to uncover insights, drive decisions, and create compelling data visualizations.",
-  },
-  {
-    icon: <Wrench className="h-10 w-10 text-primary" />,
-    name: "Tools & Tech",
-    description:
-      "Proficient with a range of modern tools like React, Next.js, Node.js, and Firebase to build robust solutions.",
-  },
-];
-
-const SkillsSection = () => (
-  <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
-    <div className="max-w-6xl mx-auto">
-      <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12">
-        My Expertise
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {skills.map((skill) => (
-          <Card
-            key={skill.name}
-            className="flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300 p-6"
-          >
-            {skill.icon}
-            <h3 className="mt-4 font-bold text-lg">{skill.name}</h3>
-            <p className="mt-2 text-sm text-muted-foreground flex-1">
-              {skill.description}
-            </p>
-          </Card>
-        ))}
-      </div>
-    </div>
-  </section>
-);
-
 const services = [
   {
     icon: <LayoutTemplate className="h-8 w-8 mb-4 text-primary" />,
     title: "Web Solutions",
     description:
-      "Crafting responsive, high-performance websites and web applications tailored to your business needs.",
+      "I craft responsive, high-performance websites and web applications tailored to your business needs using modern technologies like React, Next.js, and Node.js.",
   },
   {
     icon: <Smartphone className="h-8 w-8 mb-4 text-primary" />,
     title: "Mobile App Development",
     description:
-      "Building intuitive and engaging mobile experiences for both iOS and Android platforms.",
+      "I build intuitive and engaging cross-platform mobile experiences for both iOS and Android, leveraging frameworks like React Native and Firebase.",
   },
   {
     icon: <BarChartBig className="h-8 w-8 mb-4 text-primary" />,
     title: "Data Insight & Visualization",
     description:
-      "Transforming complex datasets into clear, actionable insights through powerful visualizations.",
+      "I transform complex datasets into clear, actionable insights through powerful visualizations, helping you make data-driven decisions.",
   },
   {
     icon: <Briefcase className="h-8 w-8 mb-4 text-primary" />,
     title: "Custom Solutions",
     description:
-      "Developing bespoke software solutions to solve unique challenges and drive business growth.",
+      "I develop bespoke software solutions to solve your unique challenges and drive business growth, ensuring a perfect fit for your requirements.",
   },
 ];
 
 const ServicesSection = () => (
-  <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
     <div className="max-w-6xl mx-auto">
       <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12">
         Services I Offer
@@ -232,42 +180,36 @@ const projects = [
     title: "Insight Dashboard",
     description:
       "A powerful data visualization platform for analyzing business metrics and trends in real-time.",
-    tags: ["React", "D3.js", "Node.js", "PostgreSQL"],
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "https://picsum.photos/seed/2/600/400",
     imageHint: "data dashboard",
     liveUrl: "#",
-    githubUrl: "#",
   },
   {
     title: "Mobile POS System",
     description:
       "An intuitive point-of-sale application for small businesses, available on both iOS and Android.",
-    tags: ["React Native", "Firebase", "Stripe API"],
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "https://picsum.photos/seed/3/600/400",
     imageHint: "mobile payment",
     liveUrl: "#",
-    githubUrl: "#",
   },
   {
     title: "Corporate Website Redesign",
     description:
       "A modern, performant, and SEO-friendly marketing website for a leading tech company.",
-    tags: ["Next.js", "Tailwind CSS", "Sanity CMS"],
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "https://picsum.photos/seed/4/600/400",
     imageHint: "corporate website",
     liveUrl: "#",
-    githubUrl: "#",
   },
 ];
 
 const PortfolioSection = () => (
   <section
     id="portfolio"
-    className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50"
+    className="py-20 px-4 sm:px-6 lg:px-8"
   >
     <div className="max-w-6xl mx-auto">
       <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12">
-        My Portfolio
+        Featured Projects
       </h2>
       <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
@@ -285,16 +227,9 @@ const PortfolioSection = () => (
             />
             <CardHeader>
               <CardTitle className="font-headline">{project.title}</CardTitle>
-              <CardDescription>{project.description}</CardDescription>
             </CardHeader>
             <CardContent className="flex-1">
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <Badge key={tag} variant="secondary">
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
+              <p className="text-muted-foreground">{project.description}</p>
             </CardContent>
             <CardFooter className="flex justify-end gap-2">
               <Button asChild variant="outline">
@@ -302,22 +237,22 @@ const PortfolioSection = () => (
                   <ExternalLink className="mr-2 h-4 w-4" /> Live View
                 </Link>
               </Button>
-              <Button asChild>
-                <Link href={project.githubUrl} target="_blank">
-                  <Github className="mr-2 h-4 w-4" /> GitHub
-                </Link>
-              </Button>
             </CardFooter>
           </Card>
         ))}
+      </div>
+      <div className="text-center mt-12">
+        <Button asChild size="lg">
+          <Link href="/projects">View More Projects</Link>
+        </Button>
       </div>
     </div>
   </section>
 );
 
 const ContactSection = () => (
-  <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
-    <div className="max-w-xl mx-auto">
+  <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
+    <div className="max-w-6xl mx-auto">
       <div className="text-center mb-12">
         <h2 className="font-headline text-4xl md:text-5xl font-bold">
           Get In Touch
@@ -326,36 +261,61 @@ const ContactSection = () => (
           Have a project in mind? I'd love to hear from you.
         </p>
       </div>
-      <Card>
-        <CardContent className="p-6">
-          <ContactForm />
-        </CardContent>
-        <CardFooter className="flex flex-col gap-6 pt-6">
-          <p className="text-sm text-muted-foreground">
-            You can also reach me on
-          </p>
-          <div className="flex gap-4">
-            <Button asChild variant="outline" size="icon">
-              <Link href="#" aria-label="GitHub">
-                <Github className="h-5 w-5" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="icon">
-              <Link href="#" aria-label="LinkedIn">
-                <Linkedin className="h-5 w-5" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="icon">
-              <Link href="mailto:contact@sps.studio" aria-label="Email">
-                <Mail className="h-5 w-5" />
-              </Link>
-            </Button>
+      <Card className="overflow-hidden">
+        <div className="grid md:grid-cols-2">
+          <div className="p-8 bg-muted/50">
+            <h3 className="font-headline text-2xl font-bold mb-6">Contact Information</h3>
+            <div className="space-y-4 text-muted-foreground">
+              <div className="flex items-start gap-4">
+                <LocateIcon className="h-6 w-6 text-primary mt-1" />
+                <div>
+                  <h4 className="font-semibold text-foreground">Location</h4>
+                    <p>San Francisco, CA</p>
+                    <p>United States</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <Mail className="h-6 w-6 text-primary mt-1" />
+                <div>
+                  <h4 className="font-semibold text-foreground">Email</h4>
+                  <a href="mailto:contact@sps.studio" className="hover:text-primary">
+                    contact@sps.studio
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <Phone className="h-6 w-6 text-primary mt-1" />
+                <div>
+                  <h4 className="font-semibold text-foreground">Phone</h4>
+                  <p>(555) 123-4567</p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-8">
+                <h4 className="font-semibold text-foreground mb-4">Follow Me</h4>
+                <div className="flex gap-4">
+                <Button asChild variant="outline" size="icon">
+                  <Link href="#" aria-label="GitHub">
+                    <Github className="h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="icon">
+                  <Link href="#" aria-label="LinkedIn">
+                    <Linkedin className="h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
           </div>
-        </CardFooter>
+          <div className="p-8">
+            <ContactForm />
+          </div>
+        </div>
       </Card>
     </div>
   </section>
 );
+
 
 const Footer = () => (
   <footer className="py-6 px-4 sm:px-6 lg:px-8 border-t">
@@ -372,7 +332,6 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <AboutSection />
-        <SkillsSection />
         <ServicesSection />
         <PortfolioSection />
         <ContactSection />
@@ -381,3 +340,5 @@ export default function Home() {
     </div>
   );
 }
+
+    

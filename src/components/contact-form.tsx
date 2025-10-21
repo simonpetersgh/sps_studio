@@ -1,3 +1,4 @@
+
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -71,7 +72,7 @@ export function ContactForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
           name="name"
@@ -119,7 +120,7 @@ export function ContactForm() {
               <FormLabel>Message</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Tell us about your project..."
+                  placeholder="Tell me about your project..."
                   className="min-h-[120px]"
                   {...field}
                 />
@@ -139,3 +140,5 @@ export function ContactForm() {
     </Form>
   );
 }
+
+    
