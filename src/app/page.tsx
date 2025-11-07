@@ -1,5 +1,6 @@
 
 
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -80,26 +81,26 @@ const Header = () => (
 );
 
 const HeroSection = () => (
-  <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center text-center text-white px-4 sm:px-6 lg:px-8">
+  <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center text-center text-white px-4 sm:px-6 lg:px-8 overflow-hidden">
     <div className="absolute inset-0">
       <Image
         src="https://picsum.photos/seed/hero/1920/1080"
         alt="Abstract background image"
         fill
-        className="object-cover"
+        className="object-cover animate-slow-zoom"
         data-ai-hint="abstract background"
         priority
       />
       <div className="absolute inset-0 bg-black/60" />
     </div>
     <div className="relative z-10 flex flex-col items-center">
-      <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight mb-4 max-w-4xl leading-tight">
+      <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight mb-4 max-w-4xl leading-tight animate-fade-in-up [animation-delay:0.2s]">
         Transforming Your Ideas into Powerful Digital Solutions
       </h1>
-      <p className="text-lg md:text-xl text-slate-300 max-w-2xl mb-8">
+      <p className="text-lg md:text-xl text-slate-300 max-w-2xl mb-8 animate-fade-in-up [animation-delay:0.4s]">
         I specialize in bridging the gap between data-driven insights and elegant user experiences, building web and mobile applications that are not just beautiful, but are smart, scalable, and solve real-world problems.
       </p>
-      <Button asChild size="lg">
+      <Button asChild size="lg" className="animate-fade-in-up [animation-delay:0.6s]">
         <Link href="#portfolio">Explore My Work</Link>
       </Button>
     </div>
@@ -371,4 +372,5 @@ export default function Home() {
     </div>
   );
 }
+
 
