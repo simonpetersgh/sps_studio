@@ -1,6 +1,7 @@
 
 
 
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -111,7 +112,7 @@ const HeroSection = () => (
 const AboutSection = () => (
   <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
     <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-      <div className="order-2 md:order-1">
+      <div className="order-2 md:order-1 animate-fade-in-up">
         <h2 className="font-headline text-4xl md:text-5xl font-bold mb-6">
           Hi, I'm Simon.
         </h2>
@@ -122,7 +123,7 @@ const AboutSection = () => (
           This analytical foundation now fuels my work in web and app development, allowing me to build not just beautiful, but also smart and effective digital solutions. I thrive on transforming complex problems into elegant, user-friendly experiences. Let's create something exceptional together.
         </p>
       </div>
-      <div className="flex justify-center order-1 md:order-2">
+      <div className="flex justify-center order-1 md:order-2 animate-fade-in-up [animation-delay:0.2s]">
         <Image
           src="/sp-re.png"
           alt="A portrait of Simon"
@@ -166,14 +167,15 @@ const services = [
 const ServicesSection = () => (
     <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
     <div className="max-w-6xl mx-auto">
-      <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12">
+      <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-in-up">
         What I Do
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {services.map((service) => (
+        {services.map((service, index) => (
           <Card
             key={service.title}
-            className="flex flex-col text-center items-center hover:shadow-lg transition-shadow duration-300"
+            className="flex flex-col text-center items-center hover:shadow-lg transition-shadow duration-300 animate-fade-in-up"
+            style={{ animationDelay: `${index * 0.15}s` }}
           >
             <CardHeader>
               {service.icon}
@@ -225,14 +227,15 @@ const PortfolioSection = () => (
     className="py-20 px-4 sm:px-6 lg:px-8"
   >
     <div className="max-w-6xl mx-auto">
-      <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12">
+      <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-in-up">
         Featured Projects
       </h2>
       <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <Card
             key={project.title}
-            className="overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300"
+            className="overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300 animate-fade-in-up"
+            style={{ animationDelay: `${index * 0.15}s` }}
           >
             <Image
               src={project.imageUrl}
@@ -258,7 +261,7 @@ const PortfolioSection = () => (
           </Card>
         ))}
       </div>
-      <div className="text-center mt-12">
+      <div className="text-center mt-12 animate-fade-in-up">
         <Button asChild size="lg">
           <Link href="/projects">View More Projects</Link>
         </Button>
@@ -270,7 +273,7 @@ const PortfolioSection = () => (
 const ContactSection = () => (
   <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
     <div className="max-w-3xl mx-auto">
-      <div className="text-center mb-12">
+      <div className="text-center mb-12 animate-fade-in-up">
         <h2 className="font-headline text-4xl md:text-5xl font-bold">
           Get In Touch
         </h2>
@@ -278,7 +281,7 @@ const ContactSection = () => (
           Have a project in mind? I'd love to hear from you.
         </p>
       </div>
-      <Card className="rounded-xl p-8">
+      <Card className="rounded-xl p-8 animate-fade-in-up [animation-delay:0.2s]">
         <ContactForm />
       </Card>
     </div>
@@ -374,3 +377,6 @@ export default function Home() {
 }
 
 
+
+
+    
