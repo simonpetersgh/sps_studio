@@ -1,4 +1,5 @@
 
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -51,8 +52,8 @@ const SpsLogo = (props: SVGProps<SVGSVGElement>) => (
 );
 
 const Header = () => (
-  <header className="py-4 px-4 sm:px-6 lg:px-8">
-    <nav className="flex justify-between items-center">
+  <header className="py-4 px-4 sm:px-6 lg:px-8 absolute top-0 left-0 right-0 z-10 bg-transparent">
+    <nav className="flex justify-between items-center max-w-7xl mx-auto">
       <Link href="/" className="flex items-center gap-2">
         <SpsLogo />
         <span className="font-headline text-xl font-bold">TheSPS</span>
@@ -79,21 +80,32 @@ const Header = () => (
 );
 
 const HeroSection = () => (
-  <section className="text-center py-20 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-    <SpsLogo className="w-24 h-24 mb-6" />
-    
-    <h1 className="font-headline text-3xl md:text-5xl font-bold tracking-tight mb-4">
-      Simon Peters Sakpla 
-    </h1>
-    <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
-      I design and develop digital solutions tailored to your business needs, from responsive web applications to 
-      scalable mobile apps.
-    </p>
-    <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-      <Link href="#portfolio">View My Work</Link>
-    </Button>
+  <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center text-center text-white px-4 sm:px-6 lg:px-8">
+    <div className="absolute inset-0">
+      <Image
+        src="https://picsum.photos/seed/hero/1920/1080"
+        alt="Abstract background image"
+        fill
+        className="object-cover"
+        data-ai-hint="abstract background"
+        priority
+      />
+      <div className="absolute inset-0 bg-black/60" />
+    </div>
+    <div className="relative z-10 flex flex-col items-center">
+      <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight mb-4 max-w-4xl leading-tight">
+        Transforming Your Ideas into Powerful Digital Solutions
+      </h1>
+      <p className="text-lg md:text-xl text-slate-300 max-w-2xl mb-8">
+        I specialize in bridging the gap between data-driven insights and elegant user experiences, building web and mobile applications that are not just beautiful, but are smart, scalable, and solve real-world problems.
+      </p>
+      <Button asChild size="lg">
+        <Link href="#portfolio">Explore My Work</Link>
+      </Button>
+    </div>
   </section>
 );
+
 
 const AboutSection = () => (
   <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -359,3 +371,4 @@ export default function Home() {
     </div>
   );
 }
+
