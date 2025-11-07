@@ -55,7 +55,7 @@ const Header = () => (
     <nav className="flex justify-between items-center">
       <Link href="/" className="flex items-center gap-2">
         <SpsLogo />
-        <span className="font-headline text-xl font-bold">SPS Studio</span>
+        <span className="font-headline text-xl font-bold">TheSPS</span>
       </Link>
       <div className="hidden md:flex items-center gap-4 text-sm font-medium">
         <Link href="#about" className="hover:text-primary transition-colors">
@@ -81,12 +81,13 @@ const Header = () => (
 const HeroSection = () => (
   <section className="text-center py-20 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
     <SpsLogo className="w-24 h-24 mb-6" />
-    <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight mb-4">
-      SPS Studio
+    
+    <h1 className="font-headline text-3xl md:text-5xl font-bold tracking-tight mb-4">
+      Simon Peters Sakpla 
     </h1>
     <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
-      I craft digital excellence, from insightful data analysis to seamless web
-      & app solutions.
+      I design and develop digital solutions tailored to your business needs, from responsive web applications to 
+      scalable mobile apps.
     </p>
     <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
       <Link href="#portfolio">View My Work</Link>
@@ -110,7 +111,7 @@ const AboutSection = () => (
       </div>
       <div className="flex justify-center order-1 md:order-2">
         <Image
-          src="https://picsum.photos/seed/1/400/400"
+          src="/sp-re.png"
           alt="A portrait of Simon"
           width={400}
           height={400}
