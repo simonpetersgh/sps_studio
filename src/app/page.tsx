@@ -55,7 +55,7 @@ const Header = () => (
     <nav className="flex justify-between items-center max-w-7xl mx-auto">
       <Link href="/" className="flex items-center gap-2">
         <SpsLogo />
-        <span className="font-headline text-xl font-bold">TheSPS</span>
+        <span className="font-headline text-xl font-bold">[Simon S. Peters]</span>
       </Link>
       <div className="hidden md:flex items-center gap-4 text-sm font-medium">
         <Link href="#about" className="hover:text-primary transition-colors">
@@ -104,7 +104,7 @@ const HeroSection = () => (
         Transforming Your Ideas into Powerful Digital Solutions
       </h1>
       <p className="text-lg md:text-xl text-slate-300 max-w-2xl mb-8 animate-fade-in-up [animation-delay:0.4s]">
-      I develop digital solutions that empower startups to establish an online presence, optimize performance and drive growth.
+      I develop digital solutions that empower startups to establish a strong online presence, optimize performance and drive growth.
       </p>
       <Button asChild size="lg" className="animate-fade-in-up [animation-delay:0.6s]">
         <Link href="#portfolio">Explore My Work</Link>
@@ -117,7 +117,13 @@ const HeroSection = () => (
 const AboutSection = () => (
   <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
     <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-      <div className="order-2 md:order-1 animate-fade-in-up">
+      <div className="order-2 md:order-1 animate-fade-in-up text-center md:text-left">
+        <Badge
+          variant="outline"
+          className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
+        >
+          About Me
+        </Badge>
         <h2 className="font-headline text-4xl md:text-5xl font-bold mb-6">
           Hi, I'm Simon.
         </h2>
@@ -171,10 +177,18 @@ const services = [
 
 const ServicesSection = () => (
     <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
-    <div className="max-w-6xl mx-auto">
-      <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-in-up">
-        What I Do
-      </h2>
+    <div className="max-w-6xl mx-auto text-center">
+      <div className="animate-fade-in-up mb-12">
+        <Badge
+          variant="outline"
+          className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
+        >
+          My Expertise
+        </Badge>
+        <h2 className="font-headline text-4xl md:text-5xl font-bold">
+          What I Do
+        </h2>
+      </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {services.map((service, index) => (
           <Card
@@ -231,11 +245,19 @@ const PortfolioSection = () => (
     id="portfolio"
     className="py-20 px-4 sm:px-6 lg:px-8"
   >
-    <div className="max-w-6xl mx-auto">
-      <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-in-up">
-        Featured Projects
-      </h2>
-      <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+    <div className="max-w-6xl mx-auto text-center">
+      <div className="mb-12 animate-fade-in-up">
+        <Badge
+          variant="outline"
+          className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
+        >
+          My Work
+        </Badge>
+        <h2 className="font-headline text-4xl md:text-5xl font-bold">
+          Featured Projects
+        </h2>
+      </div>
+      <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 text-left">
         {projects.map((project, index) => (
           <Card
             key={project.title}
@@ -279,6 +301,12 @@ const ContactSection = () => (
   <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
     <div className="max-w-3xl mx-auto">
       <div className="text-center mb-12 animate-fade-in-up">
+        <Badge
+          variant="outline"
+          className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
+        >
+          Let's Connect
+        </Badge>
         <h2 className="font-headline text-4xl md:text-5xl font-bold">
           Get In Touch
         </h2>
