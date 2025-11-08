@@ -1,7 +1,4 @@
 
-
-
-
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -95,6 +92,14 @@ const HeroSection = () => (
       <div className="absolute inset-0 bg-black/60" />
     </div>
     <div className="relative z-10 flex flex-col items-center">
+      <div className="animate-fade-in-up">
+        <Badge
+          variant="outline"
+          className="text-lg md:text-xl font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
+        >
+          Business Analyst & Software Developer
+        </Badge>
+      </div>
       <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight mb-4 max-w-4xl leading-tight animate-fade-in-up [animation-delay:0.2s]">
         Transforming Your Ideas into Powerful Digital Solutions
       </h1>
@@ -160,7 +165,7 @@ const services = [
     icon: <Briefcase className="h-8 w-8 mb-4 text-primary" />,
     title: "Custom Solutions",
     description:
-      "I develop bespoke software solutions to solve your unique challenges and drive business growth, ensuring a perfect fit for your requirements.",
+      "I develop bespoke software solutions to solve your unique challenges and drive business-growth, ensuring a perfect fit for your requirements.",
   },
 ];
 
@@ -375,8 +380,3 @@ export default function Home() {
     </div>
   );
 }
-
-
-
-
-    
