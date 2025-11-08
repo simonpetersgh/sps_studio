@@ -71,7 +71,7 @@ const Header = () => (
           Contact
         </Link>
       </div>
-      <Button asChild className="hidden md:block" variant="outline">
+      <Button asChild className="hidden md:block" variant="default">
         <Link href="#contact">Get In Touch</Link>
       </Button>
     </nav>
@@ -82,7 +82,7 @@ const HeroSection = () => (
   <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center text-center text-white px-4 sm:px-6 lg:px-8 overflow-hidden">
     <div className="absolute inset-0">
       <Image
-        src="https://firebasestorage.googleapis.com/v0/b/sesa-studio.firebasestorage.app/o/sps-studio%2Fcover.png?alt=media&token=bd8b865e-2f41-41af-a3c1-5dabbf66aa60"
+        src="https://firebasestorage.googleapis.com/v0/b/sesa-studio.firebasestorage.app/o/sps-studio%2Fcover-3.png?alt=media&token=949857a4-ed32-4151-a458-13ee7a589482"
         alt="Abstract background image"
         fill
         className="object-cover animate-slow-zoom"
@@ -100,13 +100,13 @@ const HeroSection = () => (
           Business Analyst & Software Developer
         </Badge>
       </div>
-      <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight mb-4 max-w-4xl leading-tight animate-fade-in-up [animation-delay:0.2s]">
-        Transforming Your Ideas into Powerful Digital Solutions
+      <h1 className="font-headline text-4xl md:text-6xl font-bold text-primary/90 tracking-tight mb-4 max-w-4xl leading-tight animate-fade-in-up [animation-delay:0.2s]">
+        Transforming Ideas into Powerful Digital Solutions
       </h1>
       <p className="text-lg md:text-xl text-slate-300 max-w-2xl mb-8 animate-fade-in-up [animation-delay:0.4s]">
       I develop digital solutions that empower startups to establish a strong online presence, optimize performance and drive growth.
       </p>
-      <Button asChild size="lg" className="animate-fade-in-up [animation-delay:0.6s]">
+      <Button asChild size="lg" className="animate-fade-in-up [animation-delay:0.6s]" variant="default">
         <Link href="#portfolio">Explore My Work</Link>
       </Button>
     </div>
@@ -122,7 +122,7 @@ const AboutSection = () => (
           variant="outline"
           className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
         >
-          About Me
+          Hii, I'm Simon
         </Badge>
         <h2 className="font-headline text-4xl md:text-5xl font-bold mb-6">
           Hi, I'm Simon.
@@ -203,9 +203,9 @@ const ServicesSection = () => (
             <CardContent className="flex-1">
               <p className="text-muted-foreground">{service.description}</p>
             </CardContent>
-            <CardFooter>
+            {/* <CardFooter>
               <Button variant="link">Learn More</Button>
-            </CardFooter>
+            </CardFooter> */}
           </Card>
         ))}
       </div>
@@ -289,7 +289,7 @@ const PortfolioSection = () => (
         ))}
       </div>
       <div className="text-center mt-12 animate-fade-in-up">
-        <Button asChild size="lg">
+        <Button asChild size="lg" variant="default">
           <Link href="/projects">View More Projects</Link>
         </Button>
       </div>
@@ -331,7 +331,7 @@ const Footer = () => (
               <span className="font-headline text-xl font-bold text-foreground">SPS Studio</span>
           </div>
           <p className="text-sm">
-            Crafting digital excellence, from insightful data analysis to seamless web & app solutions.
+            Crafting digital excellence, from needs-focused requirement analysis to seamless web & app solutions.
           </p>
         </div>
 
