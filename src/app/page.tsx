@@ -85,7 +85,7 @@ const HeroSection = () => (
   <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center text-center text-white px-4 sm:px-6 lg:px-8 overflow-hidden">
     <div className="absolute inset-0">
       <Image
-        src="https://picsum.photos/seed/hero/1920/1080"
+        src="https://firebasestorage.googleapis.com/v0/b/sesa-studio.firebasestorage.app/o/sps-studio%2Fcover.png?alt=media&token=bd8b865e-2f41-41af-a3c1-5dabbf66aa60"
         alt="Abstract background image"
         fill
         className="object-cover animate-slow-zoom"
@@ -99,7 +99,7 @@ const HeroSection = () => (
         Transforming Your Ideas into Powerful Digital Solutions
       </h1>
       <p className="text-lg md:text-xl text-slate-300 max-w-2xl mb-8 animate-fade-in-up [animation-delay:0.4s]">
-        I specialize in bridging the gap between data-driven insights and elegant user experiences, building web and mobile applications that are not just beautiful, but are smart, scalable, and solve real-world problems.
+      I develop digital solutions that empower startups to establish an online presence, optimize performance and drive growth.
       </p>
       <Button asChild size="lg" className="animate-fade-in-up [animation-delay:0.6s]">
         <Link href="#portfolio">Explore My Work</Link>
