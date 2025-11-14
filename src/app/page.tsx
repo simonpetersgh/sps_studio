@@ -46,7 +46,35 @@ const SpsLogo = (props: SVGProps<SVGSVGElement>) => (
 );
 
 const Header = () => (
-  <header className="py-4 px-4 sm:px-6 lg:px-8 absolute top-0 left-0 right-0 z-10 bg-transparent">
+  <header className="py-4 px-4 sm:px-6 lg:px-8 absolute top-0 left-0 right-0 z-10 bg-transparent text-white group">
+    <nav className="flex justify-between items-center max-w-7xl mx-auto">
+      <Link href="/" className="flex items-center gap-2">
+        <SpsLogo />
+        <span className="font-headline text-xl font-bold">[Simon S. Peters]</span>
+      </Link>
+      <div className="hidden md:flex items-center gap-4 text-sm font-medium">
+        <Link href="#about" className="hover:text-primary transition-colors">
+          About
+        </Link>
+        <Link href="#services" className="hover:text-primary transition-colors">
+          Services
+        </Link>
+        <Link href="#portfolio" className="hover:text-primary transition-colors">
+          Projects
+        </Link>
+        <Link href="/contact" className="hover:text-primary transition-colors">
+          Contact
+        </Link>
+      </div>
+      <Button asChild className="hidden md:block bg-transparent border-white text-white hover:bg-white hover:text-black" variant="outline">
+        <Link href="/contact">Get In Touch</Link>
+      </Button>
+    </nav>
+  </header>
+);
+
+const StickyHeader = () => (
+  <header className="py-4 px-4 sm:px-6 lg:px-8 sticky top-0 z-20 bg-background/80 backdrop-blur-sm border-b">
     <nav className="flex justify-between items-center max-w-7xl mx-auto">
       <Link href="/" className="flex items-center gap-2">
         <SpsLogo />
@@ -101,7 +129,7 @@ const HeroSection = () => (
       <p className="text-lg md:text-xl text-slate-300 max-w-2xl mb-8 animate-fade-in-up [animation-delay:0.4s]">
       I develop digital solutions that empower startups to establish a strong online presence, optimize performance and drive growth.
       </p>
-      <Button asChild size="lg" className="animate-fade-in-up [animation-delay:0.6s]" variant="outline">
+      <Button asChild size="lg" className="animate-fade-in-up [animation-delay:0.6s] bg-transparent border-white text-white hover:bg-white hover:text-black" variant="outline">
         <Link href="#portfolio">Explore My Work</Link>
       </Button>
     </div>
@@ -390,14 +418,17 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-dvh bg-background">
       <Header />
-      <main className="flex-1">
-        <HeroSection />
-        <AboutSection />
-        <ServicesSection />
-        <PortfolioSection />
-        <ContactReferrerSection />
-      </main>
-      <Footer />
+      <div className="block" id="page-content">
+        <StickyHeader />
+        <main className="flex-1">
+          <HeroSection />
+          <AboutSection />
+          <ServicesSection />
+          <PortfolioSection />
+          <ContactReferrerSection />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }
