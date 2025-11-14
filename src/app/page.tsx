@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -177,21 +176,21 @@ const services = [
     title: "Web Solutions",
     description:
       "Crafting responsive, high-performance websites and web applications tailored to your business needs.",
-    link: "/services/web-solutions",
+    link: "/services#web-solutions",
   },
   {
     icon: <Smartphone className="h-8 w-8 mb-4 text-primary" />,
     title: "Mobile App Development",
     description:
       "Building intuitive and engaging cross-platform mobile experiences for both iOS and Android.",
-      link: "/services/mobile-applications",
+      link: "/services#mobile-applications",
   },
   {
     icon: <Briefcase className="h-8 w-8 mb-4 text-primary" />,
     title: "Custom Business Software",
     description:
       "Developing bespoke software solutions to solve your unique challenges and drive business growth.",
-      link: "/services/custom-business-software",
+      link: "/services#custom-business-software",
   },
 ];
 
@@ -432,3 +431,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
