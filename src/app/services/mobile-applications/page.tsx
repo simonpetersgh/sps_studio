@@ -33,7 +33,7 @@ const Header = () => (
           <span className="font-headline text-xl font-bold">SPS Studio</span>
         </Link>
         <Button asChild variant="outline">
-          <Link href="/#contact">Get In Touch</Link>
+          <Link href="/contact">Get In Touch</Link>
         </Button>
       </nav>
     </header>
@@ -91,7 +91,7 @@ export default function MobileAppsPage() {
                                     </div>
                                 </div>
                                 <Button asChild size="lg">
-                                    <Link href="/#contact">Discuss Your App Idea</Link>
+                                    <Link href="/contact">Discuss Your App Idea</Link>
                                 </Button>
                             </div>
                              <div className="flex justify-center">

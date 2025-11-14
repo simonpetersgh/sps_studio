@@ -33,7 +33,7 @@ const Header = () => (
           <span className="font-headline text-xl font-bold">SPS Studio</span>
         </Link>
         <Button asChild variant="outline">
-          <Link href="/#contact">Get In Touch</Link>
+          <Link href="/contact">Get In Touch</Link>
         </Button>
       </nav>
     </header>
@@ -103,7 +103,7 @@ export default function CustomSoftwarePage() {
                                     ))}
                                 </ul>
                                 <Button asChild size="lg">
-                                    <Link href="/#contact">Book a Consultation</Link>
+                                    <Link href="/contact">Book a Consultation</Link>
                                 </Button>
                             </div>
                         </div>

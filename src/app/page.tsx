@@ -9,7 +9,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ContactForm } from "@/components/contact-form";
 import {
   Briefcase,
   ExternalLink,
@@ -63,12 +62,12 @@ const Header = () => (
         <Link href="#portfolio" className="hover:text-primary transition-colors">
           Projects
         </Link>
-        <Link href="#contact" className="hover:text-primary transition-colors">
+        <Link href="/contact" className="hover:text-primary transition-colors">
           Contact
         </Link>
       </div>
       <Button asChild className="hidden md:block" variant="outline">
-        <Link href="#contact">Get In Touch</Link>
+        <Link href="/contact">Get In Touch</Link>
       </Button>
     </nav>
   </header>
@@ -292,31 +291,6 @@ const PortfolioSection = () => (
   </section>
 );
 
-const ContactSection = () => (
-  <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
-    <div className="max-w-3xl mx-auto">
-      <div className="text-center mb-12 animate-fade-in-up">
-        <Badge
-          variant="outline"
-          className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
-        >
-          Let's Connect
-        </Badge>
-        <h2 className="font-headline text-4xl md:text-5xl font-bold">
-          Get In Touch
-        </h2>
-        <p className="mt-4 text-lg text-muted-foreground">
-          Have a project in mind? I'd love to hear from you.
-        </p>
-      </div>
-      <Card className="rounded-xl p-8 animate-fade-in-up [animation-delay:0.2s]">
-        <ContactForm />
-      </Card>
-    </div>
-  </section>
-);
-
-
 const Footer = () => (
     <footer className="bg-muted text-muted-foreground py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -397,7 +371,6 @@ export default function Home() {
         <AboutSection />
         <ServicesSection />
         <PortfolioSection />
-        <ContactSection />
       </main>
       <Footer />
     </div>

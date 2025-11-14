@@ -32,7 +32,7 @@ const Header = () => (
           <span className="font-headline text-xl font-bold">SPS Studio</span>
         </Link>
         <Button asChild variant="outline">
-          <Link href="/#contact">Get In Touch</Link>
+          <Link href="/contact">Get In Touch</Link>
         </Button>
       </nav>
     </header>
@@ -143,7 +143,7 @@ export default function WebSolutionsPage() {
                                     </CardContent>
                                     <CardFooter>
                                         <Button asChild className="w-full" variant={pkg.popular ? 'default' : 'outline'}>
-                                            <Link href="/#contact">Get Started</Link>
+                                            <Link href="/contact">Get Started</Link>
                                         </Button>
                                     </CardFooter>
                                 </Card>
