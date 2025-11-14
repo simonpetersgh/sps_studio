@@ -291,6 +291,30 @@ const PortfolioSection = () => (
   </section>
 );
 
+const ContactReferrerSection = () => (
+    <section id="contact-referrer" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
+        <div className="max-w-4xl mx-auto text-center">
+            <div className="animate-fade-in-up">
+                <Badge
+                  variant="outline"
+                  className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
+                >
+                  Have a project in mind?
+                </Badge>
+                <h2 className="font-headline text-4xl md:text-5xl font-bold mb-6">
+                  Let's Build Something Great Together
+                </h2>
+                <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+                  I'm currently available for freelance work and new projects. If you want to chat about an idea or just say hi, I'd love to hear from you.
+                </p>
+                <Button asChild size="lg" variant="outline">
+                    <Link href="/contact">Get In Touch</Link>
+                </Button>
+            </div>
+        </div>
+    </section>
+);
+
 const Footer = () => (
     <footer className="bg-muted text-muted-foreground py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -371,6 +395,7 @@ export default function Home() {
         <AboutSection />
         <ServicesSection />
         <PortfolioSection />
+        <ContactReferrerSection />
       </main>
       <Footer />
     </div>
