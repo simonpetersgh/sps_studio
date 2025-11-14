@@ -11,10 +11,7 @@ import {
 } from "@/components/ui/card";
 import { ContactForm } from "@/components/contact-form";
 import {
-  BarChartBig,
   Briefcase,
-  Code2,
-  Database,
   ExternalLink,
   Facebook,
   Github,
@@ -26,7 +23,6 @@ import {
   Phone,
   Smartphone,
   Twitter,
-  Wrench,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -71,7 +67,7 @@ const Header = () => (
           Contact
         </Link>
       </div>
-      <Button asChild className="hidden md:block" variant="default">
+      <Button asChild className="hidden md:block" variant="outline">
         <Link href="#contact">Get In Touch</Link>
       </Button>
     </nav>
@@ -106,7 +102,7 @@ const HeroSection = () => (
       <p className="text-lg md:text-xl text-slate-300 max-w-2xl mb-8 animate-fade-in-up [animation-delay:0.4s]">
       I develop digital solutions that empower startups to establish a strong online presence, optimize performance and drive growth.
       </p>
-      <Button asChild size="lg" className="animate-fade-in-up [animation-delay:0.6s]" variant="default">
+      <Button asChild size="lg" className="animate-fade-in-up [animation-delay:0.6s]" variant="outline">
         <Link href="#portfolio">Explore My Work</Link>
       </Button>
     </div>
@@ -153,25 +149,22 @@ const services = [
     icon: <LayoutTemplate className="h-8 w-8 mb-4 text-primary" />,
     title: "Web Solutions",
     description:
-      "I craft responsive, high-performance websites and web applications tailored to your business needs using modern technologies like React, Next.js, and Node.js.",
+      "Crafting responsive, high-performance websites and web applications tailored to your business needs.",
+    link: "/services/web-solutions",
   },
   {
     icon: <Smartphone className="h-8 w-8 mb-4 text-primary" />,
     title: "Mobile App Development",
     description:
-      "I build intuitive and engaging cross-platform mobile experiences for both iOS and Android, leveraging frameworks like React Native and Firebase.",
-  },
-  {
-    icon: <BarChartBig className="h-8 w-8 mb-4 text-primary" />,
-    title: "Data Insight & Visualization",
-    description:
-      "I transform complex datasets into clear, actionable insights through powerful visualizations, helping you make data-driven decisions.",
+      "Building intuitive and engaging cross-platform mobile experiences for both iOS and Android.",
+      link: "/services/mobile-applications",
   },
   {
     icon: <Briefcase className="h-8 w-8 mb-4 text-primary" />,
-    title: "Custom Solutions",
+    title: "Custom Business Software",
     description:
-      "I develop bespoke software solutions to solve your unique challenges and drive business-growth, ensuring a perfect fit for your requirements.",
+      "Developing bespoke software solutions to solve your unique challenges and drive business growth.",
+      link: "/services/custom-business-software",
   },
 ];
 
@@ -189,7 +182,7 @@ const ServicesSection = () => (
           What I Do
         </h2>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid md:grid-cols-3 gap-8 justify-center">
         {services.map((service, index) => (
           <Card
             key={service.title}
@@ -203,9 +196,11 @@ const ServicesSection = () => (
             <CardContent className="flex-1">
               <p className="text-muted-foreground">{service.description}</p>
             </CardContent>
-            {/* <CardFooter>
-              <Button variant="link">Learn More</Button>
-            </CardFooter> */}
+            <CardFooter>
+              <Button asChild variant="link">
+                <Link href={service.link}>Learn More</Link>
+              </Button>
+            </CardFooter>
           </Card>
         ))}
       </div>
@@ -289,7 +284,7 @@ const PortfolioSection = () => (
         ))}
       </div>
       <div className="text-center mt-12 animate-fade-in-up">
-        <Button asChild size="lg" variant="default">
+        <Button asChild size="lg" variant="outline">
           <Link href="/projects">View More Projects</Link>
         </Button>
       </div>
