@@ -1,3 +1,4 @@
+
 "use client"
 
 import * as React from "react"
@@ -88,6 +89,7 @@ SheetContent.displayName = SheetPrimitive.Content.displayName
 
 const SheetHeader = ({
   className,
+  children,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => {
   const titleId = React.useId();
@@ -102,7 +104,19 @@ const SheetHeader = ({
           className
         )}
         {...props}
-      />
+      >
+        {React.Children.map(children, (child) => {
+            if (React.isValidElement(child)) {
+                if (child.type === SheetTitle) {
+                    return React.cloneElement(child, { id: titleId } as React.HTMLAttributes<HTMLHeadingElement>);
+                }
+                if (child.type === SheetDescription) {
+                    return React.cloneElement(child, { id: descriptionId } as React.HTMLAttributes<HTMLParagraphElement>);
+                }
+            }
+            return child;
+        })}
+      </div>
     </SheetHeaderContext.Provider>
   );
 };
@@ -125,33 +139,25 @@ SheetFooter.displayName = "SheetFooter"
 const SheetTitle = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
->(({ className, ...props }, ref) => {
-  const headerContext = React.useContext(SheetHeaderContext);
-  return (
+>(({ className, ...props }, ref) => (
     <SheetPrimitive.Title
       ref={ref}
-      id={headerContext?.titleId}
       className={cn("text-lg font-semibold text-foreground", className)}
       {...props}
     />
-  );
-});
+));
 SheetTitle.displayName = SheetPrimitive.Title.displayName
 
 const SheetDescription = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>
->(({ className, ...props }, ref) => {
-  const headerContext = React.useContext(SheetHeaderContext);
-  return (
+>(({ className, ...props }, ref) => (
     <SheetPrimitive.Description
       ref={ref}
-      id={headerContext?.descriptionId}
       className={cn("text-sm text-muted-foreground", className)}
       {...props}
     />
-  );
-});
+));
 SheetDescription.displayName = SheetPrimitive.Description.displayName
 
 export {

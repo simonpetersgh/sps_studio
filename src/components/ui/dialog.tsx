@@ -1,3 +1,4 @@
+
 "use client"
 
 import * as React from "react"
@@ -67,6 +68,7 @@ DialogContent.displayName = DialogPrimitive.Content.displayName
 
 const DialogHeader = ({
   className,
+  children,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => {
   const titleId = React.useId();
@@ -81,7 +83,19 @@ const DialogHeader = ({
           className
         )}
         {...props}
-      />
+      >
+        {React.Children.map(children, (child) => {
+            if (React.isValidElement(child)) {
+                if (child.type === DialogTitle) {
+                    return React.cloneElement(child, { id: titleId } as React.HTMLAttributes<HTMLHeadingElement>);
+                }
+                if (child.type === DialogDescription) {
+                    return React.cloneElement(child, { id: descriptionId } as React.HTMLAttributes<HTMLParagraphElement>);
+                }
+            }
+            return child;
+        })}
+      </div>
     </DialogHeaderContext.Provider>
   );
 };
@@ -104,36 +118,28 @@ DialogFooter.displayName = "DialogFooter"
 const DialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
->(({ className, ...props }, ref) => {
-  const headerContext = React.useContext(DialogHeaderContext);
-  return (
+>(({ className, ...props }, ref) => (
     <DialogPrimitive.Title
       ref={ref}
-      id={headerContext?.titleId}
       className={cn(
         "text-lg font-semibold leading-none tracking-tight",
         className
       )}
       {...props}
     />
-  );
-});
+));
 DialogTitle.displayName = DialogPrimitive.Title.displayName
 
 const DialogDescription = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>
->(({ className, ...props }, ref) => {
-  const headerContext = React.useContext(DialogHeaderContext);
-  return (
+>(({ className, ...props }, ref) => (
     <DialogPrimitive.Description
       ref={ref}
-      id={headerContext?.descriptionId}
       className={cn("text-sm text-muted-foreground", className)}
       {...props}
     />
-  );
-});
+));
 DialogDescription.displayName = DialogPrimitive.Description.displayName
 
 export {
