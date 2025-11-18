@@ -257,7 +257,7 @@ const projects = [
       "A modern, performant, and SEO-friendly marketing website for a fashion brand in Accra.",
     imageUrl: "https://teesvividthread.com/og-image.png",
     imageHint: "corporate website",
-    liveUrl: "www.teesvividthread.com",
+    liveUrl: "https://www.teesvividthread.com",
   },
 ];
 
