@@ -195,7 +195,7 @@ const HeroSection = () => (
         [Simon Peters Sakpla]
       </h1>
       <p className="text-lg md:text-xl text-slate-300 max-w-2xl mb-8 animate-fade-in-up [animation-delay:0.4s]">
-      I develop web and mobile applications that empower individuals and startups to establish a strong online presenceand drive growth.
+      Developing web and mobile applications that empower individuals and startups to establish a strong online presence and drive business growth.
       </p>
       <Button asChild size="lg" className="animate-fade-in-up [animation-delay:0.6s] bg-transparent border-white text-white hover:bg-primary hover:text-black" variant="outline">
         <Link href="#portfolio">Explore My Works</Link>
