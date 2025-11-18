@@ -268,7 +268,7 @@ const ServicesSection = () => (
         >
           My Expertise
         </Badge> */}
-        <h2 className="font-headline text-4xl md:text-5xl font-bold">
+        <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
           How I Can Help?
         </h2>
       </div>
@@ -338,7 +338,7 @@ const PortfolioSection = () => (
         >
           My Work
         </Badge> */}
-        <h2 className="font-headline text-4xl md:text-5xl font-bold">
+        <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
           Featured Projects
         </h2>
       </div>
@@ -392,11 +392,11 @@ const ContactReferrerSection = () => (
                 >
                   Have a project in mind?
                 </Badge> */}
-                <h2 className="font-headline text-4xl md:text-5xl font-bold mb-6">
+                <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold mb-6">
                   Let's Turn Your Idea into a Solution
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  I am available for freelance work and new projects. You can feel free to contact me about your ideas or needs. I'd love to hear from you.
+                  I am available for freelance work and new projects. Feel free to contact me about your ideas or needs; I'd love to hear from you.
                 </p>
                 <Button asChild size="lg" variant="outline">
                     <Link href="/contact">Get In Touch Now</Link>

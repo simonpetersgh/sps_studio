@@ -44,9 +44,7 @@ const Header = () => (
         <Link href="/#portfolio" className="hover:text-primary transition-colors">
           Projects
         </Link>
-        <Link href="/contact" className="hover:text-primary transition-colors">
-          Contact
-        </Link>
+        
       </div>
       <div className="md:hidden">
         <Sheet>
@@ -71,9 +69,7 @@ const Header = () => (
                     <Link href="/#portfolio" className="text-lg font-medium hover:text-primary transition-colors">
                       Projects
                     </Link>
-                    <Link href="/contact" className="text-lg font-medium hover:text-primary transition-colors">
-                      Contact
-                    </Link>
+                    
                 </div>
                 <Button asChild className="w-full" variant="outline">
                     <Link href="/contact">Get In Touch</Link>
