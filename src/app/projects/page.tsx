@@ -81,7 +81,7 @@ const Header = () => (
     <nav className="flex justify-between items-center max-w-7xl mx-auto">
       <Link href="/" className="flex items-center gap-2">
         <SpsLogo />
-        <span className="font-headline text-xl font-bold">[Simon S. Peters]</span>
+        <span className="font-headline text-xl font-bold">Simon S. Peters</span>
       </Link>
       <div className="hidden md:flex items-center gap-4 text-sm font-medium">
         <Link href="/#about" className="hover:text-primary transition-colors">

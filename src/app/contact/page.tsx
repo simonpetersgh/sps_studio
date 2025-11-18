@@ -30,7 +30,7 @@ const Header = () => (
     <nav className="flex justify-between items-center max-w-7xl mx-auto">
       <Link href="/" className="flex items-center gap-2">
         <SpsLogo />
-        <span className="font-headline text-xl font-bold">[Simon S. Peters]</span>
+        <span className="font-headline text-xl font-bold">Simon S. Peters</span>
       </Link>
       <div className="hidden md:flex items-center gap-4 text-sm font-medium">
         <Link href="/#about" className="hover:text-primary transition-colors">
@@ -128,12 +128,12 @@ const ContactSection = () => (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12 animate-fade-in-up">
-          <Badge
+          {/* <Badge
             variant="outline"
             className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
           >
             Let's Connect
-          </Badge>
+          </Badge> */}
           <h2 className="font-headline text-4xl md:text-5xl font-bold">
             Get In Touch
           </h2>

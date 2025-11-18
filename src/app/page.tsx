@@ -49,7 +49,7 @@ const Header = () => (
     <nav className="flex justify-between items-center max-w-7xl mx-auto">
       <Link href="/" className="flex items-center gap-2">
         <SpsLogo />
-        <span className="font-headline text-xl font-bold">[Simon S. Peters]</span>
+        <span className="font-headline text-xl font-bold">Simon S. Peters</span>
       </Link>
       <div className="hidden md:flex items-center gap-4 text-sm font-medium">
         <Link href="#about" className="hover:text-primary transition-colors">
@@ -77,7 +77,7 @@ const StickyHeader = () => (
     <nav className="flex justify-between items-center max-w-7xl mx-auto">
       <Link href="/" className="flex items-center gap-2">
         <SpsLogo />
-        <span className="font-headline text-xl font-bold">[Simon S. Peters]</span>
+        <span className="font-headline text-xl font-bold">Simon S. Peters</span>
       </Link>
       <div className="hidden md:flex items-center gap-4 text-sm font-medium">
         <Link href="#about" className="hover:text-primary transition-colors">
@@ -137,23 +137,23 @@ const HeroSection = () => (
 
 
 const AboutSection = () => (
-  <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
+  <section id="about" className="py-12 px-4 sm:px-6 lg:px-8">
     <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
       <div className="order-2 md:order-1 animate-fade-in-up text-center md:text-left">
         <Badge
           variant="outline"
           className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
         >
-          Hii, I'm Simon
+          Simon Peters Sakpla
         </Badge>
-        <h2 className="font-headline text-4xl md:text-5xl font-bold mb-6">
+        <h2 className="font-headline text-4xl md:text-5xl text-primary/90 font-bold mb-6">
           Hi, I'm Simon.
         </h2>
         <p className="text-lg text-muted-foreground mb-4">
-          I'm the creative mind behind SPS Studio. With a passion for both the analytical and the artistic, I've dedicated my career to bridging the gap between data and design. My journey began in data analysis, where I honed my skills in uncovering hidden patterns and telling stories with numbers.
+        A freelance developer and analyst based in Accra, Ghana. I am a tech professional with a bachelor’s degree in Business Information Technology. I posses with a unique blend of business acumen and technical expertise which I leverage to design and build innovative digital solutions that meet business needs and strategy, optimize service delivery and drive growth.
         </p>
         <p className="text-lg text-muted-foreground">
-          This analytical foundation now fuels my work in web and app development, allowing me to build not just beautiful, but also smart and effective digital solutions. I thrive on transforming complex problems into elegant, user-friendly experiences. Let's create something exceptional together.
+        I specialize in the design and devlopment of websites and cross-platform applications for startups and SMEs  leveraging modern skills and technologies to for them to thrive and grow in the digital economy. My role is centered on understanding clients’ ideas, goals and turning them into a user-centric solution. If you need an online presence, want to build an MVP for your business, I bridge the gap ideas, needs, strategy and technical implementation.
         </p>
       </div>
       <div className="flex justify-center order-1 md:order-2 animate-fade-in-up [animation-delay:0.2s]">
@@ -195,17 +195,17 @@ const services = [
 ];
 
 const ServicesSection = () => (
-    <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
+    <section id="services" className="py-12 px-4 sm:px-6 lg:px-8 bg-secondary/50">
     <div className="max-w-6xl mx-auto text-center">
       <div className="animate-fade-in-up mb-12">
-        <Badge
+        {/* <Badge
           variant="outline"
           className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
         >
           My Expertise
-        </Badge>
+        </Badge> */}
         <h2 className="font-headline text-4xl md:text-5xl font-bold">
-          What I Do
+          How I Can Help?
         </h2>
       </div>
       <div className="grid md:grid-cols-3 gap-8 justify-center">
@@ -236,44 +236,44 @@ const ServicesSection = () => (
 
 const projects = [
   {
-    title: "Insight Dashboard",
+    title: "KEPS Studio",
     description:
-      "A powerful data visualization platform for analyzing business metrics and trends in real-time.",
-    imageUrl: "https://picsum.photos/seed/2/600/400",
-    imageHint: "data dashboard",
-    liveUrl: "#",
+      "A web app for the newly launched studio for a group of managed software engineers and freelance community.",
+    imageUrl: "https://firebasestorage.googleapis.com/v0/b/sesa-studio.firebasestorage.app/o/keps-studio%2Fworkspace-1.png?alt=media&token=7338c884-7eab-43d9-884b-53d5309b910e",
+    imageHint: "website cover",
+    liveUrl: "https://picsum.photos/seed/3/600/400",
   },
   {
-    title: "Mobile POS System",
+    title: "Delivery Mobile App",
     description:
-      "An intuitive point-of-sale application for small businesses, available on both iOS and Android.",
-    imageUrl: "https://picsum.photos/seed/3/600/400",
+      "An intuitive delivery and courier services application for a startup, soon to be available on both iOS and Android.",
     imageHint: "mobile payment",
-    liveUrl: "#",
+    imageUrl: "https://firebasestorage.googleapis.com/v0/b/sesa-studio.firebasestorage.app/o/keps-studio%2Fdeft-project.png?alt=media&token=922e5b26-b7bf-4dba-bd28-e9bd35e1730a",
+    liveUrl: "https://deft-admin.web.app",
   },
   {
-    title: "Corporate Website Redesign",
+    title: "Business Website Design",
     description:
-      "A modern, performant, and SEO-friendly marketing website for a leading tech company.",
-    imageUrl: "https://picsum.photos/seed/4/600/400",
+      "A modern, performant, and SEO-friendly marketing website for a fashion brand in Accra.",
+    imageUrl: "https://teesvividthread.com/og-image.png",
     imageHint: "corporate website",
-    liveUrl: "#",
+    liveUrl: "www.teesvividthread.com",
   },
 ];
 
 const PortfolioSection = () => (
   <section
     id="portfolio"
-    className="py-20 px-4 sm:px-6 lg:px-8"
+    className="py-12 px-4 sm:px-6 lg:px-8"
   >
     <div className="max-w-6xl mx-auto text-center">
       <div className="mb-12 animate-fade-in-up">
-        <Badge
+        {/* <Badge
           variant="outline"
           className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
         >
           My Work
-        </Badge>
+        </Badge> */}
         <h2 className="font-headline text-4xl md:text-5xl font-bold">
           Featured Projects
         </h2>
@@ -322,20 +322,20 @@ const ContactReferrerSection = () => (
     <section id="contact-referrer" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
         <div className="max-w-4xl mx-auto text-center">
             <div className="animate-fade-in-up">
-                <Badge
+                {/* <Badge
                   variant="outline"
                   className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
                 >
                   Have a project in mind?
-                </Badge>
+                </Badge> */}
                 <h2 className="font-headline text-4xl md:text-5xl font-bold mb-6">
-                  Let's Build Something Great Together
+                  Let's Turn Your Idea into a Solution
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  I'm currently available for freelance work and new projects. If you want to chat about an idea or just say hi, I'd love to hear from you.
+                  I am available for freelance work and new projects. You can feel free to contact me about your ideas or needs. I'd love to hear from you.
                 </p>
                 <Button asChild size="lg" variant="outline">
-                    <Link href="/contact">Get In Touch</Link>
+                    <Link href="/contact">Get In Touch Now</Link>
                 </Button>
             </div>
         </div>
@@ -408,7 +408,7 @@ const Footer = () => (
 
       </div>
       <div className="mt-8 pt-6 border-t border-muted-foreground/20 text-center text-sm">
-        © {new Date().getFullYear()} SPS Studio. All Rights Reserved.
+        © {new Date().getFullYear()} TheSPS Studio. All Rights Reserved.
       </div>
     </footer>
 );
