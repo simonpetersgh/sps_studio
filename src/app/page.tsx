@@ -1,4 +1,5 @@
 
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -18,6 +19,7 @@ import {
   Linkedin,
   LocateIcon,
   Mail,
+  Menu,
   Phone,
   Smartphone,
   Twitter,
@@ -25,6 +27,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import type { SVGProps } from "react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const SpsLogo = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -65,6 +68,39 @@ const Header = () => (
           Contact
         </Link>
       </div>
+      <div className="md:hidden">
+        <Sheet>
+            <SheetTrigger asChild>
+                <Button variant="outline" size="icon" className="bg-transparent border-white text-white hover:bg-white hover:text-black">
+                    <Menu className="h-5 w-5" />
+                    <span className="sr-only">Toggle navigation menu</span>
+                </Button>
+            </SheetTrigger>
+            <SheetContent side="left" className="bg-background text-foreground">
+                <div className="grid gap-4 py-6">
+                    <Link href="/" className="flex items-center gap-2 mb-4">
+                        <SpsLogo className="w-8 h-8" />
+                        <span className="font-headline text-xl font-bold">SPS Studio</span>
+                    </Link>
+                    <Link href="/#about" className="text-lg font-medium hover:text-primary transition-colors">
+                      About
+                    </Link>
+                    <Link href="/#services" className="text-lg font-medium hover:text-primary transition-colors">
+                      Services
+                    </Link>
+                    <Link href="/#portfolio" className="text-lg font-medium hover:text-primary transition-colors">
+                      Projects
+                    </Link>
+                    <Link href="/contact" className="text-lg font-medium hover:text-primary transition-colors">
+                      Contact
+                    </Link>
+                </div>
+                <Button asChild className="w-full" variant="outline">
+                    <Link href="/contact">Get In Touch</Link>
+                </Button>
+            </SheetContent>
+        </Sheet>
+      </div>
       <Button asChild className="hidden md:block bg-transparent border-white text-white hover:bg-white hover:text-black" variant="outline">
         <Link href="/contact">Get In Touch</Link>
       </Button>
@@ -92,6 +128,39 @@ const StickyHeader = () => (
         <Link href="/contact" className="hover:text-primary transition-colors">
           Contact
         </Link>
+      </div>
+       <div className="md:hidden">
+        <Sheet>
+            <SheetTrigger asChild>
+                <Button variant="outline" size="icon">
+                    <Menu className="h-5 w-5" />
+                    <span className="sr-only">Toggle navigation menu</span>
+                </Button>
+            </SheetTrigger>
+            <SheetContent side="left">
+                <div className="grid gap-4 py-6">
+                    <Link href="/" className="flex items-center gap-2 mb-4">
+                        <SpsLogo className="w-8 h-8" />
+                        <span className="font-headline text-xl font-bold">SPS Studio</span>
+                    </Link>
+                    <Link href="/#about" className="text-lg font-medium hover:text-primary transition-colors">
+                      About
+                    </Link>
+                    <Link href="/#services" className="text-lg font-medium hover:text-primary transition-colors">
+                      Services
+                    </Link>
+                    <Link href="/#portfolio" className="text-lg font-medium hover:text-primary transition-colors">
+                      Projects
+                    </Link>
+                    <Link href="/contact" className="text-lg font-medium hover:text-primary transition-colors">
+                      Contact
+                    </Link>
+                </div>
+                <Button asChild className="w-full" variant="outline">
+                    <Link href="/contact">Get In Touch</Link>
+                </Button>
+            </SheetContent>
+        </Sheet>
       </div>
       <Button asChild className="hidden md:block" variant="outline">
         <Link href="/contact">Get In Touch</Link>
