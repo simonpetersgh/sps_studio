@@ -216,7 +216,7 @@ const AboutSection = () => (
         A freelance developer and analyst based in Accra, Ghana. I am a tech professional with a bachelor’s degree in Business Information Technology. I posses with a unique blend of business acumen and technical expertise which I leverage to design and build innovative digital solutions that meet business needs and strategy, optimize service delivery and drive growth.
         </p>
         <p className="text-lg text-left text-muted-foreground">
-        I specialize in the design and devlopment of websites and cross-platform applications for startups and SMEs  leveraging modern skills and technologies to for them to thrive and grow in the digital economy. My role is centered on understanding clients’ ideas, goals and turning them into a user-centric solution. If you need an online presence, want to build an MVP for your business, I bridge the gap ideas, needs, strategy and technical implementation.
+        I specialize in the design and devlopment of websites and cross-platform applications for startups and SMEs  leveraging modern skills and technologies to for them to thrive and grow in the digital economy. My role is centered on understanding clients’ ideas, goals and turning them into a user-centric solution.
         </p>
       </div>
       <div className="flex justify-center order-1 md:order-2 animate-fade-in-up [animation-delay:0.2s]">
