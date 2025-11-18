@@ -241,7 +241,7 @@ const projects = [
       "A web app for the newly launched studio for a group of managed software engineers and freelance community.",
     imageUrl: "https://firebasestorage.googleapis.com/v0/b/sesa-studio.firebasestorage.app/o/keps-studio%2Fworkspace-1.png?alt=media&token=7338c884-7eab-43d9-884b-53d5309b910e",
     imageHint: "website cover",
-    liveUrl: "https://picsum.photos/seed/3/600/400",
+    liveUrl: "https://sesastudio--sesa-studio.europe-west4.hosted.app/",
   },
   {
     title: "Delivery Mobile App",
