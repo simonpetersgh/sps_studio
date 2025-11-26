@@ -223,12 +223,12 @@ const AboutSection = () => (
   <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
     <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
       <div className="order-2 md:order-1 animate-fade-in-up text-center md:text-left">
-        <Badge
+        {/* <Badge
           variant="outline"
           className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
         >
           About Me
-        </Badge>
+        </Badge> */}
         <h2 className="font-headline text-4xl md:text-5xl text-primary/90 font-bold mb-6">
           Hii, I'm Simon.
         </h2>
@@ -260,13 +260,13 @@ const AboutSection = () => (
 const services = [
   {
     icon: <LayoutTemplate className="h-8 w-8 mb-4 text-primary" />,
-    title: "Web Solutions",
+    title: "High-Performance Website and Web Apps",
     description: "Having a professional online presence in the digital age is non-negotiable. I design and build fast, responsive websites that establish trust and make one’s business stand out. Beyond just standard websites and marketing sites, I build web applications where your users can log in, book services, or manage accounts. We can turn your website into a tool for customer self-service and drive sales 24/7.",
     link: "/services#web-solutions",
   },
   {
     icon: <Smartphone className="h-8 w-8 mb-4 text-primary" />,
-    title: "Mobile App Development",
+    title: "Scalable Mobile App Development",
     description: "Get your own mobile app without the high cost of traditional development. I use smart cross-platform technology to build high-quality apps that work flawlessly on both iPhone and Android from a single codebase. marketplace, delivery service, or community. Whether you need a customer-facing app for bookings and orders, or an app for your agents and staff tools to manage tasks on the go, I help develop apps for your one’s unique needs.",
     link: "/services#mobile-applications",
   },
@@ -289,7 +289,7 @@ const ServicesSection = () => (
           My Expertise
         </Badge>
         <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
-          How I Can Help?
+          Services and How I Can Help
         </h2>
       </div>
       <div className="grid md:grid-cols-3 gap-8 justify-center animate-fade-in-up [animation-delay:0.2s]">
@@ -356,7 +356,7 @@ const WorkflowSection = () => (
                 variant="outline"
                 className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
             >
-                Our Process
+                The Process
             </Badge>
           <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
             How We Can Work Together
@@ -483,7 +483,7 @@ const PortfolioSection = () => (
 );
 
 const CtaSection = () => (
-    <section id="contact-referrer" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
             <div className="animate-fade-in-up">
                 <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold mb-6">
