@@ -114,19 +114,19 @@ const services = [
     icon: <LayoutTemplate className="h-8 w-8 mb-4 text-primary" />,
     title: "High-Performance Website and Web Apps",
     description: "Having a professional online presence in the digital age is non-negotiable. I design and build fast, responsive websites that establish trust and make one’s business stand out. Beyond just standard websites and marketing sites, I build web applications where your users can log in, book services, or manage accounts. We can turn your website into a tool for customer self-service and drive sales 24/7.",
-    link: "/services#web-solutions",
+    link: "/service-plans",
   },
   {
     icon: <Smartphone className="h-8 w-8 mb-4 text-primary" />,
     title: "Scalable Mobile App Development",
     description: "Get your own mobile app without the high cost of traditional development. I use smart cross-platform technology to build high-quality apps that work flawlessly on both iPhone and Android from a single codebase. marketplace, delivery service, or community. Whether you need a customer-facing app for bookings and orders, or an app for your agents and staff tools to manage tasks on the go, I help develop apps for your one’s unique needs.",
-    link: "/services#mobile-applications",
+    link: "/services-and-plans",
   },
   {
     icon: <Briefcase className="h-8 w-8 mb-4 text-primary" />,
     title: "Custom Business Software",
     description: "If you are outgrowing Excel sheets, notebooks but don’t have the budget to purchase expensive Enterprise software, it is time for a custom solution tailored specifically to your unique business needs. From managing customer data, to inventory or cashflows management, I build user friendly, secure and scalable tools that optimize your business operations and eliminate the headaches of scaling your business with the right digital tools.",
-    link: "/services#custom-business-software",
+    link: "/services-and-plans",
   },
 ];
 

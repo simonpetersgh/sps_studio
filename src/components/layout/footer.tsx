@@ -12,7 +12,7 @@ export const Footer = () => (
               <span className="font-headline text-xl font-bold text-foreground">SPS Studio</span>
           </div>
           <p className="text-sm">
-            Crafting digital excellence, from needs-focused requirement analysis to seamless web & app solutions.
+            Crafting digital excellence, from needs-focused requirement analysis to functional web & app solutions.
           </p>
         </div>
 

@@ -14,7 +14,7 @@ const NavLinks = ({ mobile = false }: { mobile?: boolean }) => (
     <Link href="/#about" className={cn(mobile ? "text-lg font-medium" : "text-sm", "hover:text-primary transition-colors")}>
       About
     </Link>
-    <Link href="/#services" className={cn(mobile ? "text-lg font-medium" : "text-sm", "hover:text-primary transition-colors")}>
+    <Link href="/services-and-pricing" className={cn(mobile ? "text-lg font-medium" : "text-sm", "hover:text-primary transition-colors")}>
       Services
     </Link>
     <Link href="/#portfolio" className={cn(mobile ? "text-lg font-medium" : "text-sm", "hover:text-primary transition-colors")}>
@@ -31,7 +31,7 @@ const TransparentHeader = () => (
         <nav className="flex justify-between items-center max-w-7xl mx-auto">
         <Link href="/" className="flex items-center gap-2">
             <SpsLogo />
-            <span className="font-headline text-xl font-bold">TheSPS Studio</span>
+            <span className="font-headline text-xl font-bold">Simon Peters Sakpla</span>
         </Link>
         <div className="hidden md:flex items-center gap-4 text-sm font-medium">
             <NavLinks />
