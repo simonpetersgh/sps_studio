@@ -27,7 +27,9 @@ const formSchema = z.object({
   email: z.string().email({
     message: "Please enter a valid email address.",
   }),
-  mobileNumber: z.string().optional(),
+  mobileNumber: z.string().min(10, {
+    message: "Mobile number must be 10 characters.",
+  }),
   subject: z.string().min(5, {
     message: "Subject must be at least 5 characters.",
   }),
@@ -107,7 +109,7 @@ export function ContactForm() {
             name="mobileNumber"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Mobile Number (Optional)</FormLabel>
+                <FormLabel>Mobile Number</FormLabel>
                 <FormControl>
                   <Input {...field} />
                 </FormControl>
