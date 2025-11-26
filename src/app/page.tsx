@@ -33,6 +33,7 @@ import {
   Rocket,
   Smartphone,
   Twitter,
+  MessageCircle as Whatsapp,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -484,25 +485,28 @@ const PortfolioSection = () => (
   </section>
 );
 
-const ContactReferrerSection = () => (
+const CtaSection = () => (
     <section id="contact-referrer" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
             <div className="animate-fade-in-up">
-                <Badge
-                  variant="outline"
-                  className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
-                >
-                  Have a project in mind?
-                </Badge>
                 <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold mb-6">
-                  Let's Turn Your Idea into a Solution
+                  Let’s Talk About Your Project
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  I am available for freelance work and new projects. Feel free to contact me about your ideas or needs; I'd love to hear from you.
+                  You don't need a full technical plan to get started. Just bring your idea and I am happy to discuss how we can bring it to life. Let's analyze your business needs and find the best solution for your budget.
                 </p>
-                <Button asChild size="lg">
-                    <Link href="/contact">Get In Touch Now</Link>
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white">
+                        <Link href="https://wa.me/233540228056" target="_blank">
+                            <Whatsapp className="mr-2 h-5 w-5" /> Chat on WhatsApp
+                        </Link>
+                    </Button>
+                    <Button asChild size="lg" variant="outline">
+                        <Link href="mailto:simonpetersgh@gmail.com">
+                            <Mail className="mr-2 h-5 w-5" /> Send Email
+                        </Link>
+                    </Button>
+                </div>
             </div>
         </div>
     </section>
@@ -591,10 +595,12 @@ export default function Home() {
           <ServicesSection />
           <WorkflowSection />
           <PortfolioSection />
-          <ContactReferrerSection />
+          <CtaSection />
         </main>
         <Footer />
       </div>
     </div>
   );
 }
+
+    
