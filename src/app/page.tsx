@@ -261,23 +261,20 @@ const services = [
   {
     icon: <LayoutTemplate className="h-8 w-8 mb-4 text-primary" />,
     title: "Web Solutions",
-    description:
-      "Crafting responsive, high-performance websites and web applications tailored to your business needs.",
+    description: "Having a professional online presence in the digital age is non-negotiable. I design and build fast, responsive websites that establish trust and make one’s business stand out. Beyond just standard websites and marketing sites, I build web applications where your users can log in, book services, or manage accounts. We can turn your website into a tool for customer self-service and drive sales 24/7.",
     link: "/services#web-solutions",
   },
   {
     icon: <Smartphone className="h-8 w-8 mb-4 text-primary" />,
     title: "Mobile App Development",
-    description:
-      "Building intuitive and engaging cross-platform mobile experiences for both iOS and Android.",
-      link: "/services#mobile-applications",
+    description: "Get your own mobile app without the high cost of traditional development. I use smart cross-platform technology to build high-quality apps that work flawlessly on both iPhone and Android from a single codebase. marketplace, delivery service, or community. Whether you need a customer-facing app for bookings and orders, or an app for your agents and staff tools to manage tasks on the go, I help develop apps for your one’s unique needs.",
+    link: "/services#mobile-applications",
   },
   {
     icon: <Briefcase className="h-8 w-8 mb-4 text-primary" />,
     title: "Custom Business Software",
-    description:
-      "Developing bespoke software solutions to solve your unique challenges and drive business growth.",
-      link: "/services#custom-business-software",
+    description: "If you are outgrowing Excel sheets, notebooks but don’t have the budget to purchase expensive Enterprise software, it is time for a custom solution tailored specifically to your unique business needs. From managing customer data, to inventory or cashflows management, I build user friendly, secure and scalable tools that optimize your business operations and eliminate the headaches of scaling your business with the right digital tools.",
+    link: "/services#custom-business-software",
   },
 ];
 
@@ -301,7 +298,7 @@ const ServicesSection = () => (
             key={service.title}
             className="flex flex-col text-center items-center hover:shadow-lg transition-shadow duration-300"
           >
-            <CardHeader>
+            <CardHeader className="items-center">
               {service.icon}
               <CardTitle className="font-headline">{service.title}</CardTitle>
             </CardHeader>
