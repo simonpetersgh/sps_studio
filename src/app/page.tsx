@@ -80,7 +80,7 @@ const Header = () => (
                 <div className="grid gap-4 py-6">
                     <Link href="/" className="flex items-center gap-2 mb-4">
                         <SpsLogo className="w-8 h-8" />
-                        <span className="font-headline text-xl font-bold">SPS Studio</span>
+                        <span className="font-headline text-xl font-bold">Simon Peters Sakpla</span>
                     </Link>
                     <Link href="/#about" className="text-lg font-medium hover:text-primary transition-colors">
                       About
@@ -113,7 +113,7 @@ const StickyHeader = () => (
     <nav className="flex justify-between items-center max-w-7xl mx-auto">
       <Link href="/" className="flex items-center gap-2">
         <SpsLogo />
-        <span className="font-headline text-xl font-bold">TheSPS Studio</span>
+        <span className="font-headline text-xl font-bold">Simon Peters Sakpla</span>
       </Link>
       <div className="hidden md:flex items-center gap-4 text-sm font-medium">
         <Link href="#about" className="hover:text-primary transition-colors">
@@ -191,14 +191,17 @@ const HeroSection = () => (
           Business Analyst & Software Developer
         </Badge>
       </div>
-      <h1 className="font-headline text-4xl md:text-6xl font-bold text-primary/90 tracking-tight mb-4 max-w-4xl leading-tight animate-fade-in-up [animation-delay:0.2s]">
+      {/* <h1 className="font-headline text-4xl md:text-6xl font-bold text-primary/90 tracking-tight mb-4 max-w-4xl leading-tight animate-fade-in-up [animation-delay:0.2s]">
         [Simon Peters Sakpla]
+      </h1> */}
+      <h1 className="font-headline text-4xl md:text-4xl font-bold text-primary/90 tracking-tight py-6 mb-4 max-w-4xl leading-tight animate-fade-in-up [animation-delay:0.2s]">
+        Chat. Plan. Build. Launch. Grow with SPS.
       </h1>
       <p className="text-lg md:text-xl text-slate-300 max-w-2xl mb-8 animate-fade-in-up [animation-delay:0.4s]">
-      I develop web and mobile applications that empower individuals and startups to establish a strong online presenceand drive growth.
+      Developing web and mobile applications that empower individuals and startups to establish a strong online presence and drive growth.
       </p>
       <Button asChild size="lg" className="animate-fade-in-up [animation-delay:0.6s] bg-transparent border-white text-white hover:bg-primary hover:text-black" variant="outline">
-        <Link href="#portfolio">Explore My Works</Link>
+        <Link href="#contact">Get in Touch</Link>
       </Button>
     </div>
   </section>
@@ -213,10 +216,13 @@ const AboutSection = () => (
           Hii, I'm Simon.
         </h2>
         <p className="text-lg text-left text-muted-foreground mb-4">
-        A freelance developer and analyst based in Accra, Ghana. I am a tech professional with a bachelor’s degree in Business Information Technology. I posses with a unique blend of business acumen and technical expertise which I leverage to design and build innovative digital solutions that meet business needs and strategy, optimize service delivery and drive growth.
+        A freelance developer and analyst based in Accra, Ghana. I am a tech professional with a bachelor’s degree in Business Information Technology with a unique blend of business acumen and technical expertise 
+        which gives me a unique advantage. 
+        I understand both the business needs, strategy and the technical solutions needed to achieve them.
         </p>
         <p className="text-lg text-left text-muted-foreground">
-        I specialize in the design and devlopment of websites and cross-platform applications for startups and SMEs  leveraging modern skills and technologies to for them to thrive and grow in the digital economy. My role is centered on understanding clients’ ideas, goals and turning them into a user-centric solution.
+        I specialize in the design and devlopment of high-performance and affordable websites and cross-platform applications for startups and SMEs to thrive and grow in the digital economy in Ghana. 
+        My role is centered on partnering clients to understand their needs, and turn ideas into into user-friendly applications that help optimize operations and drive business success.
         </p>
       </div>
       <div className="flex justify-center order-1 md:order-2 animate-fade-in-up [animation-delay:0.2s]">
