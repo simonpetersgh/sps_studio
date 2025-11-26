@@ -12,7 +12,7 @@ export default {
       fontFamily: {
         title: ['"Playfair Display"', 'serif'],
         body: ['"PT Sans"', 'sans-serif'],
-        headline: ['"PT Sans"', 'sans-serif'],
+        headline: ['"Playfair"', 'serif'],
         code: ['monospace'],
       },
       colors: {
@@ -106,5 +106,3 @@ export default {
   },
   plugins: [require('tailwindcss-animate')],
 } satisfies Config;
-
-    

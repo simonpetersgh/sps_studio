@@ -10,7 +10,15 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+import {
   Briefcase,
+  ClipboardList,
+  Code,
   ExternalLink,
   Facebook,
   Github,
@@ -20,7 +28,9 @@ import {
   LocateIcon,
   Mail,
   Menu,
+  MessageCircle,
   Phone,
+  Rocket,
   Smartphone,
   Twitter,
 } from "lucide-react";
@@ -209,9 +219,15 @@ const HeroSection = () => (
 
 
 const AboutSection = () => (
-  <section id="about" className="py-12 px-4 sm:px-6 lg:px-8">
+  <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
     <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
       <div className="order-2 md:order-1 animate-fade-in-up text-center md:text-left">
+        <Badge
+          variant="outline"
+          className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
+        >
+          About Me
+        </Badge>
         <h2 className="font-headline text-4xl md:text-5xl text-primary/90 font-bold mb-6">
           Hii, I'm Simon.
         </h2>
@@ -265,25 +281,24 @@ const services = [
 ];
 
 const ServicesSection = () => (
-    <section id="services" className="py-12 px-4 sm:px-6 lg:px-8 bg-secondary/50">
+    <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
     <div className="max-w-6xl mx-auto text-center">
       <div className="animate-fade-in-up mb-12">
-        {/* <Badge
+        <Badge
           variant="outline"
           className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
         >
           My Expertise
-        </Badge> */}
+        </Badge>
         <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
           How I Can Help?
         </h2>
       </div>
-      <div className="grid md:grid-cols-3 gap-8 justify-center">
+      <div className="grid md:grid-cols-3 gap-8 justify-center animate-fade-in-up [animation-delay:0.2s]">
         {services.map((service, index) => (
           <Card
             key={service.title}
-            className="flex flex-col text-center items-center hover:shadow-lg transition-shadow duration-300 animate-fade-in-up"
-            style={{ animationDelay: `${index * 0.15}s` }}
+            className="flex flex-col text-center items-center hover:shadow-lg transition-shadow duration-300"
           >
             <CardHeader>
               {service.icon}
@@ -304,6 +319,88 @@ const ServicesSection = () => (
   </section>
 );
 
+const workflowSteps = [
+    {
+      value: "step-1",
+      title: "Step 1: Discovery & Strategy",
+      icon: <MessageCircle className="h-6 w-6 text-primary" />,
+      shortTitle: "Discovery",
+      description: "We start with a free chat. I learn about your ideas, business goals and challenges to understand exactly what you need. As both an analyst and a developer, I help you clarify your requirements to ensure we build the right solution, not just any solution."
+    },
+    {
+      value: "step-2",
+      title: "Step 2: Proposal & Planning",
+      icon: <ClipboardList className="h-6 w-6 text-primary" />,
+      shortTitle: "Planning",
+      description: "Once I understand your needs, I create a clear proposal outlining what we’re building, how it will work, timelines and cost, and what you can expect at each stage. After your approval, I map out a structured plan and roadmap, so you know exactly what’s coming next. Everything is transparent from the start. No hidden surprises."
+    },
+    {
+      value: "step-3",
+      title: "Step 3: Design & Development",
+      icon: <Code className="h-6 w-6 text-primary" />,
+      shortTitle: "Development",
+      description: "This is where the magic happens. With the plan in place, I move into designing and building your solution. You’ll see wireframes, UI designs so you can visualize the result and test prototypes. I provide regular updates throughout the development process for you to stay informed and confident as your idea comes to life."
+    },
+    {
+      value: "step-4",
+      title: "Step 4: Launch & Support",
+      icon: <Rocket className="h-6 w-6 text-primary" />,
+      shortTitle: "Launch",
+      description: "After thorough testing, improvements and your final approval, your solution is packaged and deployed. But I don't just disappear; I help you launch your project and ensure everything runs smoothly within the provided support period as your solution is in use."
+    },
+  ];
+  
+const WorkflowSection = () => (
+    <section id="workflow" className="py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12 animate-fade-in-up">
+            <Badge
+                variant="outline"
+                className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
+            >
+                Our Process
+            </Badge>
+          <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
+            How We Can Work Together
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+            In partnering you to turn your idea from concept to a working product., I keep the entire process simple, transparent, and collaborative through a 4-step workflow:
+          </p>
+        </div>
+  
+        <div className="hidden md:flex justify-between items-center mb-8 relative animate-fade-in-up [animation-delay:0.2s]">
+            <div className="absolute top-1/2 left-0 w-full h-0.5 bg-border -translate-y-1/2"></div>
+            {workflowSteps.map((step, index) => (
+                <div key={step.value} className="relative z-10 flex flex-col items-center text-center">
+                    <div className="h-12 w-12 rounded-full bg-background border-2 border-primary flex items-center justify-center">
+                        {step.icon}
+                    </div>
+                    <p className="mt-2 font-semibold text-sm">{step.shortTitle}</p>
+                </div>
+            ))}
+        </div>
+        
+        <div className="animate-fade-in-up [animation-delay:0.4s]">
+          <Accordion type="single" collapsible defaultValue="step-1">
+            {workflowSteps.map(step => (
+              <AccordionItem value={step.value} key={step.value}>
+                <AccordionTrigger className="text-lg font-headline hover:no-underline">
+                    <div className="flex items-center gap-4">
+                        <span className="md:hidden">{step.icon}</span>
+                        <span>{step.title}</span>
+                    </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pl-4 border-l-2 border-primary ml-2">
+                    {step.description}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </div>
+    </section>
+);
+  
 const projects = [
   {
     title: "KEPS Studio",
@@ -334,26 +431,25 @@ const projects = [
 const PortfolioSection = () => (
   <section
     id="portfolio"
-    className="py-12 px-4 sm:px-6 lg:px-8"
+    className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50"
   >
     <div className="max-w-6xl mx-auto text-center">
       <div className="mb-12 animate-fade-in-up">
-        {/* <Badge
+        <Badge
           variant="outline"
           className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
         >
           My Work
-        </Badge> */}
+        </Badge>
         <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
           Featured Projects
         </h2>
       </div>
-      <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 text-left">
+      <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 text-left animate-fade-in-up [animation-delay:0.2s]">
         {projects.map((project, index) => (
           <Card
             key={project.title}
-            className="overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300 animate-fade-in-up"
-            style={{ animationDelay: `${index * 0.15}s` }}
+            className="overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300"
           >
             <Image
               src={project.imageUrl}
@@ -379,7 +475,7 @@ const PortfolioSection = () => (
           </Card>
         ))}
       </div>
-      <div className="text-center mt-12 animate-fade-in-up">
+      <div className="text-center mt-12 animate-fade-in-up [animation-delay:0.4s]">
         <Button asChild size="lg" variant="outline">
           <Link href="/projects">View More Projects</Link>
         </Button>
@@ -389,22 +485,22 @@ const PortfolioSection = () => (
 );
 
 const ContactReferrerSection = () => (
-    <section id="contact-referrer" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
+    <section id="contact-referrer" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
             <div className="animate-fade-in-up">
-                {/* <Badge
+                <Badge
                   variant="outline"
                   className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
                 >
                   Have a project in mind?
-                </Badge> */}
+                </Badge>
                 <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold mb-6">
                   Let's Turn Your Idea into a Solution
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
                   I am available for freelance work and new projects. Feel free to contact me about your ideas or needs; I'd love to hear from you.
                 </p>
-                <Button asChild size="lg" variant="outline">
+                <Button asChild size="lg">
                     <Link href="/contact">Get In Touch Now</Link>
                 </Button>
             </div>
@@ -493,6 +589,7 @@ export default function Home() {
           <HeroSection />
           <AboutSection />
           <ServicesSection />
+          <WorkflowSection />
           <PortfolioSection />
           <ContactReferrerSection />
         </main>
@@ -501,5 +598,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
