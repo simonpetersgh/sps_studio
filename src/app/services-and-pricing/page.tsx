@@ -145,7 +145,7 @@ const customServices = [
 ];
 
 export default function ServicesAndPricing() {
-  const [activeTab, setActiveTab] = useState<"build" | "care">("build");
+  const [activeTab, setActiveTab] = useState<"care" | "build">("care");
 
   return (
     <div className="flex flex-col min-h-dvh bg-background text-foreground">
