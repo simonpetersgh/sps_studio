@@ -34,6 +34,7 @@ const webPackages = [
     title: "Starter",
     description: "For individuals, freelancers, or startups needing a professional web presence to showcase their brand, products or services.",
     price: "GHS1,200 - GHS1,500",
+    isPopular: true,
     features: [
       "Up to 5 Pages",
       "1 Year Domain (.com, .org)",
@@ -49,7 +50,6 @@ const webPackages = [
     title: "Business",
     description: "For businesses needing content-rich sites with blog, CMS, analytics and more control and content updates",
     price: "GHS2,000 - GHS3,500",
-    isPopular: true,
     features: [
       "Up to 10 Pages",
       "CMS Integration",
@@ -85,6 +85,7 @@ const carePlans = [
     title: "Starter Care",
     price: "GHS 750 / year",
     description: "Essential care to keep your site secure and updated.",
+    isPopular: true,
     features: [
       "Everything in Starter (One-time)",
       "Domain Renewals",
@@ -98,7 +99,6 @@ const carePlans = [
     title: "Business Care",
     price: "GHS 1,650 / year",
     description: "Comprehensive support for peak performance.",
-    isPopular: true,
     features: [
       "Everything in Business",
       "Domain Renewals",
@@ -221,7 +221,7 @@ export default function ServicesAndPricing() {
                 >
                   {plan.isPopular && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-3 py-1 text-xs font-bold uppercase rounded-full tracking-wide">
-                      Most Popular
+                      Beginner Friendly
                     </div>
                   )}
                   <CardHeader>
