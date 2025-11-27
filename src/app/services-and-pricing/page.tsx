@@ -245,7 +245,7 @@ export default function ServicesAndPricing() {
                   <CardFooter>
                     <Button asChild className="w-full" variant={plan.isPopular ? "default" : "outline"}>
                       <Link 
-                        href={`https://wa.me/233540228056?text=Hi Simon, I am interested in the ${plan.title} ${activeTab === 'build' ? 'package' : 'subscription'}.`} 
+                        href={`https://wa.me/233540228056?text=Hi Simon, I am interested in the ${plan.title} ${activeTab === 'build' ? 'package' : 'care'}.`} 
                         target="_blank"
                       >
                         Get Started
@@ -265,7 +265,7 @@ export default function ServicesAndPricing() {
                 </p>
               </div>
               <Button asChild variant="secondary">
-                <Link href="/contact">Request a Custom Quote</Link>
+                <Link href="/contact">Get in Touch</Link>
               </Button>
             </div>
           </div>
