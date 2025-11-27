@@ -32,8 +32,8 @@ import {Footer} from "@/components/layout/footer";
 const webPackages = [
   {
     title: "Starter",
-    description: "Get your brand online. Perfect for individuals and startups.",
-    price: "GHS 1,200 - 1,500",
+    description: "For individuals, freelancers, or startups needing a professional web presence to showcase their brand, products or services.",
+    price: "GHS1,200 - GHS1500",
     features: [
       "Up to 5 Pages",
       "1 Year Domain (.com, .org)",
@@ -47,8 +47,8 @@ const webPackages = [
   },
   {
     title: "Business",
-    description: "Enhanced digital footprint with CMS and Blog capabilities.",
-    price: "GHS 2,500 - 5,000",
+    description: "For businesses needing content-rich sites with blog, CMS, analytics and more control and content updates",
+    price: "GHS2,500 - GHS5,000",
     isPopular: true,
     features: [
       "Up to 10 Pages",
@@ -64,8 +64,8 @@ const webPackages = [
   },
   {
     title: "E-commerce",
-    description: "Feature-rich online stores to sell and upsell digitally.",
-    price: "GHS 7,000 - 30,000",
+    description: "Feature-rich website for businesses ready to sell and upsell products onlines.",
+    price: "GHS 7,000+",
     features: [
       "Up to 20 Pages",
       "E-commerce Store Setup",
@@ -126,20 +126,20 @@ const customServices = [
   {
     title: "MVP Development",
     icon: <Rocket className="h-8 w-8 text-primary mb-4" />,
-    description: "We specialize in rapidly building and launching Minimum Viable Products (MVPs) to validate your business idea with real users. Our lean operation processes focus on building core functionality to get you to market quickly.",
-    cta: "Request Proposal",
+    description: "Want rapid building and launching of Minimum Viable Products (MVPs) to validate your business idea with real users. Let's begin with a chat and plan on on building core functionality to get you to market quickly.",
+    cta: "Get in Touch",
   },
   {
     title: "Mobile Applications",
     icon: <Smartphone className="h-8 w-8 text-primary mb-4" />,
-    description: "From iOS to Android, we design and develop beautiful, intuitive, and high-performance native and cross-platform mobile applications. We handle the entire lifecycle from concept and UI/UX design to deployment.",
-    cta: "Request Proposal",
+    description: "If you need a high-performance iOS to Android app intuitive for your customers and business operations, I am ready to after an initial consultation to understand your project scope and goals and develop your solution.",
+    cta: "Get in Touch",
   },
   {
     title: "Custom Business Software",
     icon: <Layers className="h-8 w-8 text-primary mb-4" />,
-    description: "Streamline and digitize your operations with software built specifically for your business processes. We develop custom software, internal tools, or platforms to solve your unique challenges and drive digital transformation.",
-    cta: "Request Proposal",
+    description: "If you want to streamline and digital transformation drive with software built specifically for your business processes, internal tools, or platforms to solve your unique challenges and drive digital transformation, get in touch now.",
+    cta: "Get in Touch",
   },
 ];
 
@@ -155,15 +155,12 @@ export default function ServicesAndPricing() {
         
         {/* --- HERO SECTION --- */}
         <section className="px-4 sm:px-6 lg:px-8 pb-16 text-center">
-          <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/10">
-            Services & Pricing
-          </Badge>
           <h1 className="font-headline text-4xl md:text-6xl font-bold mb-6">
             Quality Solutions.<br />
             <span className="text-primary">Transparent Pricing.</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            We are dedicated to helping Ghanaian startups, gig workers, and small businesses launch their digital presence and build quality business applications affordably.
+          Every business or gig deserves a quality digital presence built to perform and convert. There are flexible packages designed to suit different needs and budgets. If you have custom needs beyond these, I’d be happy to build a tailored solution with you.
           </p>
         </section>
 
@@ -173,7 +170,7 @@ export default function ServicesAndPricing() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-headline font-bold mb-4">Affordable Web Solutions</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-                 tailored web development packages for a one-time project or flexible yearly payment plans designed to provide value and quality.
+                Get staarted with a tailored web development packages for a one-time development or flexible yearly payment plans designed to provide value and quality.
               </p>
               
               {/* Toggle Switch */}
@@ -203,9 +200,9 @@ export default function ServicesAndPricing() {
               {/* Context Text based on Tab */}
               <div className="animate-fade-in-up">
                 {activeTab === "build" ? (
-                  <p className="text-sm text-primary mb-4 font-medium">Pay once, own your website forever. Ideal for full upfront ownership.</p>
+                  <p className="text-sm text-primary mb-4 font-medium">Pay once, own your website forever. Ideal for full upfront ownership and site management post-launch.</p>
                 ) : (
-                  <p className="text-sm text-primary mb-4 font-medium">Peace of mind. Security, updates, and domain renewals included.</p>
+                  <p className="text-sm text-primary mb-4 font-medium">For a peace of mind. Includes domain and hosting, maintenance, security and feature updates, ensuring your website is always live and functional.</p>
                 )}
               </div>
             </div>
@@ -248,7 +245,7 @@ export default function ServicesAndPricing() {
                         href={`https://wa.me/233540228056?text=Hi Simon, I am interested in the ${plan.title} ${activeTab === 'build' ? 'package' : 'subscription'}.`} 
                         target="_blank"
                       >
-                        Choose {plan.title}
+                        Get Started
                       </Link>
                     </Button>
                   </CardFooter>
@@ -261,7 +258,7 @@ export default function ServicesAndPricing() {
               <div className="text-left">
                 <h3 className="text-xl font-bold font-headline">Need something Custom?</h3>
                 <p className="text-muted-foreground mt-2 max-w-xl">
-                  We offer bespoke design, API integrations, and scalable architecture for unique business needs.
+                Don’t see a package that fits your vision? I build custom web & mobile apps, MVPs, internal platforms with API integrations and scalable architecture for unique business needs and offer ongoing maintenance and support for existing sites.
                 </p>
               </div>
               <Button asChild variant="secondary">

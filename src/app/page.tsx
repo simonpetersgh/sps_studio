@@ -86,12 +86,11 @@ const AboutSection = () => (
         </h2>
         <p className="text-lg text-left text-muted-foreground mb-4">
         A freelance developer and analyst based in Accra, Ghana. I am a tech professional with a bachelor’s degree in Business Information Technology with a unique blend of business acumen and technical expertise 
-        which gives me a unique advantage. 
-        I understand both the business needs, strategy and the technical solutions needed to achieve them.
+        which gives me a unique advantage to understand business needs, strategy and the technical solutions needed to achieve them.
         </p>
         <p className="text-lg text-left text-muted-foreground">
         I specialize in the design and devlopment of high-performance and affordable websites and cross-platform applications for startups and SMEs to thrive and grow in the digital economy in Ghana. 
-        My role is centered on partnering clients to understand their needs, and turn ideas into into user-friendly applications that help optimize operations and drive business success.
+        My role is centered on partnering with clients to understand their needs, and turn ideas into into user-friendly applications that help optimize operations and drive business success.
         </p>
       </div>
       <div className="flex justify-center order-1 md:order-2 animate-fade-in-up [animation-delay:0.2s]">
@@ -119,13 +118,13 @@ const services = [
   {
     icon: <Smartphone className="h-8 w-8 mb-4 text-primary" />,
     title: "Scalable Mobile App Development",
-    description: "Get your own mobile app without the high cost of traditional development. I use smart cross-platform technology to build high-quality apps that work flawlessly on both iPhone and Android from a single codebase. marketplace, delivery service, or community. Whether you need a customer-facing app for bookings and orders, or an app for your agents and staff tools to manage tasks on the go, I help develop apps for your one’s unique needs.",
+    description: "Get your own mobile app without the high cost of traditional development. I use smart cross-platform technology to build high-quality apps that work flawlessly on both iPhone and Android from a single codebase. Whether you need a customer-facing app for bookings and orders, or an app for your agents and staff tools to manage tasks on the go, I help develop apps for your one’s unique needs.",
     link: "/services-and-plans",
   },
   {
     icon: <Briefcase className="h-8 w-8 mb-4 text-primary" />,
     title: "Custom Business Software",
-    description: "If you are outgrowing Excel sheets, notebooks but don’t have the budget to purchase expensive Enterprise software, it is time for a custom solution tailored specifically to your unique business needs. From managing customer data, to inventory or cashflows management, I build user friendly, secure and scalable tools that optimize your business operations and eliminate the headaches of scaling your business with the right digital tools.",
+    description: "If you are outgrowing Excel sheets, notebooks but don’t have the budget to purchase expensive Enterprise software, it is time for a custom solution tailored specifically to your unique business needs. From managing customer data, to inventory or cashflows management, I build user friendly, secure and scalable solutions that optimize your business operations and eliminate the headaches of scaling your business with the right digital tools.",
     link: "/services-and-plans",
   },
 ];
@@ -134,12 +133,12 @@ const ServicesSection = () => (
     <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
     <div className="max-w-6xl mx-auto text-center">
       <div className="animate-fade-in-up mb-12">
-        <Badge
+        {/* <Badge
           variant="outline"
           className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
         >
           My Expertise
-        </Badge>
+        </Badge> */}
         <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
           Services and How I Can Help
         </h2>
@@ -204,12 +203,12 @@ const WorkflowSection = () => (
     <section id="workflow" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12 animate-fade-in-up">
-            <Badge
+            {/* <Badge
                 variant="outline"
                 className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
             >
                 The Process
-            </Badge>
+            </Badge> */}
           <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
             How We Can Work Together
           </h2>
@@ -285,12 +284,12 @@ const PortfolioSection = () => (
   >
     <div className="max-w-6xl mx-auto text-center">
       <div className="mb-12 animate-fade-in-up">
-        <Badge
+        {/* <Badge
           variant="outline"
           className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
         >
           My Work
-        </Badge>
+        </Badge> */}
         <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
           Featured Projects
         </h2>

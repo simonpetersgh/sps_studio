@@ -6,8 +6,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
-  title: 'SPS Studio',
-  description: 'Innovation and Insights',
+  title: 'Simon Peters Sak[la | SPS Studio',
+  description: 'Innovation',
 };
 
 export default function RootLayout({
