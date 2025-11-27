@@ -33,7 +33,7 @@ const webPackages = [
   {
     title: "Starter",
     description: "For individuals, freelancers, or startups needing a professional web presence to showcase their brand, products or services.",
-    price: "GHS1,200 - GHS1500",
+    price: "GHS1,200 - GHS1,500",
     features: [
       "Up to 5 Pages",
       "1 Year Domain (.com, .org)",
@@ -48,12 +48,13 @@ const webPackages = [
   {
     title: "Business",
     description: "For businesses needing content-rich sites with blog, CMS, analytics and more control and content updates",
-    price: "GHS2,500 - GHS5,000",
+    price: "GHS2,000 - GHS3,500",
     isPopular: true,
     features: [
       "Up to 10 Pages",
       "CMS Integration",
-      "Contact Forms & Blog Setup",
+      "Contact Forms & Admin dashboard",
+      "Blog Setup",
       "Advanced SEO",
       "Speed Optimisation",
       "Google Maps Integration",
@@ -65,7 +66,7 @@ const webPackages = [
   {
     title: "E-commerce",
     description: "Feature-rich website for businesses ready to sell and upsell products onlines.",
-    price: "GHS 7,000+",
+    price: "GHS4,000+",
     features: [
       "Up to 20 Pages",
       "E-commerce Store Setup",
@@ -81,7 +82,7 @@ const webPackages = [
 
 const carePlans = [
   {
-    title: "Starter Subscription",
+    title: "Starter Care",
     price: "GHS 750 / year",
     description: "Essential care to keep your site secure and updated.",
     features: [
@@ -94,7 +95,7 @@ const carePlans = [
     ],
   },
   {
-    title: "Business Subscription",
+    title: "Business Care",
     price: "GHS 1,650 / year",
     description: "Comprehensive support for peak performance.",
     isPopular: true,
@@ -108,8 +109,8 @@ const carePlans = [
     ],
   },
   {
-    title: "E-commerce Subscription",
-    price: "GHS 4,500 / year",
+    title: "E-commerce Care",
+    price: "GHS 3,000 / year",
     description: "Proactive maintenance for premium websites.",
     features: [
       "Everything in E-commerce",
@@ -175,16 +176,7 @@ export default function ServicesAndPricing() {
               
               {/* Toggle Switch */}
               <div className="inline-flex bg-background border rounded-full p-1 mb-8">
-                <button
-                  onClick={() => setActiveTab("build")}
-                  className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-                    activeTab === "build" 
-                    ? "bg-primary text-primary-foreground shadow-sm" 
-                    : "text-muted-foreground hover:text-foreground"
-                  }`}
-                >
-                  One-Time Build
-                </button>
+                {/* CARE TAB */}
                 <button
                   onClick={() => setActiveTab("care")}
                   className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
@@ -195,6 +187,17 @@ export default function ServicesAndPricing() {
                 >
                   Yearly Care Plans
                 </button>
+                {/* ONE TIME TAB */}
+                <button
+                  onClick={() => setActiveTab("build")}
+                  className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
+                    activeTab === "build" 
+                    ? "bg-primary text-primary-foreground shadow-sm" 
+                    : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  One-Time Build
+                </button>
               </div>
 
               {/* Context Text based on Tab */}
@@ -202,7 +205,7 @@ export default function ServicesAndPricing() {
                 {activeTab === "build" ? (
                   <p className="text-sm text-primary mb-4 font-medium">Pay once, own your website forever. Ideal for full upfront ownership and site management post-launch.</p>
                 ) : (
-                  <p className="text-sm text-primary mb-4 font-medium">For a peace of mind. Includes domain and hosting, maintenance, security and feature updates, ensuring your website is always live and functional.</p>
+                  <p className="text-sm text-primary mb-4 font-medium">For a peace of mind. Includes domain and hosting maintenance, content updates, ensuring your website is always live and functional.</p>
                 )}
               </div>
             </div>
