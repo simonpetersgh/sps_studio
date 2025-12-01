@@ -4,6 +4,7 @@
 
 
 
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -166,8 +167,8 @@ const ServicesSection = () => (
                 </div>
               </div>
               {/* Back Face */}
-              <div className="relative md:absolute md:inset-0 md:w-full md:h-full md:[transform:rotateY(180deg)] md:[backface-visibility:hidden]">
-                <Card className="flex flex-col h-full rounded-xl -mt-2 md:mt-0">
+              <div className="mt-2 md:mt-0 md:absolute md:inset-0 md:w-full md:h-full md:[transform:rotateY(180deg)] md:[backface-visibility:hidden]">
+                <Card className="flex flex-col h-full rounded-xl">
                   <CardHeader className="items-center">
                     {service.icon}
                     <CardTitle className="font-headline text-center text-xl">{service.title}</CardTitle>
