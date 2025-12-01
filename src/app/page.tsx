@@ -1,5 +1,6 @@
 
 
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -31,6 +32,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import placeholderImages from "@/lib/placeholder-images.json";
 
 const HeroSection = () => (
   <section className="relative h-dvh md:h-[70vh] min-h-[500px] flex items-center justify-center text-center text-white px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -111,22 +113,24 @@ const AboutSection = () => (
 const services = [
   {
     icon: <LayoutTemplate className="h-8 w-8 mb-4 text-primary" />,
-    title: "High-Performance Website and Web Apps",
-    description: "I build responsive websites and web apps for organisations of any kind or size. Whether you need a clean online presence or a platform for ecommerce, bookings, user management, and self-service. I build solutions that support your goals round the clock.",
-    // description: "Having a professional online presence in the digital age is essential. I design and build responsive websites that establish trust and make one’s business stand out. Beyond standard websites and marketing sites, I build high-performance web applications where your customers can log in, book services, or manage accounts. We can turn your website into a tool for customer self-service and drive sales 24/7.",
+    title: "High-Performance Websites & Web Platforms",
+    description: "Having a professional online presence in the digital age is non-negotiable. I design and build fast, responsive websites that establish trust and make one’s business stand out. Beyond just standard websites and marketing sites, I build web applications where your users can log in, book services, or manage accounts. We can turn your website into a tool for customer self-service and drive sales 24/7.",
     link: "/service-plans",
+    image: placeholderImages.services.web,
   },
   {
     icon: <Smartphone className="h-8 w-8 mb-4 text-primary" />,
-    title: "Scalable Mobile App Development",
-    description: "Need a high-quality mobile app without the high cost of traditional development? I build apps that run smoothly on both iPhone and Android, designed to fit your needs and requirements for your customers, staff, or on-the-go operations.",
+    title: "Scalable Mobile Apps (iOS & Android)",
+    description: "Get your own mobile app without the high cost of traditional development. I use smart cross-platform technology to build high-quality apps that work flawlessly on both iPhone and Android from a single codebase. marketplace, delivery service, or community. Whether you need a customer-facing app for bookings and orders, or an app for your agents and staff tools to manage tasks on the go, I help develop apps for your one’s unique needs.",
     link: "/services-and-plans",
+    image: placeholderImages.services.mobile,
   },
   {
     icon: <Briefcase className="h-8 w-8 mb-4 text-primary" />,
     title: "Custom Business Software",
-    description: "If spreadsheets, notes, and manual work are slowing you down, you don’t need expensive enterprise software, get a software that fits your workflow, supports your team, and grows with your organisation. I develop secure, efficient and scalable tools that help manage customers, inventory, finances, and daily operations with ease.",
+    description: "If you are outgrowing Excel sheets, notebooks but don’t have the budget to purchase expensive Enterprise software, it is time for a custom solution tailored specifically to your unique business needs. From managing customer data, to inventory or cashflows management, I build user friendly, secure and scalable tools that optimize your business operations and eliminate the headaches of scaling your business with the right digital tools.",
     link: "/services-and-plans",
+    image: placeholderImages.services.custom,
   },
 ];
 
@@ -134,40 +138,53 @@ const ServicesSection = () => (
     <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
     <div className="max-w-6xl mx-auto text-center">
       <div className="animate-fade-in-up mb-12">
-        {/* <Badge
-          variant="outline"
-          className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
-        >
-          My Expertise
-        </Badge> */}
         <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
           Services and How I Can Help
         </h2>
       </div>
-      <div className="grid md:grid-cols-3 gap-8 justify-center animate-fade-in-up [animation-delay:0.2s]">
-        {services.map((service, index) => (
-          <Card
-            key={service.title}
-            className="flex flex-col text-center items-center hover:shadow-lg transition-shadow duration-300"
-          >
-            <CardHeader className="items-center">
-              {service.icon}
-              <CardTitle className="font-headline">{service.title}</CardTitle>
-            </CardHeader>
-            <CardContent className="flex-1">
-              <p className="text-muted-foreground text-base">{service.description}</p>
-            </CardContent>
-            <CardFooter>
-              <Button asChild variant="link">
-                <Link href={service.link}>Learn More</Link>
-              </Button>
-            </CardFooter>
-          </Card>
+      <div className="grid md:grid-cols-3 gap-8 justify-center animate-fade-in-up [animation-delay:0.2s] [perspective:1000px]">
+        {services.map((service) => (
+            <div key={service.title} className="group h-[400px]">
+                <div className="relative h-full w-full rounded-xl shadow-lg transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                    {/* Front Face */}
+                    <div className="absolute inset-0 [backface-visibility:hidden]">
+                        <Image 
+                            src={service.image.src}
+                            alt={service.title}
+                            width={service.image.width}
+                            height={service.image.height}
+                            data-ai-hint={service.image.hint}
+                            className="w-full h-full object-cover rounded-xl"
+                        />
+                        <div className="absolute inset-0 bg-black/50 rounded-xl flex items-end p-6">
+                            <h3 className="text-white text-2xl font-bold font-headline">{service.title}</h3>
+                        </div>
+                    </div>
+                    {/* Back Face */}
+                    <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                        <Card className="h-full flex flex-col">
+                            <CardHeader className="items-center">
+                                {service.icon}
+                                <CardTitle className="font-headline text-center text-xl">{service.title}</CardTitle>
+                            </CardHeader>
+                            <CardContent className="flex-1">
+                                <p className="text-left text-muted-foreground text-sm">{service.description}</p>
+                            </CardContent>
+                            <CardFooter>
+                                <Button asChild variant="link" className="w-full">
+                                    <Link href={service.link}>Learn More</Link>
+                                </Button>
+                            </CardFooter>
+                        </Card>
+                    </div>
+                </div>
+            </div>
         ))}
       </div>
     </div>
   </section>
 );
+
 
 const workflowSteps = [
     {
@@ -175,41 +192,39 @@ const workflowSteps = [
       title: "Step 1: Discovery & Strategy",
       icon: <MessageCircle className="h-6 w-6 text-primary" />,
       shortTitle: "Discovery",
-      description: "We start with a free chat. I learn about your ideas, business goals and challenges to understand exactly what you need. As both an analyst and a developer, I help you clarify your requirements to ensure we build the right solution, not just any solution."
+      description: "We start with a free chat. I learn about your ideas, business goals and challenges to understand exactly what you need. As both an analyst and a developer, I help you clarify your requirements to ensure we build the right solution, not just any solution.",
+      image: placeholderImages.workflow.discovery,
     },
     {
       value: "step-2",
       title: "Step 2: Proposal & Planning",
       icon: <ClipboardList className="h-6 w-6 text-primary" />,
       shortTitle: "Planning",
-      description: "Once I understand your needs, I create a clear proposal outlining what we’re building, how it will work, timelines and cost, and what you can expect at each stage. After your approval, I map out a structured plan and roadmap, so you know exactly what’s coming next. Everything is transparent from the start. No hidden surprises."
+      description: "Once I understand your needs, I create a clear proposal outlining what we’re building, how it will work, timelines and cost, and what you can expect at each stage. After your approval, I map out a structured plan and roadmap, so you know exactly what’s coming next. Everything is transparent from the start. No hidden surprises.",
+      image: placeholderImages.workflow.planning,
     },
     {
       value: "step-3",
       title: "Step 3: Design & Development",
       icon: <Code className="h-6 w-6 text-primary" />,
       shortTitle: "Development",
-      description: "This is where the magic happens. With the plan in place, I move into designing and building your solution. You’ll see wireframes, UI designs so you can visualize the result and test prototypes. I provide regular updates throughout the development process for you to stay informed and confident as your idea comes to life."
+      description: "This is where the magic happens. With the plan in place, I move into designing and building your solution. You’ll see wireframes, UI designs so you can visualize the result and test prototypes. I provide regular updates throughout the development process for you to stay informed and confident as your idea comes to life.",
+      image: placeholderImages.workflow.development,
     },
     {
       value: "step-4",
       title: "Step 4: Launch & Support",
       icon: <Rocket className="h-6 w-6 text-primary" />,
       shortTitle: "Launch",
-      description: "After thorough testing, improvements and your final approval, your solution is packaged and deployed. But I don't just disappear; I help you launch your project and ensure everything runs smoothly within the provided support period as your solution is in use."
+      description: "After thorough testing, improvements and your final approval, your solution is packaged and deployed. But I don't just disappear; I help you launch your project and ensure everything runs smoothly within the provided support period as your solution is in use.",
+      image: placeholderImages.workflow.launch,
     },
-  ];
-  
+];
+
 const WorkflowSection = () => (
     <section id="workflow" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12 animate-fade-in-up">
-            {/* <Badge
-                variant="outline"
-                className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
-            >
-                The Process
-            </Badge> */}
           <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
             How We Can Work Together
           </h2>
@@ -218,30 +233,32 @@ const WorkflowSection = () => (
           </p>
         </div>
   
-        <div className="hidden md:flex justify-between items-center mb-8 relative animate-fade-in-up [animation-delay:0.2s]">
-            <div className="absolute top-1/2 left-0 w-full h-0.5 bg-border -translate-y-1/2"></div>
-            {workflowSteps.map((step, index) => (
-                <div key={step.value} className="relative z-10 flex flex-col items-center text-center">
-                    <div className="h-12 w-12 rounded-full bg-background border-2 border-primary flex items-center justify-center">
-                        {step.icon}
-                    </div>
-                    <p className="mt-2 font-semibold text-sm">{step.shortTitle}</p>
-                </div>
-            ))}
-        </div>
-        
-        <div className="animate-fade-in-up [animation-delay:0.4s]">
+        <div className="animate-fade-in-up [animation-delay:0.2s]">
           <Accordion type="single" collapsible defaultValue="step-1">
             {workflowSteps.map(step => (
               <AccordionItem value={step.value} key={step.value}>
                 <AccordionTrigger className="text-xl font-headline hover:no-underline">
                     <div className="flex items-center gap-4">
-                        <span className="md:hidden">{step.icon}</span>
+                        <span className="p-2 bg-primary/10 rounded-full">{step.icon}</span>
                         <span>{step.title}</span>
                     </div>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-base pl-4 border-l-2 border-primary ml-2">
-                    {step.description}
+                <AccordionContent className="text-muted-foreground text-base pl-4 border-l-2 border-primary ml-[18px]">
+                    <div className="grid md:grid-cols-3 gap-8 py-4">
+                        <div className="md:col-span-2">
+                           {step.description}
+                        </div>
+                        <div className="relative h-48 w-full rounded-lg overflow-hidden">
+                           <Image 
+                             src={step.image.src}
+                             alt={step.title}
+                             width={step.image.width}
+                             height={step.image.height}
+                             data-ai-hint={step.image.hint}
+                             className="w-full h-full object-cover"
+                           />
+                        </div>
+                    </div>
                 </AccordionContent>
               </AccordionItem>
             ))}

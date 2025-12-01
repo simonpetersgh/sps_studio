@@ -1,0 +1,48 @@
+{
+  "services": {
+    "web": {
+      "src": "https://picsum.photos/seed/webdesign/600/800",
+      "width": 600,
+      "height": 800,
+      "hint": "website user interface"
+    },
+    "mobile": {
+      "src": "https://picsum.photos/seed/mobileapp/600/800",
+      "width": 600,
+      "height": 800,
+      "hint": "mobile app screen"
+    },
+    "custom": {
+      "src": "https://picsum.photos/seed/software/600/800",
+      "width": 600,
+      "height": 800,
+      "hint": "dashboard analytics"
+    }
+  },
+  "workflow": {
+    "discovery": {
+      "src": "https://picsum.photos/seed/discovery/600/400",
+      "width": 600,
+      "height": 400,
+      "hint": "conversation brainstorming"
+    },
+    "planning": {
+      "src": "https://picsum.photos/seed/planning/600/400",
+      "width": 600,
+      "height": 400,
+      "hint": "blueprint strategy"
+    },
+    "development": {
+      "src": "https://picsum.photos/seed/development/600/400",
+      "width": 600,
+      "height": 400,
+      "hint": "coding programming"
+    },
+    "launch": {
+      "src": "https://picsum.photos/seed/launch/600/400",
+      "width": 600,
+      "height": 400,
+      "hint": "rocket launch"
+    }
+  }
+}
