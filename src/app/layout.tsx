@@ -5,10 +5,77 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/theme-provider";
 
+// export const metadata: Metadata = {
+//   title: 'Simon Peters Sakpla | SPS Studio',
+//   description: 'Innovation',
+// };
+// app/layout.tsx
+
 export const metadata: Metadata = {
-  title: 'Simon Peters Sak[la | SPS Studio',
-  description: 'Innovation',
+  title: "Simon Peters Sakpla | SPS Studio",
+  description:
+    "Freelance Software Developer | Professional Web, Mobile App & Custom Software Development Services",
+  keywords: [
+    "web development",
+    "web developer",
+    "web developer ghana",
+    "mobile app development",
+    "mobile app developer",
+    "mobile app developer ghana",
+    "custom software",
+    "business software",
+    "web design",
+    "websitedesign",
+    "web design ghana",
+    "web developer",
+    "Next.js developer",
+    "Flutter developer",
+    "Flutter developer ghana",
+    "Ghana software developer",
+    "booking apps",
+    "inventory systems",
+    "business tools",
+    "digital solutions",
+    "SPS Studio",
+    "Simon Peters Sakpla",
+  ],
+  authors: [{ name: "Simon Peters Sakpla" }],
+  creator: "Simon Peters Sakpla",
+  publisher: "SPS Studio",
+  robots: "index, follow",
+
+  openGraph: {
+    title: "Simon Peters Sakpla | SPS STUDIO",
+    description:
+      "Business Analyst & Software Developer - Professional Web, Mobile App & Custom Software Development Services",
+    url: "https://simonpetersgh.com",
+    siteName: "SPS STUDIO",
+    images: [
+      {
+        url: "https://simonpetersgh.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "SPS STUDIO",
+      },
+    ],
+    locale: "en_GH",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Simon Peters Sakpla | SPS Studio",
+    description:
+      "Business Analyst & Software Developer | Web, Mobile App & Custom Software Development services for individuals, startups, businesses and organisation of all kinds.",
+    images: ["https://simonpetersgh.com/og-image.png"],
+    creator: "@simonpetersgh",
+  },
+
+  alternates: {
+    canonical: "https://simonpetersgh.com",
+  },
 };
+
 
 export default function RootLayout({
   children,
@@ -33,6 +100,7 @@ export default function RootLayout({
           {children}
           <Toaster />
         </ThemeProvider>
+        {/* ANALYTICS AND PAGE INSIGHT */}
         <Analytics />
         <SpeedInsights />
       </body>
