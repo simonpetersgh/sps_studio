@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -71,7 +64,7 @@ const HeroSection = () => (
       Developing web and mobile applications that empower individuals and startups to establish a strong online presence and drive growth.
       </p>
       <Button asChild size="lg" className="animate-fade-in-up [animation-delay:0.6s] bg-transparent border-white text-white hover:bg-primary hover:text-black" variant="outline">
-        <Link href="#contact">Get in Touch</Link>
+        <Link href="/contact">Get in Touch</Link>
       </Button>
     </div>
   </section>
@@ -149,43 +142,28 @@ const ServicesSection = () => (
       </div>
       <div className="grid md:grid-cols-3 gap-8 animate-fade-in-up [animation-delay:0.2s]">
         {services.map((service) => (
-          <div key={service.title} className="group md:[perspective:1000px]">
-            <div className="relative h-full transition-transform duration-500 md:[transform-style:preserve-3d] md:group-hover:[transform:rotateY(180deg)]">
-              {/* Front Face */}
-              <div className="md:absolute md:inset-0 w-full h-full md:[backface-visibility:hidden]">
-                <div className="relative w-full h-96 rounded-xl overflow-hidden shadow-lg">
-                  <Image
+          <Card key={service.title} className="flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-2">
+            <div className="relative w-full h-64">
+                <Image
                     src={service.image.src}
                     alt={service.title}
-                    width={service.image.width}
-                    height={service.image.height}
+                    fill
                     data-ai-hint={service.image.hint}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/50 flex items-end p-6">
-                    <h3 className="text-white text-2xl font-bold font-headline">{service.title}</h3>
-                  </div>
-                </div>
-              </div>
-              {/* Back Face */}
-              <div className="mt-4 md:mt-0 md:absolute md:inset-0 w-full h-full md:[transform:rotateY(180deg)] md:[backface-visibility:hidden]">
-                <Card className="flex flex-col h-full rounded-xl">
-                  <CardHeader className="items-center">
-                    {service.icon}
-                    <CardTitle className="font-headline text-center text-xl">{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-1">
-                    <p className="text-left text-muted-foreground">{service.description}</p>
-                  </CardContent>
-                  <CardFooter>
-                    <Button asChild variant="link" className="w-full">
-                      <Link href={service.link}>Learn More</Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </div>
+                    className="object-cover"
+                />
             </div>
-          </div>
+            <CardHeader>
+                <CardTitle className="font-headline text-center text-xl">{service.title}</CardTitle>
+            </CardHeader>
+            <CardContent className="flex-1">
+                <p className="text-left text-muted-foreground">{service.description}</p>
+            </CardContent>
+            <CardFooter>
+                <Button asChild variant="link" className="w-full">
+                    <Link href={service.link}>Learn More</Link>
+                </Button>
+            </CardFooter>
+          </Card>
         ))}
       </div>
     </div>
@@ -275,6 +253,82 @@ const WorkflowSection = () => (
     </section>
 );
 
+const PortfolioSection = () => {
+    const featuredProjects = [
+    {
+      title: "KEPS Studio",
+      description:
+        "A web app for the newly launched studio for a group of managed software engineers and freelance community.",
+      imageUrl: "https://firebasestorage.googleapis.com/v0/b/sesa-studio.firebasestorage.app/o/keps-studio%2Fworkspace-1.png?alt=media&token=7338c884-7eab-43d9-884b-53d5309b910e",
+      imageHint: "website cover",
+      liveUrl: "https://sesastudio--sesa-studio.europe-west4.hosted.app/",
+    },
+    {
+      title: "Delivery Mobile App",
+      description:
+        "An intuitive delivery and courier services application for a startup, soon to be available on both iOS and Android.",
+      imageHint: "mobile payment",
+      imageUrl: "https://firebasestorage.googleapis.com/v0/b/sesa-studio.firebasestorage.app/o/keps-studio%2Fdeft-project.png?alt=media&token=922e5b26-b7bf-4dba-bd28-e9bd35e1730a",
+      liveUrl: "https://deft-admin.web.app",
+    },
+    {
+      title: "Business Website Design",
+      description:
+        "A modern, performant, and SEO-friendly marketing website for a fashion brand in Accra.",
+      imageUrl: "https://teesvividthread.com/og-image.png",
+      imageHint: "corporate website",
+      liveUrl: "https://www.teesvividthread.com",
+    },
+  ];
+    
+    return (
+        <section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
+            <div className="max-w-6xl mx-auto">
+                <div className="text-center mb-12 animate-fade-in-up">
+                    <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
+                        Featured Projects
+                    </h2>
+                    <p className="mt-4 text-xl text-muted-foreground max-w-3xl mx-auto">
+                        Here's a glimpse of what I can do. I've worked on a variety of projects, from sleek marketing sites to complex web applications.
+                    </p>
+                </div>
+                <div className="grid md:grid-cols-3 gap-8 animate-fade-in-up [animation-delay:0.2s]">
+                {featuredProjects.map((project) => (
+                    <Card key={project.title} className="overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300">
+                    <Image
+                        src={project.imageUrl}
+                        alt={project.title}
+                        width={600}
+                        height={400}
+                        className="w-full h-48 object-cover"
+                        data-ai-hint={project.imageHint}
+                    />
+                    <CardHeader>
+                        <CardTitle className="font-headline">{project.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-1">
+                        <p className="text-muted-foreground">{project.description}</p>
+                    </CardContent>
+                    <CardFooter className="flex justify-between items-center">
+                         <Button asChild variant="outline">
+                            <Link href={project.liveUrl} target="_blank">
+                                <ExternalLink className="mr-2 h-4 w-4" /> Live View
+                            </Link>
+                        </Button>
+                    </CardFooter>
+                    </Card>
+                ))}
+                </div>
+                 <div className="text-center mt-12 animate-fade-in-up [animation-delay:0.4s]">
+                    <Button asChild size="lg" variant="ghost">
+                        <Link href="/projects">View More Projects</Link>
+                    </Button>
+                </div>
+            </div>
+        </section>
+    );
+}
+
 const CtaSection = () => (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -313,6 +367,7 @@ export default function Home() {
           <AboutSection />
           <ServicesSection />
           <WorkflowSection />
+          <PortfolioSection />
           <CtaSection />
         </main>
         <Footer />
@@ -320,5 +375,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
