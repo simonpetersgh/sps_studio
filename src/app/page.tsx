@@ -133,41 +133,44 @@ const services = [
 ];
 
 const ServicesSection = () => (
-  <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
-    <div className="max-w-6xl mx-auto text-center">
-      <div className="animate-fade-in-up mb-12">
-        <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
-          Services and How I Can Help
-        </h2>
-      </div>
-      <div className="grid md:grid-cols-3 gap-8 animate-fade-in-up [animation-delay:0.2s]">
-        {services.map((service) => (
-          <Card key={service.title} className="flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-2">
-            <div className="relative w-full h-64">
-                <Image
-                    src={service.image.src}
-                    alt={service.title}
-                    fill
-                    data-ai-hint={service.image.hint}
-                    className="object-cover"
-                />
+    <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
+        <div className="max-w-6xl mx-auto text-center">
+            <div className="animate-fade-in-up mb-12">
+                <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
+                    Services and How I Can Help
+                </h2>
             </div>
-            <CardHeader>
-                <CardTitle className="font-headline text-center text-xl">{service.title}</CardTitle>
-            </CardHeader>
-            <CardContent className="flex-1">
-                <p className="text-left text-muted-foreground">{service.description}</p>
-            </CardContent>
-            <CardFooter>
-                <Button asChild variant="link" className="w-full">
-                    <Link href={service.link}>Learn More</Link>
-                </Button>
-            </CardFooter>
-          </Card>
-        ))}
-      </div>
-    </div>
-  </section>
+            <div className="grid md:grid-cols-3 gap-8 animate-fade-in-up [animation-delay:0.2s]">
+                {services.map((service) => (
+                    <Card
+                        key={service.title}
+                        className="flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-2"
+                    >
+                        <div className="relative w-full h-64">
+                            <Image
+                                src={service.image.src}
+                                alt={service.title}
+                                fill
+                                data-ai-hint={service.image.hint}
+                                className="object-cover"
+                            />
+                        </div>
+                        <CardHeader>
+                            <CardTitle className="font-headline text-center text-xl">{service.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent className="flex-1">
+                            <p className="text-left text-muted-foreground">{service.description}</p>
+                        </CardContent>
+                        <CardFooter>
+                            <Button asChild variant="link" className="w-full">
+                                <Link href={service.link}>Learn More</Link>
+                            </Button>
+                        </CardFooter>
+                    </Card>
+                ))}
+            </div>
+        </div>
+    </section>
 );
 
 
@@ -253,81 +256,6 @@ const WorkflowSection = () => (
     </section>
 );
 
-const PortfolioSection = () => {
-    const featuredProjects = [
-    {
-      title: "KEPS Studio",
-      description:
-        "A web app for the newly launched studio for a group of managed software engineers and freelance community.",
-      imageUrl: "https://firebasestorage.googleapis.com/v0/b/sesa-studio.firebasestorage.app/o/keps-studio%2Fworkspace-1.png?alt=media&token=7338c884-7eab-43d9-884b-53d5309b910e",
-      imageHint: "website cover",
-      liveUrl: "https://sesastudio--sesa-studio.europe-west4.hosted.app/",
-    },
-    {
-      title: "Delivery Mobile App",
-      description:
-        "An intuitive delivery and courier services application for a startup, soon to be available on both iOS and Android.",
-      imageHint: "mobile payment",
-      imageUrl: "https://firebasestorage.googleapis.com/v0/b/sesa-studio.firebasestorage.app/o/keps-studio%2Fdeft-project.png?alt=media&token=922e5b26-b7bf-4dba-bd28-e9bd35e1730a",
-      liveUrl: "https://deft-admin.web.app",
-    },
-    {
-      title: "Business Website Design",
-      description:
-        "A modern, performant, and SEO-friendly marketing website for a fashion brand in Accra.",
-      imageUrl: "https://teesvividthread.com/og-image.png",
-      imageHint: "corporate website",
-      liveUrl: "https://www.teesvividthread.com",
-    },
-  ];
-    
-    return (
-        <section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
-            <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-12 animate-fade-in-up">
-                    <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
-                        Featured Projects
-                    </h2>
-                    <p className="mt-4 text-xl text-muted-foreground max-w-3xl mx-auto">
-                        Here's a glimpse of what I can do. I've worked on a variety of projects, from sleek marketing sites to complex web applications.
-                    </p>
-                </div>
-                <div className="grid md:grid-cols-3 gap-8 animate-fade-in-up [animation-delay:0.2s]">
-                {featuredProjects.map((project) => (
-                    <Card key={project.title} className="overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300">
-                    <Image
-                        src={project.imageUrl}
-                        alt={project.title}
-                        width={600}
-                        height={400}
-                        className="w-full h-48 object-cover"
-                        data-ai-hint={project.imageHint}
-                    />
-                    <CardHeader>
-                        <CardTitle className="font-headline">{project.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex-1">
-                        <p className="text-muted-foreground">{project.description}</p>
-                    </CardContent>
-                    <CardFooter className="flex justify-between items-center">
-                         <Button asChild variant="outline">
-                            <Link href={project.liveUrl} target="_blank">
-                                <ExternalLink className="mr-2 h-4 w-4" /> Live View
-                            </Link>
-                        </Button>
-                    </CardFooter>
-                    </Card>
-                ))}
-                </div>
-                 <div className="text-center mt-12 animate-fade-in-up [animation-delay:0.4s]">
-                    <Button asChild size="lg" variant="ghost">
-                        <Link href="/projects">View More Projects</Link>
-                    </Button>
-                </div>
-            </div>
-        </section>
-    );
-}
 
 const CtaSection = () => (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -367,7 +295,6 @@ export default function Home() {
           <AboutSection />
           <ServicesSection />
           <WorkflowSection />
-          <PortfolioSection />
           <CtaSection />
         </main>
         <Footer />
