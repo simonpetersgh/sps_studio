@@ -1,5 +1,4 @@
 
-
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -16,47 +15,29 @@ import { Footer } from "@/components/layout/footer";
 
 const allProjects = [
     {
-      title: "Insight Dashboard",
-      description: "A powerful data visualization platform for analyzing business metrics and trends in real-time.",
-      imageUrl: "https://picsum.photos/seed/2/600/400",
-      imageHint: "data dashboard",
-      liveUrl: "#",
+      title: "KEPS Studio",
+      description:
+        "A web app for the newly launched studio for a group of managed software engineers and freelance community.",
+      imageUrl: "https://firebasestorage.googleapis.com/v0/b/sesa-studio.firebasestorage.app/o/keps-studio%2Fworkspace-1.png?alt=media&token=7338c884-7eab-43d9-884b-53d5309b910e",
+      imageHint: "website cover",
+      liveUrl: "https://sesastudio--sesa-studio.europe-west4.hosted.app/",
     },
     {
-      title: "Mobile POS System",
-      description: "An intuitive point-of-sale application for small businesses, available on both iOS and Android.",
-      imageUrl: "https://picsum.photos/seed/3/600/400",
+      title: "Delivery Mobile App",
+      description:
+        "An intuitive delivery and courier services application for a startup, soon to be available on both iOS and Android.",
       imageHint: "mobile payment",
-      liveUrl: "#",
+      imageUrl: "https://firebasestorage.googleapis.com/v0/b/sesa-studio.firebasestorage.app/o/keps-studio%2Fdeft-project.png?alt=media&token=922e5b26-b7bf-4dba-bd28-e9bd35e1730a",
+      liveUrl: "https://deft-admin.web.app",
     },
     {
-      title: "Corporate Website Redesign",
-      description: "A modern, performant, and SEO-friendly marketing website for a leading tech company.",
-      imageUrl: "https://picsum.photos/seed/4/600/400",
+      title: "Business Website Design",
+      description:
+        "A modern, performant, and SEO-friendly marketing website for a fashion brand in Accra.",
+      imageUrl: "https://teesvividthread.com/og-image.png",
       imageHint: "corporate website",
-      liveUrl: "#",
+      liveUrl: "https://www.teesvividthread.com",
     },
-    {
-      title: "E-commerce Storefront",
-      description: "A full-featured e-commerce platform with a custom CMS and payment integration.",
-      imageUrl: "https://picsum.photos/seed/5/600/400",
-      imageHint: "online store",
-      liveUrl: "#",
-    },
-    {
-      title: "Project Management Tool",
-      description: "A collaborative tool to help teams manage tasks, timelines, and resources effectively.",
-      imageUrl: "https://picsum.photos/seed/6/600/400",
-      imageHint: "project management",
-      liveUrl: "#",
-    },
-    {
-        title: "Recipe Finder App",
-        description: "A mobile app that helps users discover new recipes based on ingredients they have.",
-        imageUrl: "https://picsum.photos/seed/7/600/400",
-        imageHint: "food recipe",
-        liveUrl: "#",
-    }
   ];
   
 export default function ProjectsPage() {

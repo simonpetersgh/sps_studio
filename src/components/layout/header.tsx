@@ -17,7 +17,7 @@ const NavLinks = ({ mobile = false }: { mobile?: boolean }) => (
     <Link href="/services-and-pricing" className={cn(mobile ? "text-lg font-medium" : "text-sm", "hover:text-primary transition-colors")}>
       Services
     </Link>
-    <Link href="/#portfolio" className={cn(mobile ? "text-lg font-medium" : "text-sm", "hover:text-primary transition-colors")}>
+    <Link href="/projects" className={cn(mobile ? "text-lg font-medium" : "text-sm", "hover:text-primary transition-colors")}>
       Projects
     </Link>
     <Link href="/contact" className={cn(mobile ? "text-lg font-medium" : "text-sm", "hover:text-primary transition-colors")}>
