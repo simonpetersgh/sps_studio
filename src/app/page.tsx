@@ -1,6 +1,7 @@
 
 
 
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -142,27 +143,27 @@ const ServicesSection = () => (
           Services and How I Can Help
         </h2>
       </div>
-      <div className="grid md:grid-cols-3 gap-8 justify-center animate-fade-in-up [animation-delay:0.2s] [perspective:1000px]">
+      <div className="grid md:grid-cols-3 gap-8 justify-center animate-fade-in-up [animation-delay:0.2s] md:[perspective:1000px]">
         {services.map((service) => (
-            <div key={service.title} className="group h-[400px]">
-                <div className="relative h-full w-full rounded-xl shadow-lg transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                    {/* Front Face */}
-                    <div className="absolute inset-0 [backface-visibility:hidden]">
+            <div key={service.title} className="group md:h-[400px]">
+                <div className="relative w-full md:h-full rounded-xl shadow-lg transition-all duration-500 md:[transform-style:preserve-3d] md:group-hover:[transform:rotateY(180deg)]">
+                    {/* Front Face - Visible on all screens initially */}
+                    <div className="md:absolute md:inset-0 md:[backface-visibility:hidden]">
                         <Image 
                             src={service.image.src}
                             alt={service.title}
                             width={service.image.width}
                             height={service.image.height}
                             data-ai-hint={service.image.hint}
-                            className="w-full h-full object-cover rounded-xl"
+                            className="w-full h-64 md:h-full object-cover rounded-t-xl md:rounded-xl"
                         />
-                        <div className="absolute inset-0 bg-black/50 rounded-xl flex items-end p-6">
+                        <div className="absolute inset-0 bg-black/50 rounded-t-xl md:rounded-xl flex items-end p-6">
                             <h3 className="text-white text-2xl font-bold font-headline">{service.title}</h3>
                         </div>
                     </div>
-                    {/* Back Face */}
-                    <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                        <Card className="h-full flex flex-col">
+                    {/* Back Face - Flips on desktop, stacked on mobile */}
+                    <div className="md:absolute md:inset-0 md:[transform:rotateY(180deg)] md:[backface-visibility:hidden]">
+                        <Card className="flex flex-col h-full rounded-b-xl md:rounded-xl">
                             <CardHeader className="items-center">
                                 {service.icon}
                                 <CardTitle className="font-headline text-center text-xl">{service.title}</CardTitle>
