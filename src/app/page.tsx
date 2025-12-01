@@ -2,6 +2,7 @@
 
 
 
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -136,7 +137,7 @@ const services = [
 ];
 
 const ServicesSection = () => (
-    <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
+  <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50">
     <div className="max-w-6xl mx-auto text-center">
       <div className="animate-fade-in-up mb-12">
         <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
@@ -145,41 +146,43 @@ const ServicesSection = () => (
       </div>
       <div className="grid md:grid-cols-3 gap-8 justify-center animate-fade-in-up [animation-delay:0.2s] md:[perspective:1000px]">
         {services.map((service) => (
-            <div key={service.title} className="group md:h-[400px]">
-                <div className="relative w-full md:h-full rounded-xl shadow-lg transition-all duration-500 md:[transform-style:preserve-3d] md:group-hover:[transform:rotateY(180deg)]">
-                    {/* Front Face - Visible on all screens initially */}
-                    <div className="md:absolute md:inset-0 md:[backface-visibility:hidden]">
-                        <Image 
-                            src={service.image.src}
-                            alt={service.title}
-                            width={service.image.width}
-                            height={service.image.height}
-                            data-ai-hint={service.image.hint}
-                            className="w-full h-64 md:h-full object-cover rounded-t-xl md:rounded-xl"
-                        />
-                        <div className="absolute inset-0 bg-black/50 rounded-t-xl md:rounded-xl flex items-end p-6">
-                            <h3 className="text-white text-2xl font-bold font-headline">{service.title}</h3>
-                        </div>
-                    </div>
-                    {/* Back Face - Flips on desktop, stacked on mobile */}
-                    <div className="md:absolute md:inset-0 md:[transform:rotateY(180deg)] md:[backface-visibility:hidden]">
-                        <Card className="flex flex-col h-full rounded-b-xl md:rounded-xl">
-                            <CardHeader className="items-center">
-                                {service.icon}
-                                <CardTitle className="font-headline text-center text-xl">{service.title}</CardTitle>
-                            </CardHeader>
-                            <CardContent className="flex-1">
-                                <p className="text-left text-muted-foreground text-sm">{service.description}</p>
-                            </CardContent>
-                            <CardFooter>
-                                <Button asChild variant="link" className="w-full">
-                                    <Link href={service.link}>Learn More</Link>
-                                </Button>
-                            </CardFooter>
-                        </Card>
-                    </div>
+          <div key={service.title} className="group md:h-[400px]">
+            <div className="relative w-full h-full rounded-xl shadow-lg transition-all duration-500 md:[transform-style:preserve-3d] md:group-hover:[transform:rotateY(180deg)]">
+              {/* Front Face */}
+              <div className="md:absolute md:inset-0 md:[backface-visibility:hidden]">
+                <div className="relative w-full h-64 md:h-full rounded-xl overflow-hidden">
+                  <Image
+                    src={service.image.src}
+                    alt={service.title}
+                    width={service.image.width}
+                    height={service.image.height}
+                    data-ai-hint={service.image.hint}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/50 flex items-end p-6">
+                    <h3 className="text-white text-2xl font-bold font-headline">{service.title}</h3>
+                  </div>
                 </div>
+              </div>
+              {/* Back Face */}
+              <div className="relative md:absolute md:inset-0 md:[transform:rotateY(180deg)] md:[backface-visibility:hidden]">
+                <Card className="flex flex-col h-full rounded-xl -mt-2 md:mt-0">
+                  <CardHeader className="items-center">
+                    {service.icon}
+                    <CardTitle className="font-headline text-center text-xl">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <p className="text-left text-muted-foreground text-sm">{service.description}</p>
+                  </CardContent>
+                  <CardFooter>
+                    <Button asChild variant="link" className="w-full">
+                      <Link href={service.link}>Learn More</Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </div>
             </div>
+          </div>
         ))}
       </div>
     </div>
