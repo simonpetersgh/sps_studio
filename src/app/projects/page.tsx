@@ -70,7 +70,7 @@ export default function ProjectsPage() {
                 <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight mb-4">
                     All Projects
                 </h1>
-                <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+                <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
                     Here's a broader selection of my work, showcasing my skills across different domains.
                 </p>
             </div>
@@ -92,7 +92,7 @@ export default function ProjectsPage() {
                     <CardTitle className="font-headline">{project.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1">
-                    <p className="text-muted-foreground">{project.description}</p>
+                    <p className="text-muted-foreground text-base">{project.description}</p>
                   </CardContent>
                   <CardFooter className="flex justify-end gap-2">
                     <Button asChild variant="outline">

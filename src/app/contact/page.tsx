@@ -15,7 +15,7 @@ const CtaSection = () => (
                 <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold mb-6">
                   Let’s Talk About Your Project
                 </h2>
-                <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+                <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
                   You don't need a full technical plan to get started. Just bring your idea and I am happy to discuss how we can bring it to life. Let's analyze your business needs and find the best solution for your budget.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">

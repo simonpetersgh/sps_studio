@@ -60,7 +60,7 @@ const HeroSection = () => (
       <h1 className="font-headline text-4xl md:text-4xl font-bold text-primary/90 tracking-tight py-6 mb-4 max-w-4xl leading-tight animate-fade-in-up [animation-delay:0.2s]">
         Chat. Plan. Build. Launch. Grow with SPS.
       </h1>
-      <p className="text-lg md:text-xl text-slate-300 max-w-2xl mb-8 animate-fade-in-up [animation-delay:0.4s]">
+      <p className="text-xl md:text-2xl text-slate-300 max-w-2xl mb-8 animate-fade-in-up [animation-delay:0.4s]">
       Developing web and mobile applications that empower individuals and startups to establish a strong online presence and drive growth.
       </p>
       <Button asChild size="lg" className="animate-fade-in-up [animation-delay:0.6s] bg-transparent border-white text-white hover:bg-primary hover:text-black" variant="outline">
@@ -154,7 +154,7 @@ const ServicesSection = () => (
               <CardTitle className="font-headline">{service.title}</CardTitle>
             </CardHeader>
             <CardContent className="flex-1">
-              <p className="text-muted-foreground">{service.description}</p>
+              <p className="text-muted-foreground text-base">{service.description}</p>
             </CardContent>
             <CardFooter>
               <Button asChild variant="link">
@@ -212,7 +212,7 @@ const WorkflowSection = () => (
           <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
             How We Can Work Together
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="mt-4 text-xl text-muted-foreground max-w-3xl mx-auto">
             In partnering you to turn your idea from concept to a working product., I keep the entire process simple, transparent, and collaborative through a 4-step workflow:
           </p>
         </div>
@@ -233,13 +233,13 @@ const WorkflowSection = () => (
           <Accordion type="single" collapsible defaultValue="step-1">
             {workflowSteps.map(step => (
               <AccordionItem value={step.value} key={step.value}>
-                <AccordionTrigger className="text-lg font-headline hover:no-underline">
+                <AccordionTrigger className="text-xl font-headline hover:no-underline">
                     <div className="flex items-center gap-4">
                         <span className="md:hidden">{step.icon}</span>
                         <span>{step.title}</span>
                     </div>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pl-4 border-l-2 border-primary ml-2">
+                <AccordionContent className="text-muted-foreground text-base pl-4 border-l-2 border-primary ml-2">
                     {step.description}
                 </AccordionContent>
               </AccordionItem>
@@ -312,7 +312,7 @@ const PortfolioSection = () => (
               <CardTitle className="font-headline">{project.title}</CardTitle>
             </CardHeader>
             <CardContent className="flex-1">
-              <p className="text-muted-foreground">{project.description}</p>
+              <p className="text-muted-foreground text-base">{project.description}</p>
             </CardContent>
             <CardFooter className="flex justify-end gap-2">
               <Button asChild variant="outline">
@@ -340,7 +340,7 @@ const CtaSection = () => (
                 <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold mb-6">
                   Let’s Talk About Your Project
                 </h2>
-                <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+                <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
                   You don't need a full technical plan to get started. Just bring your idea and I am happy to discuss how we can bring it to life. Let's analyze your business needs and find the best solution for your budget.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -104,7 +104,7 @@ export default function ServicesPage() {
                             <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight mb-4">
                                 Web Solutions
                             </h1>
-                            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+                            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
                                 From simple landing pages to complex e-commerce platforms, I build beautiful, functional, and high-performing websites that meet your business goals.
                             </p>
                         </div>
@@ -122,7 +122,7 @@ export default function ServicesPage() {
                                             <span className="text-4xl font-bold">{pkg.price.startsWith('$') ? pkg.price.split(' ')[0] : ''}</span>
                                             <span className="text-muted-foreground">{pkg.price.startsWith('$') ? pkg.price.substring(pkg.price.indexOf(' ')) : pkg.price}</span>
                                         </div>
-                                        <ul className="space-y-3 text-sm">
+                                        <ul className="space-y-3 text-base">
                                             {pkg.features.map((feature) => (
                                                 <li key={feature} className="flex items-center gap-2">
                                                     <Check className="h-4 w-4 text-primary" />
@@ -155,7 +155,7 @@ export default function ServicesPage() {
                             <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight mb-4">
                                 Mobile App Development
                             </h1>
-                            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+                            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
                                 I create beautiful, intuitive, and high-performance mobile applications for iOS and Android that your users will love.
                             </p>
                         </div>
@@ -163,7 +163,7 @@ export default function ServicesPage() {
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div>
                                 <h2 className="font-headline text-3xl font-bold mb-4">From Idea to App Store</h2>
-                                <p className="text-muted-foreground mb-6">
+                                <p className="text-muted-foreground mb-6 text-lg">
                                     The mobile app development process is a journey we'll take together. It starts with your vision. I'll help refine your idea, create a beautiful design, develop a robust and scalable application, and guide you through the process of launching on the Apple App Store and Google Play Store.
                                 </p>
                                 <div className="grid grid-cols-3 gap-4 text-center mb-8">
@@ -198,7 +198,7 @@ export default function ServicesPage() {
 
                         <div className="mt-24 text-center">
                              <h2 className="font-headline text-4xl font-bold mb-4">Pricing</h2>
-                             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+                             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto text-lg">
                                 Every mobile app is unique. The final cost depends on the complexity, features, and platforms required. I provide a detailed, transparent quote after our initial consultation.
                              </p>
                              <Card className="max-w-md mx-auto">
@@ -207,7 +207,7 @@ export default function ServicesPage() {
                                 </CardHeader>
                                 <CardContent>
                                     <p className="text-4xl font-bold mb-4">By Consultation</p>
-                                    <p className="text-muted-foreground">
+                                    <p className="text-muted-foreground text-base">
                                         Let's discuss your project to determine the scope and provide a detailed estimate.
                                     </p>
                                 </CardContent>
@@ -229,7 +229,7 @@ export default function ServicesPage() {
                             <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight mb-4">
                                 Custom Business Software
                             </h1>
-                            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+                            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
                                 I develop tailored software solutions that streamline your operations, boost productivity, and provide a competitive edge.
                             </p>
                         </div>
@@ -247,10 +247,10 @@ export default function ServicesPage() {
                             </div>
                             <div>
                                 <h2 className="font-headline text-3xl font-bold mb-4">Your Business, Your Software</h2>
-                                <p className="text-muted-foreground mb-6">
+                                <p className="text-muted-foreground mb-6 text-lg">
                                     Off-the-shelf software doesn't always fit. When you have unique processes, you need a solution built around your business. I work closely with you to understand your challenges and build a robust, scalable, and secure software application that perfectly matches your needs.
                                 </p>
-                                <ul className="grid grid-cols-2 gap-x-6 gap-y-3 mb-8">
+                                <ul className="grid grid-cols-2 gap-x-6 gap-y-3 mb-8 text-base">
                                     {customSoftwareFeatures.map((feature) => (
                                         <li key={feature} className="flex items-center gap-2">
                                             <Check className="h-4 w-4 text-primary shrink-0" />
@@ -266,7 +266,7 @@ export default function ServicesPage() {
 
                         <div className="mt-24 text-center">
                              <h2 className="font-headline text-4xl font-bold mb-4">Pricing</h2>
-                             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+                             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto text-lg">
                                Custom software projects are quoted based on the specific requirements, complexity, and timeline. I believe in full transparency and will provide a detailed proposal after our initial consultation.
                              </p>
                              <Card className="max-w-md mx-auto">
@@ -275,7 +275,7 @@ export default function ServicesPage() {
                                 </CardHeader>
                                 <CardContent>
                                     <p className="text-4xl font-bold mb-4">By Consultation</p>
-                                    <p className="text-muted-foreground">
+                                    <p className="text-muted-foreground text-base">
                                         Let's analyze your needs and build a comprehensive project plan and estimate.
                                     </p>
                                 </CardContent>
