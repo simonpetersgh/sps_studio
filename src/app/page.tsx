@@ -3,6 +3,7 @@
 
 
 
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -147,10 +148,10 @@ const ServicesSection = () => (
       <div className="grid md:grid-cols-3 gap-8 justify-center animate-fade-in-up [animation-delay:0.2s] md:[perspective:1000px]">
         {services.map((service) => (
           <div key={service.title} className="group md:h-[400px]">
-            <div className="relative w-full h-full rounded-xl shadow-lg transition-all duration-500 md:[transform-style:preserve-3d] md:group-hover:[transform:rotateY(180deg)]">
+            <div className="relative w-full h-full transition-transform duration-500 md:[transform-style:preserve-3d] md:group-hover:[transform:rotateY(180deg)]">
               {/* Front Face */}
-              <div className="md:absolute md:inset-0 md:[backface-visibility:hidden]">
-                <div className="relative w-full h-64 md:h-full rounded-xl overflow-hidden">
+              <div className="md:absolute md:inset-0 md:w-full md:h-full md:[backface-visibility:hidden]">
+                <div className="relative w-full h-64 md:h-full rounded-xl overflow-hidden shadow-lg">
                   <Image
                     src={service.image.src}
                     alt={service.title}
@@ -165,7 +166,7 @@ const ServicesSection = () => (
                 </div>
               </div>
               {/* Back Face */}
-              <div className="relative md:absolute md:inset-0 md:[transform:rotateY(180deg)] md:[backface-visibility:hidden]">
+              <div className="relative md:absolute md:inset-0 md:w-full md:h-full md:[transform:rotateY(180deg)] md:[backface-visibility:hidden]">
                 <Card className="flex flex-col h-full rounded-xl -mt-2 md:mt-0">
                   <CardHeader className="items-center">
                     {service.icon}
