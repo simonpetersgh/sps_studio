@@ -5,6 +5,7 @@
 
 
 
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -146,13 +147,13 @@ const ServicesSection = () => (
           Services and How I Can Help
         </h2>
       </div>
-      <div className="grid md:grid-cols-3 gap-8 justify-center animate-fade-in-up [animation-delay:0.2s] md:[perspective:1000px]">
+      <div className="grid md:grid-cols-3 gap-8 animate-fade-in-up [animation-delay:0.2s]">
         {services.map((service) => (
-          <div key={service.title} className="group md:h-[400px]">
-            <div className="relative w-full h-full transition-transform duration-500 md:[transform-style:preserve-3d] md:group-hover:[transform:rotateY(180deg)]">
+          <div key={service.title} className="group md:[perspective:1000px]">
+            <div className="relative h-full transition-transform duration-500 md:[transform-style:preserve-3d] md:group-hover:[transform:rotateY(180deg)]">
               {/* Front Face */}
-              <div className="md:absolute md:inset-0 md:w-full md:h-full md:[backface-visibility:hidden]">
-                <div className="relative w-full h-64 md:h-full rounded-xl overflow-hidden shadow-lg">
+              <div className="md:absolute md:inset-0 w-full h-full md:[backface-visibility:hidden]">
+                <div className="relative w-full h-96 rounded-xl overflow-hidden shadow-lg">
                   <Image
                     src={service.image.src}
                     alt={service.title}
@@ -167,14 +168,14 @@ const ServicesSection = () => (
                 </div>
               </div>
               {/* Back Face */}
-              <div className="mt-2 md:mt-0 md:absolute md:inset-0 md:w-full md:h-full md:[transform:rotateY(180deg)] md:[backface-visibility:hidden]">
+              <div className="mt-4 md:mt-0 md:absolute md:inset-0 w-full h-full md:[transform:rotateY(180deg)] md:[backface-visibility:hidden]">
                 <Card className="flex flex-col h-full rounded-xl">
                   <CardHeader className="items-center">
                     {service.icon}
                     <CardTitle className="font-headline text-center text-xl">{service.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1">
-                    <p className="text-left text-muted-foreground text-sm">{service.description}</p>
+                    <p className="text-left text-muted-foreground">{service.description}</p>
                   </CardContent>
                   <CardFooter>
                     <Button asChild variant="link" className="w-full">
@@ -273,89 +274,6 @@ const WorkflowSection = () => (
       </div>
     </section>
 );
-  
-const projects = [
-  {
-    title: "KEPS Studio",
-    description:
-      "A web app for the newly launched studio for a group of managed software engineers and freelance community.",
-    imageUrl: "https://firebasestorage.googleapis.com/v0/b/sesa-studio.firebasestorage.app/o/keps-studio%2Fworkspace-1.png?alt=media&token=7338c884-7eab-43d9-884b-53d5309b910e",
-    imageHint: "website cover",
-    liveUrl: "https://sesastudio--sesa-studio.europe-west4.hosted.app/",
-  },
-  {
-    title: "Delivery Mobile App",
-    description:
-      "An intuitive delivery and courier services application for a startup, soon to be available on both iOS and Android.",
-    imageHint: "mobile payment",
-    imageUrl: "https://firebasestorage.googleapis.com/v0/b/sesa-studio.firebasestorage.app/o/keps-studio%2Fdeft-project.png?alt=media&token=922e5b26-b7bf-4dba-bd28-e9bd35e1730a",
-    liveUrl: "https://deft-admin.web.app",
-  },
-  {
-    title: "Business Website Design",
-    description:
-      "A modern, performant, and SEO-friendly marketing website for a fashion brand in Accra.",
-    imageUrl: "https://teesvividthread.com/og-image.png",
-    imageHint: "corporate website",
-    liveUrl: "https://www.teesvividthread.com",
-  },
-];
-
-const PortfolioSection = () => (
-  <section
-    id="portfolio"
-    className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50"
-  >
-    <div className="max-w-6xl mx-auto text-center">
-      <div className="mb-12 animate-fade-in-up">
-        {/* <Badge
-          variant="outline"
-          className="text-base md:text-lg font-medium tracking-wide border-primary/50 text-primary/90 bg-primary/10 mb-4"
-        >
-          My Work
-        </Badge> */}
-        <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
-          Featured Projects
-        </h2>
-      </div>
-      <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 text-left animate-fade-in-up [animation-delay:0.2s]">
-        {projects.map((project, index) => (
-          <Card
-            key={project.title}
-            className="overflow-hidden flex flex-col hover:shadow-lg transition-shadow duration-300"
-          >
-            <Image
-              src={project.imageUrl}
-              alt={project.title}
-              width={600}
-              height={400}
-              className="w-full h-48 object-cover"
-              data-ai-hint={project.imageHint}
-            />
-            <CardHeader>
-              <CardTitle className="font-headline">{project.title}</CardTitle>
-            </CardHeader>
-            <CardContent className="flex-1">
-              <p className="text-muted-foreground text-base">{project.description}</p>
-            </CardContent>
-            <CardFooter className="flex justify-end gap-2">
-              <Button asChild variant="outline">
-                <Link href={project.liveUrl} target="_blank">
-                  <ExternalLink className="mr-2 h-4 w-4" /> Live View
-                </Link>
-              </Button>
-            </CardFooter>
-          </Card>
-        ))}
-      </div>
-      <div className="text-center mt-12 animate-fade-in-up [animation-delay:0.4s]">
-        <Button asChild size="lg" variant="outline">
-          <Link href="/projects">View More Projects</Link>
-        </Button>
-      </div>
-    </div>
-  </section>
-);
 
 const CtaSection = () => (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -395,7 +313,6 @@ export default function Home() {
           <AboutSection />
           <ServicesSection />
           <WorkflowSection />
-          <PortfolioSection />
           <CtaSection />
         </main>
         <Footer />
