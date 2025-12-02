@@ -59,7 +59,7 @@ const HeroSection = () => (
         [Simon Peters Sakpla]
       </h1> */}
       <h1 className="font-headline text-4xl md:text-4xl font-bold text-primary/90 tracking-tight py-6 mb-4 max-w-4xl leading-tight animate-fade-in-up [animation-delay:0.2s]">
-        Plan. Build. Launch. Grow with SPS.
+        Plan. Build. Grow. with SPS.
       </h1>
       <p className="text-xl md:text-2xl text-slate-300 max-w-2xl mb-8 animate-fade-in-up [animation-delay:0.4s]">
       Developing web and mobile applications that empower individuals and startups to establish a strong online presence and drive growth.
@@ -96,7 +96,7 @@ const AboutSection = () => (
       </div>
       <div className="flex justify-center order-1 md:order-2 animate-fade-in-up [animation-delay:0.2s]">
         <Image
-          src="/sp-re.png"
+          src="/sp.png"
           alt="A portrait of Simon"
           width={400}
           height={400}
@@ -113,21 +113,22 @@ const services = [
   {
     icon: <LayoutTemplate className="h-8 w-8 mb-4 text-primary" />,
     title: "High-Performance Websites & Web Platforms",
-    description: "Having a professional online presence in the digital age is non-negotiable. I design and build fast, responsive websites that establish trust and make one’s business stand out. Beyond just standard websites and marketing sites, I build web applications where your users can log in, book services, or manage accounts. We can turn your website into a tool for customer self-service and drive sales 24/7.",
+    description: "I build responsive websites and web apps for organisations of any kind or size. Whether you need a clean online presence or a platform for ecommerce, bookings, user management, and self-service. I build solutions that support your goals round the clock.",
     link: "/service-plans",
     image: placeholderImages.services.web,
   },
   {
     icon: <Smartphone className="h-8 w-8 mb-4 text-primary" />,
     title: "Scalable Mobile Apps (iOS & Android)",
-    description: "Get your own mobile app without the high cost of traditional development. I use smart cross-platform technology to build high-quality apps that work flawlessly on both iPhone and Android from a single codebase. marketplace, delivery service, or community. Whether you need a customer-facing app for bookings and orders, or an app for your agents and staff tools to manage tasks on the go, I help develop apps for your one’s unique needs.",
+    description: "Need a high-quality mobile app without the high cost of traditional development? I build apps that run smoothly on both iPhone and Android, designed to fit your needs and requirements for your customers, staff, or on-the-go operations.",
     link: "/services-and-plans",
     image: placeholderImages.services.mobile,
   },
   {
     icon: <Briefcase className="h-8 w-8 mb-4 text-primary" />,
     title: "Custom Business Software",
-    description: "If you are outgrowing Excel sheets, notebooks but don’t have the budget to purchase expensive Enterprise software, it is time for a custom solution tailored specifically to your unique business needs. From managing customer data, to inventory or cashflows management, I build user friendly, secure and scalable tools that optimize your business operations and eliminate the headaches of scaling your business with the right digital tools.",
+    description: "If spreadsheets, notes, and manual work are slowing you down, you don’t need expensive enterprise software, get a software that fits your workflow, supports your team, and grows with your organisation. I develop secure, efficient and scalable tools that help manage customers, inventory, finances, and daily operations with ease.",
+    // description: "If you are outgrowing Excel sheets, notebooks but don’t have the budget to purchase expensive Enterprise software, it is time for a custom solution tailored specifically to your unique business needs. From managing customer data, to inventory or cashflows management, I build user friendly, secure and scalable tools that optimize your business operations and eliminate the headaches of scaling your business with the right digital tools.",
     link: "/services-and-plans",
     image: placeholderImages.services.custom,
   },
