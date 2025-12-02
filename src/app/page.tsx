@@ -62,7 +62,7 @@ const HeroSection = () => (
         Plan. Build. Grow. with SPS.
       </h1>
       <p className="text-xl md:text-2xl text-slate-300 max-w-2xl mb-8 animate-fade-in-up [animation-delay:0.4s]">
-      Developing web and mobile applications that empower individuals and startups to establish a strong online presence and drive growth.
+      Developing web and mobile applications that empower individuals and organisations to establish a strong online presence and drive digital transformation.
       </p>
       <Button asChild size="lg" className="animate-fade-in-up [animation-delay:0.6s] bg-transparent border-white text-white hover:bg-primary hover:text-black" variant="outline">
         <Link href="/contact">Get in Touch</Link>
@@ -90,8 +90,8 @@ const AboutSection = () => (
         which gives me a unique advantage to understand business needs, strategy and the technical solutions needed to achieve them.
         </p>
         <p className="text-lg text-left text-muted-foreground">
-        I specialize in the design and devlopment of high-performance and affordable websites and cross-platform applications for startups and SMEs to thrive and grow in the digital economy in Ghana. 
-        My role is centered on partnering with clients to understand their needs, and turn ideas into into user-friendly applications that help optimize operations and drive business success.
+        I specialize in the design and devlopment of high-performance and affordable web solutions and cross-platform applications for startups, SMEs or non-profit organisations to thrive and grow in the digital economy in Ghana. 
+        My role is centered on partnering with clients to understand their needs and turn ideas into into user-friendly solutions that help optimize operations and lead to organisational success.
         </p>
       </div>
       <div className="flex justify-center order-1 md:order-2 animate-fade-in-up [animation-delay:0.2s]">

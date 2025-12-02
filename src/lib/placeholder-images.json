@@ -1,19 +1,19 @@
 {
   "services": {
     "web": {
-      "src": "https://picsum.photos/seed/webdesign/600/800",
+      "src": "/web-ui.png",
       "width": 600,
       "height": 800,
       "hint": "website user interface"
     },
     "mobile": {
-      "src": "https://picsum.photos/seed/mobileapp/600/800",
+      "src": "/mobile-app.png",
       "width": 600,
       "height": 800,
       "hint": "mobile app screen"
     },
     "custom": {
-      "src": "https://picsum.photos/seed/software/600/800",
+      "src": "/web-dev2.png",
       "width": 600,
       "height": 800,
       "hint": "dashboard analytics"

@@ -158,10 +158,10 @@ export default function ServicesAndPricing() {
         <section className="px-4 sm:px-6 lg:px-8 pb-16 text-center">
           <h1 className="font-headline text-4xl md:text-6xl font-bold mb-6">
             Quality Solutions.<br />
-            <span className="text-primary">Transparent Pricing.</span>
+            <span className="text-primary">Transparent Plans.</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-          Every business or gig deserves a quality digital presence built to perform and convert. There are flexible packages designed to suit different needs and budgets. If you have custom needs beyond these, I’d be happy to build a tailored solution with you.
+          There are flexible packages designed to suit different needs and budgets. If you have custom needs beyond these, I’d be happy to build a tailored solution with you.
           </p>
         </section>
 
@@ -171,7 +171,7 @@ export default function ServicesAndPricing() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-headline font-bold mb-4">Affordable Web Solutions</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-                Get staarted with a tailored web development packages for a one-time development or flexible yearly payment plans designed to provide value and quality.
+                Get started with a tailored web development packages for a one-time development or flexible yearly payment plans designed to provide value and quality.
               </p>
               
               {/* Toggle Switch */}
@@ -245,7 +245,7 @@ export default function ServicesAndPricing() {
                   <CardFooter>
                     <Button asChild className="w-full" variant={plan.isPopular ? "default" : "outline"}>
                       <Link 
-                        href={`https://wa.me/233540228056?text=Hi Simon, I am interested in the ${plan.title} ${activeTab === 'build' ? 'package' : 'care'}.`} 
+                        href={`https://wa.me/233540228056?text=Hi Simon, I am interested in the ${plan.title} ${activeTab === 'build' ? 'package' : 'plan'}.`} 
                         target="_blank"
                       >
                         Get Started

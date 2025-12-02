@@ -49,13 +49,13 @@ export const metadata: Metadata = {
     description:
       "Business Analyst & Software Developer - Professional Web, Mobile App & Custom Software Development Services",
     url: "https://simonpetersgh.com",
-    siteName: "SPS STUDIO",
+    siteName: "Simon Peters Sakpla | SPS STUDIO",
     images: [
       {
         url: "https://simonpetersgh.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "SPS STUDIO",
+        alt: "Simon Peters Sakpla | SPS STUDIO",
       },
     ],
     locale: "en_GH",
