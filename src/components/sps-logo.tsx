@@ -1,19 +1,15 @@
-import type { SVGProps } from "react";
+import Image from "next/image";
+import type { ComponentProps } from "react";
 
-export const SpsLogo = (props: SVGProps<SVGSVGElement>) => (
-    <svg
-      width="48"
-      height="48"
-      viewBox="0 0 48 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48ZM20.6667 13.3333C18.3363 13.3333 16.4444 15.2251 16.4444 17.5556C16.4444 19.886 18.3363 21.7778 20.6667 21.7778H27.3333C29.6637 21.7778 31.5556 19.886 31.5556 17.5556C31.5556 15.2251 29.6637 13.3333 27.3333 13.3333H20.6667ZM20.6667 26.2222C18.3363 26.2222 16.4444 28.114 16.4444 30.4444C16.4444 32.7749 18.3363 34.6667 20.6667 34.6667H27.3333C29.6637 34.6667 31.5556 32.7749 31.5556 30.4444C31.5556 28.114 29.6637 26.2222 27.3333 26.2222H20.6667Z"
-        fill="hsl(var(--primary))"
-      />
-    </svg>
-);
+export const SpsLogo = (props: Partial<ComponentProps<typeof Image>>) => {
+  const { width = 48, height = 48, ...rest } = props;
+  return (
+    <Image
+      src="/sp-icon.png"
+      alt="SPS Studio Logo"
+      width={width}
+      height={height}
+      {...rest}
+    />
+  );
+};
