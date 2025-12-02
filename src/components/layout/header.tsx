@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { SpsLogo } from "@/components/sps-logo";
 import { cn } from "@/lib/utils";
@@ -45,6 +45,9 @@ const TransparentHeader = () => (
                     </Button>
                 </SheetTrigger>
                 <SheetContent side="left" className="bg-background text-foreground">
+                    <SheetHeader>
+                        <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+                    </SheetHeader>
                     <div className="grid gap-4 py-6">
                         <Link href="/" className="flex items-center gap-2 mb-4">
                             <SpsLogo className="w-8 h-8" />
@@ -84,6 +87,9 @@ const StickyHeader = () => (
                     </Button>
                 </SheetTrigger>
                 <SheetContent side="left">
+                    <SheetHeader>
+                        <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+                    </SheetHeader>
                     <div className="grid gap-4 py-6">
                         <Link href="/" className="flex items-center gap-2 mb-4">
                             <SpsLogo className="w-8 h-8" />

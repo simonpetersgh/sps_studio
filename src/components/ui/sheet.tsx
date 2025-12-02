@@ -96,6 +96,18 @@ const SheetHeader = ({
   const descriptionId = React.useId();
   const contextValue = React.useMemo(() => ({ titleId, descriptionId }), [titleId, descriptionId]);
   
+  const childrenWithIds = React.Children.map(children, (child) => {
+    if (React.isValidElement(child)) {
+        if (child.type === SheetTitle) {
+            return React.cloneElement(child as React.ReactElement<React.HTMLAttributes<HTMLHeadingElement>>, { id: titleId });
+        }
+        if (child.type === SheetDescription) {
+            return React.cloneElement(child as React.ReactElement<React.HTMLAttributes<HTMLParagraphElement>>, { id: descriptionId });
+        }
+    }
+    return child;
+  });
+
   return (
     <SheetHeaderContext.Provider value={contextValue}>
       <div
@@ -105,17 +117,7 @@ const SheetHeader = ({
         )}
         {...props}
       >
-        {React.Children.map(children, (child) => {
-            if (React.isValidElement(child)) {
-                if (child.type === SheetTitle) {
-                    return React.cloneElement(child, { id: titleId } as React.HTMLAttributes<HTMLHeadingElement>);
-                }
-                if (child.type === SheetDescription) {
-                    return React.cloneElement(child, { id: descriptionId } as React.HTMLAttributes<HTMLParagraphElement>);
-                }
-            }
-            return child;
-        })}
+        {childrenWithIds}
       </div>
     </SheetHeaderContext.Provider>
   );
