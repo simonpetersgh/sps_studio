@@ -12,21 +12,21 @@ export const Footer = () => (
               <span className="font-headline text-xl font-bold text-foreground">SPS Studio</span>
           </div>
           <p className="text-sm">
-            Crafting digital excellence, from needs-focused requirement analysis to functional web & app solutions.
+            Crafting digital excellence through high-performance web & mobile applications.
           </p>
         </div>
 
         <div>
             <h3 className="font-headline text-lg font-semibold text-foreground mb-4">Contact Information</h3>
             <div className="space-y-2 text-sm">
-                <div className="flex items-start gap-3">
+                {/* <div className="flex items-start gap-3">
                     <LocateIcon className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                     <span>Accra, Ghana</span>
-                </div>
+                </div> */}
                 <div className="flex items-start gap-3">
                     <Mail className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                     <a href="mailto:simonpetersgh@gmail.com" className="hover:text-primary hover:underline">
-                        simonpetersgh@gmail.com
+                        simonsakpla@gmail.com
                     </a>
                 </div>
                 <div className="flex items-start gap-3">
@@ -69,7 +69,7 @@ export const Footer = () => (
 
       </div>
       <div className="mt-8 pt-6 border-t border-muted-foreground/20 text-center text-sm">
-        © {new Date().getFullYear()} TheSPS Studio. All Rights Reserved.
+        © {new Date().getFullYear()} SPS Studio. All Rights Reserved.
       </div>
     </footer>
 );

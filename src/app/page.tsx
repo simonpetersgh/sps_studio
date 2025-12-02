@@ -139,7 +139,7 @@ const ServicesSection = () => (
         <div className="max-w-6xl mx-auto text-center">
             <div className="animate-fade-in-up mb-12">
                 <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
-                    Services and How I Can Help
+                    Services: What I Do & How I Can Help
                 </h2>
             </div>
             <div className="grid md:grid-cols-3 gap-8 animate-fade-in-up [animation-delay:0.2s]">
@@ -190,7 +190,7 @@ const workflowSteps = [
       title: "Step 2: Proposal & Planning",
       icon: <ClipboardList className="h-6 w-6 text-primary" />,
       shortTitle: "Planning",
-      description: "Once I understand your needs, I create a clear proposal outlining what we’re building, how it will work, timelines and cost, and what you can expect at each stage. After your approval, I map out a structured plan and roadmap, so you know exactly what’s coming next. Everything is transparent from the start. No hidden surprises.",
+      description: "Once I understand your needs, I create a clear proposal outlining what we’re building, how it will work, timelines and cost and the deliverables to expect at the end of the process. After acceptance, I create a detailed plan and roadmap for the project, so you know exactly what’s coming next. Everything is transparent from the start. No hidden surprises.",
       image: placeholderImages.workflow.planning,
     },
     {
@@ -206,20 +206,20 @@ const workflowSteps = [
       title: "Step 4: Launch & Support",
       icon: <Rocket className="h-6 w-6 text-primary" />,
       shortTitle: "Launch",
-      description: "After thorough testing, improvements and your final approval, your solution is packaged and deployed. But I don't just disappear; I help you launch your project and ensure everything runs smoothly within the provided support period as your solution is in use.",
+      description: "After thorough testing, improvements and final approval, the solution is packaged and deployed to preferred platforms. But I don't just disappear; I help ensure everything runs smoothly within the provided support period as the product is in use.",
       image: placeholderImages.workflow.launch,
     },
 ];
 
 const WorkflowSection = () => (
-    <section id="workflow" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="workflow" className="py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12 animate-fade-in-up">
           <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold">
             How We Can Work Together
           </h2>
           <p className="mt-4 text-xl text-muted-foreground max-w-3xl mx-auto">
-            In partnering you to turn your idea from concept to a working product., I keep the entire process simple, transparent, and collaborative through a 4-step workflow:
+            In turning ideas from concept to a working product, I keep the process simple, transparent, and collaborative through a 4-step workflow:
           </p>
         </div>
   
@@ -260,7 +260,7 @@ const WorkflowSection = () => (
 
 
 const CtaSection = () => (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
             <div className="animate-fade-in-up">
                 <h2 className="font-headline text-4xl md:text-5xl text-primary font-bold mb-6">
