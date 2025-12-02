@@ -96,7 +96,7 @@ const AboutSection = () => (
       </div>
       <div className="flex justify-center order-1 md:order-2 animate-fade-in-up [animation-delay:0.2s]">
         <Image
-          src="/sp.png"
+          src="/sp-icon.png"
           alt="A portrait of Simon"
           width={400}
           height={400}
