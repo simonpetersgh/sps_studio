@@ -114,14 +114,14 @@ const services = [
     icon: <LayoutTemplate className="h-8 w-8 mb-4 text-primary" />,
     title: "High-Performance Websites & Web Platforms",
     description: "I build responsive websites and web apps for organisations of any kind or size. Whether you need a clean online presence or a platform for ecommerce, bookings, user management, and self-service. I build solutions that support your goals round the clock.",
-    link: "/service-plans",
+    link: "/services-and-pricing",
     image: placeholderImages.services.web,
   },
   {
     icon: <Smartphone className="h-8 w-8 mb-4 text-primary" />,
     title: "Scalable Mobile Apps (iOS & Android)",
     description: "Need a high-quality mobile app without the high cost of traditional development? I build apps that run smoothly on both iPhone and Android, designed to fit your needs and requirements for your customers, staff, or on-the-go operations.",
-    link: "/services-and-plans",
+    link: "/services-and-pricing",
     image: placeholderImages.services.mobile,
   },
   {
@@ -129,7 +129,7 @@ const services = [
     title: "Custom Business Software",
     description: "If spreadsheets, notes, and manual work are slowing you down, you don’t need expensive enterprise software, get a software that fits your workflow, supports your team, and grows with your organisation. I develop secure, efficient and scalable tools that help manage customers, inventory, finances, and daily operations with ease.",
     // description: "If you are outgrowing Excel sheets, notebooks but don’t have the budget to purchase expensive Enterprise software, it is time for a custom solution tailored specifically to your unique business needs. From managing customer data, to inventory or cashflows management, I build user friendly, secure and scalable tools that optimize your business operations and eliminate the headaches of scaling your business with the right digital tools.",
-    link: "/services-and-plans",
+    link: "/services-and-pricing",
     image: placeholderImages.services.custom,
   },
 ];

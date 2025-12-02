@@ -275,7 +275,7 @@ export default function ServicesAndPricing() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="mb-12 md:text-center max-w-3xl mx-auto">
-              <Badge variant="outline" className="mb-4">Advanced Solutions</Badge>
+              {/* <Badge variant="outline" className="mb-4">Advanced Solutions</Badge> */}
               <h2 className="font-headline text-3xl md:text-5xl font-bold mb-6">
                 Custom App & Software Services
               </h2>
@@ -309,7 +309,7 @@ export default function ServicesAndPricing() {
           </div>
         </section>
 
-        {/* --- MAINTENANCE FOR OTHERS --- */}
+        {/* --- MAINTENANCE FOR OTHERS ---
         <section className="py-16 bg-muted/30 px-4 sm:px-6 lg:px-8 border-t">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center justify-center p-3 bg-primary/10 rounded-full mb-6">
@@ -330,7 +330,7 @@ export default function ServicesAndPricing() {
               <Link href="/contact">Get a Maintenance Quote</Link>
             </Button>
           </div>
-        </section>
+        </section> */}
 
       </main>
       <Footer />
