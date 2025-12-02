@@ -155,7 +155,7 @@ export default function ServicesAndPricing() {
       <main className="flex-1 pt-24">
         
         {/* --- HERO SECTION --- */}
-        <section className="px-4 sm:px-6 lg:px-8 pb-16 text-center">
+        <section className="px-4 sm:px-6 lg:px-8 pb-8 text-center">
           <h1 className="font-headline text-4xl md:text-6xl font-bold mb-6">
             Quality Solutions.<br />
             <span className="text-primary">Transparent Plans.</span>
@@ -166,7 +166,7 @@ export default function ServicesAndPricing() {
         </section>
 
         {/* --- WEB PACKAGES SECTION (The Low Hanging Fruit) --- */}
-        <section className="py-16 bg-secondary/30 px-4 sm:px-6 lg:px-8" id="web-packages">
+        <section className="py-8 bg-secondary/30 px-4 sm:px-6 lg:px-8" id="web-packages">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-headline font-bold mb-4">Affordable Web Solutions</h2>
@@ -257,7 +257,7 @@ export default function ServicesAndPricing() {
             </div>
 
             {/* Custom Solution Callout within Pricing */}
-            <div className="mt-12 bg-background border rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="mt-8 bg-background border rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="text-left">
                 <h3 className="text-xl font-bold font-headline">Need something Custom?</h3>
                 <p className="text-muted-foreground mt-2 max-w-xl">
@@ -272,12 +272,12 @@ export default function ServicesAndPricing() {
         </section>
 
         {/* --- CUSTOM APP SERVICES (High Ticket Focus) --- */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="mb-12 md:text-center max-w-3xl mx-auto">
               {/* <Badge variant="outline" className="mb-4">Advanced Solutions</Badge> */}
               <h2 className="font-headline text-3xl md:text-5xl font-bold mb-6">
-                Custom App & Software Services
+                Mobile App & Custom Software
               </h2>
               <p className="text-lg text-muted-foreground">
                 When your vision goes beyond a standard website, we build scalable, high-performance applications tailored to your unique business needs.
