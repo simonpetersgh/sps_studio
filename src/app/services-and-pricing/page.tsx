@@ -126,19 +126,19 @@ const carePlans = [
 const customServices = [
   {
     title: "MVP Development",
-    icon: <Rocket className="h-8 w-8 text-primary mb-4" />,
+    icon: <Rocket className="h-8 w-8 text-primary shrink-0" />,
     description: "Want rapid building and launching of Minimum Viable Products (MVPs) to validate your business idea with real users. Let's begin with a chat and plan on on building core functionality to get you to market quickly.",
     cta: "Get in Touch",
   },
   {
     title: "Mobile Applications",
-    icon: <Smartphone className="h-8 w-8 text-primary mb-4" />,
+    icon: <Smartphone className="h-8 w-8 text-primary shrink-0" />,
     description: "If you need a high-performance iOS to Android app intuitive for your customers and business operations, I am ready to after an initial consultation to understand your project scope and goals and develop your solution.",
     cta: "Get in Touch",
   },
   {
     title: "Custom Business Software",
-    icon: <Layers className="h-8 w-8 text-primary mb-4" />,
+    icon: <Layers className="h-8 w-8 text-primary shrink-0" />,
     description: "If you want to streamline and digital transformation drive with software built specifically for your business processes, internal tools, or platforms to solve your unique challenges and drive digital transformation, get in touch now.",
     cta: "Get in Touch",
   },
@@ -286,17 +286,19 @@ export default function ServicesAndPricing() {
 
             <div className="grid md:grid-cols-3 gap-8">
               {customServices.map((service, index) => (
-                <Card key={index} className="bg-secondary/10 border-none hover:bg-secondary/20 transition-colors">
+                <Card key={index} className="bg-secondary/10 border-none hover:bg-secondary/20 transition-colors flex flex-col">
                   <CardHeader>
-                    {service.icon}
-                    <CardTitle className="font-headline text-xl">{service.title}</CardTitle>
+                    <div className="flex items-center gap-4">
+                      {service.icon}
+                      <CardTitle className="font-headline text-xl">{service.title}</CardTitle>
+                    </div>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="flex-1">
                     <p className="text-muted-foreground leading-relaxed">
                       {service.description}
                     </p>
                   </CardContent>
-                  <CardFooter>
+                  <CardFooter className="flex justify-center w-full">
                     <Button variant="link" asChild className="px-0 text-primary">
                       <Link href="/contact" className="flex items-center gap-2">
                         {service.cta} <ArrowRight className="h-4 w-4" />
