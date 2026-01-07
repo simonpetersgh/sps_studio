@@ -181,7 +181,7 @@ export default function ServicesAndPricing() {
               ))}
             </div>
 
-            {/* Custom Solution Callout within Pricing */}
+            {/* Custom Solution Option */}
             <div className="mt-8 bg-background border rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="text-left">
                 <h3 className="text-xl font-bold font-headline">Need something Custom?</h3>
