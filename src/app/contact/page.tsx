@@ -20,7 +20,7 @@ const CtaSection = () => (
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white">
-                        <Link href="https://wa.me/233540228056" target="_blank">
+                        <Link href="https://wa.me/233540228056?text=Hi Simon, I am interested in..." target="_blank">
                             <Whatsapp className="mr-2 h-5 w-5" /> Chat on WhatsApp
                         </Link>
                     </Button>

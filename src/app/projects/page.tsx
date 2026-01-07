@@ -15,6 +15,14 @@ import { Footer } from "@/components/layout/footer";
 
 const allProjects = [
     {
+      title: "SPS LiveCast",
+      description:
+        "A on-demand live audio streaming solution designed for organizations that require reliable and high-quality real-time broadcasting without the complexity of managing shared or social media platforms.",
+      imageUrl: "/images/livecast.jpg",
+      imageHint: "App snapshot",
+      liveUrl: "https://livecast.thesps.online",
+    },
+    {
       title: "KEPS Studio",
       description:
         "A web app for the newly launched studio for a group of managed software engineers and freelance community.",
@@ -49,10 +57,10 @@ export default function ProjectsPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
                 <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight mb-4">
-                    All Projects
+                    Featured Projects
                 </h1>
                 <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-                    Here's a broader selection of my work, showcasing my skills across different domains.
+                    Here's a featured collection of my work, showcasing my skills across different domains and projects.
                 </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

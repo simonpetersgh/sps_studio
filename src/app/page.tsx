@@ -31,7 +31,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import placeholderImages from "@/lib/placeholder-images.json";
+import myInternalImages from "@/lib/internal-images.json";
 
 const HeroSection = () => (
   <section className="relative h-dvh md:h-[70vh] min-h-[500px] flex items-center justify-center text-center text-white px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -86,12 +86,12 @@ const AboutSection = () => (
           Hii, I'm Simon.
         </h2>
         <p className="text-lg text-left text-muted-foreground mb-4">
-        A freelance developer and analyst based in Accra, Ghana. I am a tech professional with a bachelor’s degree in Business Information Technology with a unique blend of business acumen and technical expertise 
-        which gives me a unique advantage to understand business needs, strategy and the technical solutions needed to achieve them.
+        A freelance developer and analyst based in Accra, Ghana. I am a tech professional with a bachelor’s degree in Business Information Technology from the Kwame Nkrumah University of Science and Technology, Kumasi and I possess a good blend of business acumen and technical expertise 
+        which gives me a unique advantage to understand business needs, strategy and the most practical solutions needed to achieve them.
         </p>
         <p className="text-lg text-left text-muted-foreground">
-        I specialize in the design and devlopment of high-performance and affordable web solutions and cross-platform applications for startups, SMEs or non-profit organisations to thrive and grow in the digital economy in Ghana. 
-        My role is centered on partnering with clients to understand their needs and turn ideas into into user-friendly solutions that help optimize operations and lead to organisational success.
+        I specialize in the design and development of high-performance and affordable web and cross-platform applications for startups, SMEs or non-profit organisations to thrive and grow in the digital economy in Ghana. 
+        My role is centered on partnering with clients to understand their needs and turn ideas into into user-friendly solutions that drives operations and the achievement of desired goals.
         </p>
       </div>
       <div className="flex justify-center order-1 md:order-2 animate-fade-in-up [animation-delay:0.2s]">
@@ -114,23 +114,23 @@ const services = [
     icon: <LayoutTemplate className="h-8 w-8 mb-4 text-primary" />,
     title: "High-Performance Websites & Web Platforms",
     description: "I build responsive websites and web apps for organisations of any kind or size. Whether you need a clean online presence or a platform for ecommerce, bookings, user management, and self-service. I build solutions that support your goals round the clock.",
-    link: "/services-and-pricing",
-    image: placeholderImages.services.web,
+    link: "/services",
+    image: myInternalImages.services.web,
   },
   {
     icon: <Smartphone className="h-8 w-8 mb-4 text-primary" />,
     title: "Scalable Mobile Apps (iOS & Android)",
     description: "Need a high-quality mobile app without the high cost of traditional development? I build apps that run smoothly on both iPhone and Android, designed to fit your needs and requirements for your customers, staff, or on-the-go operations.",
-    link: "/services-and-pricing",
-    image: placeholderImages.services.mobile,
+    link: "/services",
+    image: myInternalImages.services.mobile,
   },
   {
     icon: <Briefcase className="h-8 w-8 mb-4 text-primary" />,
     title: "Custom Business Software",
     description: "If spreadsheets, notes, and manual work are slowing you down, you don’t need expensive enterprise software, get a software that fits your workflow, supports your team, and grows with your organisation. I develop secure, efficient and scalable tools that help manage customers, inventory, finances, and daily operations with ease.",
     // description: "If you are outgrowing Excel sheets, notebooks but don’t have the budget to purchase expensive Enterprise software, it is time for a custom solution tailored specifically to your unique business needs. From managing customer data, to inventory or cashflows management, I build user friendly, secure and scalable tools that optimize your business operations and eliminate the headaches of scaling your business with the right digital tools.",
-    link: "/services-and-pricing",
-    image: placeholderImages.services.custom,
+    link: "/services",
+    image: myInternalImages.services.custom,
   },
 ];
 
@@ -183,7 +183,7 @@ const workflowSteps = [
       icon: <MessageCircle className="h-6 w-6 text-primary" />,
       shortTitle: "Discovery",
       description: "We start with a free chat. I learn about your ideas, business goals and challenges to understand exactly what you need. As both an analyst and a developer, I help you clarify your requirements to ensure we build the right solution, not just any solution.",
-      image: placeholderImages.workflow.discovery,
+      image: myInternalImages.workflow.discovery,
     },
     {
       value: "step-2",
@@ -191,7 +191,7 @@ const workflowSteps = [
       icon: <ClipboardList className="h-6 w-6 text-primary" />,
       shortTitle: "Planning",
       description: "Once I understand your needs, I create a clear proposal outlining what we’re building, how it will work, timelines and cost and the deliverables to expect at the end of the process. After acceptance, I create a detailed plan and roadmap for the project, so you know exactly what’s coming next. Everything is transparent from the start. No hidden surprises.",
-      image: placeholderImages.workflow.planning,
+      image: myInternalImages.workflow.planning,
     },
     {
       value: "step-3",
@@ -199,7 +199,7 @@ const workflowSteps = [
       icon: <Code className="h-6 w-6 text-primary" />,
       shortTitle: "Development",
       description: "This is where the magic happens. With the plan in place, I move into designing and building your solution. You’ll see wireframes, UI designs so you can visualize the result and test prototypes. I provide regular updates throughout the development process for you to stay informed and confident as your idea comes to life.",
-      image: placeholderImages.workflow.development,
+      image: myInternalImages.workflow.development,
     },
     {
       value: "step-4",
@@ -207,7 +207,7 @@ const workflowSteps = [
       icon: <Rocket className="h-6 w-6 text-primary" />,
       shortTitle: "Launch",
       description: "After thorough testing, improvements and final approval, the solution is packaged and deployed to preferred platforms. But I don't just disappear; I help ensure everything runs smoothly within the provided support period as the product is in use.",
-      image: placeholderImages.workflow.launch,
+      image: myInternalImages.workflow.launch,
     },
 ];
 

@@ -21,25 +21,25 @@
   },
   "workflow": {
     "discovery": {
-      "src": "https://picsum.photos/seed/discovery/600/400",
+      "src": "/images/chat.png",
       "width": 600,
       "height": 400,
       "hint": "conversation brainstorming"
     },
     "planning": {
-      "src": "https://picsum.photos/seed/planning/600/400",
+      "src": "/images/discovery.jpg",
       "width": 600,
       "height": 400,
       "hint": "blueprint strategy"
     },
     "development": {
-      "src": "https://picsum.photos/seed/development/600/400",
+      "src": "/images/development.jpg",
       "width": 600,
       "height": 400,
       "hint": "coding programming"
     },
     "launch": {
-      "src": "https://picsum.photos/seed/launch/600/400",
+      "src": "/images/launch.png",
       "width": 600,
       "height": 400,
       "hint": "rocket launch"
