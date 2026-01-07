@@ -120,11 +120,11 @@ export default function ServicesAndPricing() {
         
         {/* --- HERO SECTION --- */}
         <section className="px-4 sm:px-6 lg:px-8 pb-8 text-center">
-          <h1 className="font-headline text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="font-headline text-3xl md:text-6xl font-bold mb-6">
             Quality Solutions.<br />
             <span className="text-primary">Affordable Packages.</span>
           </h1>
-          <p className="text-2xl text-muted-foreground max-w-4xl mx-auto mb-8">
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
           There are flexible packages designed for different needs and budgets. If you have custom needs beyond these, I’d be happy to build a tailored solution for you.
           </p>
         </section>
@@ -134,7 +134,7 @@ export default function ServicesAndPricing() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-headline font-bold mb-4">Curated Web Packages</h2>
-              <p className="text-2xl text-muted-foreground max-w-4xl mx-auto mb-8">
+              <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
                 Get started with a tailored web development packages for a one-time development or flexible yearly payment plan designed to provide maximum value and quality.
               </p>
             </div>
@@ -186,7 +186,7 @@ export default function ServicesAndPricing() {
               <div className="text-left">
                 <h3 className="text-xl font-bold font-headline">Need something Custom?</h3>
                 <p className="text-muted-foreground mt-2 max-w-xl">
-                Don’t see a package that fits your vision? I build custom web & mobile apps, MVPs, internal platforms with API integrations and scalable architecture for unique business needs and offer ongoing maintenance and support for existing sites.
+                Don’t see a package that fits your needs? I build custom web & mobile apps, MVPs, internal platforms with API integrations and scalable architecture for unique needs and offer ongoing maintenance and support for existing sites.
                 </p>
               </div>
               <Button asChild variant="secondary">

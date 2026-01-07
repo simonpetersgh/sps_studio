@@ -40,22 +40,22 @@ export const Footer = () => (
             <h3 className="font-headline text-lg font-semibold text-foreground mb-4">Follow Me</h3>
             <div className="flex gap-4">
             <Button asChild variant="outline" size="icon" className="bg-transparent hover:bg-accent/50">
-              <Link href="#" aria-label="GitHub">
+              <Link href="https://github.com/simonpetersgh" aria-label="GitHub">
                 <Github className="h-5 w-5" />
               </Link>
             </Button>
             <Button asChild variant="outline" size="icon" className="bg-transparent hover:bg-accent/50">
-              <Link href="#" aria-label="LinkedIn">
+              <Link href="https://linkedin.com/in/ssakpla" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </Link>
             </Button>
             <Button asChild variant="outline" size="icon" className="bg-transparent hover:bg-accent/50">
-              <Link href="#" aria-label="Twitter">
+              <Link href="https://x.com/simonpetersgh" aria-label="Twitter">
                 <Twitter className="h-5 w-5" />
               </Link>
             </Button>
             <Button asChild variant="outline" size="icon" className="bg-transparent hover:bg-accent/50">
-              <Link href="#" aria-label="Facebook">
+              <Link href="https://facebook.com/simonpeters.sakpla" aria-label="Facebook">
                 <Facebook className="h-5 w-5" />
               </Link>
             </Button>

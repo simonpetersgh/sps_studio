@@ -11,16 +11,16 @@ interface HeaderProps {
 
 const NavLinks = ({ mobile = false }: { mobile?: boolean }) => (
   <>
-    <Link href="/#about" className={cn(mobile ? "text-lg font-medium" : "text-2xl", "font-bold text-primary hover:text-accent transition-colors")}>
+    <Link href="/#about" className={cn(mobile ? "text-lg font-medium" : "text-2xl", "text-primary hover:text-accent transition-colors")}>
       About
     </Link>
-    <Link href="/services" className={cn(mobile ? "text-lg font-medium" : "text-2xl", "font-bold text-primary hover:text-accent transition-colors")}>
+    <Link href="/services" className={cn(mobile ? "text-lg font-medium" : "text-2xl", "text-primary hover:text-accent transition-colors")}>
       Services
     </Link>
-    <Link href="/projects" className={cn(mobile ? "text-lg font-medium" : "text-2xl", "font-bold text-primary hover:text-accent transition-colors")}>
+    <Link href="/projects" className={cn(mobile ? "text-lg font-medium" : "text-2xl", "text-primary hover:text-accent transition-colors")}>
       Projects
     </Link>
-    <Link href="/contact" className={cn(mobile ? "text-lg font-medium" : "text-2xl", "font-bold text-primary hover:text-accent transition-colors")}>
+    <Link href="/contact" className={cn(mobile ? "text-lg font-medium" : "text-2xl", "text-primary hover:text-accent transition-colors")}>
       Contact
     </Link>
   </>
