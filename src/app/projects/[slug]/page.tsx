@@ -105,6 +105,16 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 </div>
               </section>
             </div>
+
+            {project.liveUrl && (
+              <div className="pt-12 border-t mt-12 flex justify-center">
+                <Button asChild size="lg" variant="outline" className="gap-2">
+                  <Link href={project.liveUrl} target="_blank">
+                    <ExternalLink className="h-5 w-5" /> Open Project in New Tab
+                  </Link>
+                </Button>
+              </div>
+            )}
           </div>
         </article>
 
