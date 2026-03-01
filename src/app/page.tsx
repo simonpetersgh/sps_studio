@@ -65,7 +65,7 @@ const HeroSection = () => (
       Developing web and mobile applications that empower individuals and organisations to establish a strong online presence and drive digital transformation.
       </p>
       <Button asChild size="lg" className="animate-fade-in-up [animation-delay:0.6s] bg-transparent border-white text-white hover:bg-primary hover:text-black" variant="outline">
-        <Link href="/contact">Get in Touch</Link>
+        <Link href="/projects">View Projects</Link>
       </Button>
     </div>
   </section>

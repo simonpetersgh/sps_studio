@@ -20,6 +20,7 @@ export const projects: Project[] = [
     imageUrl: "/images/madwuma-site.png",
     imageHint: "marketing website",
     category: "Web",
+    liveUrl: "https://madwuma.vercel.app",
     technologies: ["HTML5", "Tailwind CSS", "TypeScript", "React.js", "NextJS", "Firebase", "Resend", "SEO optimization"],
     features: [
       "Responsive web design ensuring seamless experience across devices",
@@ -37,6 +38,7 @@ export const projects: Project[] = [
     imageUrl: "/images/m-cashbook.png",
     imageHint: "financial app interface",
     category: "Mobile",
+    liveUrl: "https://mcashbook.web.app",
     technologies: ["Flutter", "Supabase", "Authentication", "Real-time Database", "Analytics", "Reporting"],
     features: [
       "Secure account setup and login system",
@@ -54,6 +56,7 @@ export const projects: Project[] = [
     imageUrl: "/images/m-sycast.jpg",
     imageHint: "audio streaming dashboard",
     category: "System",
+    liveUrl: "https://livecast.thesps.online",
     technologies: ["Flutter for Web and Mobile", "Icecast Server", "Cloudflare Tunnels", "Supabase"],
     features: [
       "High-quality live audio streaming with minimal latency",
@@ -98,10 +101,10 @@ export const projects: Project[] = [
     title: "KEPS Studio",
     brief: "Web app for a community of managed software engineers and freelancers.",
     description: "A web app for the newly launched studio for a group of managed software engineers and freelance community.",
-    imageUrl: "https://firebasestorage.googleapis.com/v0/b/sesa-studio.firebasestorage.app/o/keps-studio%2Fworkspace-1.png?alt=media&token=7338c884-7eab-43d9-884b-53d5309b910e",
+    imageUrl: "/images/keps-studio.png",
     imageHint: "website cover",
     category: "Web",
-    liveUrl: "https://sesastudio--sesa-studio.europe-west4.hosted.app/",
+    liveUrl: "https://kepsstudio.vercel.app/",
     technologies: ["React", "Tailwind CSS", "Framer Motion"],
     features: ["Project showcasing", "Freelancer directory", "Service booking"]
   },
