@@ -64,9 +64,9 @@ export default function ProjectsPage() {
                       </Link>
                     </Button>
                     {project.liveUrl && (
-                      <Button asChild variant="ghost" size="sm" className="h-8">
+                      <Button asChild variant="outline" size="sm" className="h-8 gap-2">
                         <Link href={project.liveUrl} target="_blank">
-                          <ExternalLink className="h-4 w-4" />
+                          Live <ExternalLink className="h-3 w-3" />
                         </Link>
                       </Button>
                     )}

@@ -14,11 +14,11 @@ export interface Project {
 export const projects: Project[] = [
   {
     slug: "madwuma-marketing",
-    title: "Madwuma App Marketing Site",
+    title: "Madwuma Apps Website",
     brief: "The online presence and promotional platform for the Madwuma mobile application.",
     description: "The Madwuma App Marketing Site serves as the online presence and promotional platform for the Madwuma mobile application. Designed to attract users and drive downloads, the site highlights the app’s key features, benefits, and use cases.",
-    imageUrl: "https://picsum.photos/seed/madwuma1/800/600",
-    imageHint: "marketing website mockup",
+    imageUrl: "/images/madwuma-site.png",
+    imageHint: "marketing website",
     category: "Web",
     technologies: ["HTML5", "Tailwind CSS", "TypeScript", "React.js", "NextJS", "Firebase", "Resend", "SEO optimization"],
     features: [
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     title: "Madwuma Cashbook App",
     brief: "A financial management tool for small businesses and freelancers to track expenses and income.",
     description: "Madwuma Cashbook is a financial management tool designed for small businesses and freelancers to track expenses, income, and cash flow efficiently. The app simplifies bookkeeping and financial record-keeping through an intuitive interface.",
-    imageUrl: "https://picsum.photos/seed/cashbook/800/600",
+    imageUrl: "/images/m-cashbook.png",
     imageHint: "financial app interface",
     category: "Mobile",
     technologies: ["Flutter", "Supabase", "Authentication", "Real-time Database", "Analytics", "Reporting"],
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     title: "SyCast – Live Audio Streaming System",
     brief: "A reliable platform for streaming audio content to multiple users simultaneously.",
     description: "SyCast is a live audio streaming system designed for online radio, podcasts, and live events. It provides a reliable platform for streaming audio content to multiple users simultaneously, with real-time listener interaction.",
-    imageUrl: "https://picsum.photos/seed/sycast/800/600",
+    imageUrl: "/images/m-sycast.jpg",
     imageHint: "audio streaming dashboard",
     category: "System",
     technologies: ["Flutter for Web and Mobile", "Icecast Server", "Cloudflare Tunnels", "Supabase"],

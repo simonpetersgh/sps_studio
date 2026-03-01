@@ -62,7 +62,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 </h1>
               </div>
               {project.liveUrl && (
-                <Button asChild size="lg">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                   <Link href={project.liveUrl} target="_blank">
                     <ExternalLink className="mr-2 h-5 w-5" /> Visit Live Project
                   </Link>
@@ -71,7 +71,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             </div>
 
             <div className="prose prose-slate dark:prose-invert max-w-none">
-              <h2 className="text-2xl font-bold font-headline mb-4 border-b pb-2">Overview</h2>
+              <h2 className="text-2xl font-bold font-headline mb-4 border-b pb-2 text-primary">Overview</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 {project.description}
               </p>
@@ -110,7 +110,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
         <section className="bg-secondary/20 py-20 mt-20">
             <div className="max-w-4xl mx-auto px-4 text-center">
-                <h2 className="font-headline text-3xl font-bold mb-6">Have a similar project in mind?</h2>
+                <h2 className="font-headline text-3xl font-bold mb-6 text-primary">Have a similar project in mind?</h2>
                 <p className="text-xl text-muted-foreground mb-8">
                     Let's discuss how we can bring your ideas to life with professional engineering.
                 </p>
