@@ -74,7 +74,7 @@ export const projects: Project[] = [
     imageUrl: "https://firebasestorage.googleapis.com/v0/b/sesa-studio.firebasestorage.app/o/keps-studio%2Fdeft-project.png?alt=media&token=922e5b26-b7bf-4dba-bd28-e9bd35e1730a",
     imageHint: "logistics app tracking",
     category: "Mobile",
-    liveUrl: "https://deft-admin.web.app",
+    liveUrl: "https://deft-apps.web.app",
     technologies: ["Flutter", "Google Maps API", "Firebase", "Paystack", "Serverless Functions"],
     features: [
       "Real-time delivery tracking with live map integration",
